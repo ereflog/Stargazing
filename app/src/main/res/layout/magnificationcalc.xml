@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".MagnificationCalcActivity">
 
     <TextView
         android:id="@+id/textView"
@@ -34,10 +36,10 @@
         <EditText
             android:layout_width="130dp"
             android:layout_height="wrap_content"
+            android:hint="Telescope FL"
             android:paddingRight="20dp"
             android:textSize="18dp"
-            android:hint="Telescope FL"
-            />
+            tools:ignore="TouchTargetSizeCheck" />
     </LinearLayout>
 
 
@@ -62,10 +64,10 @@
         <EditText
             android:layout_width="130dp"
             android:layout_height="wrap_content"
+            android:hint="Eyepiece FL"
             android:paddingRight="20dp"
             android:textSize="18dp"
-            android:hint="Eyepiece FL"
-            />
+            tools:ignore="TouchTargetSizeCheck" />
 
     </LinearLayout>
 
@@ -140,10 +142,10 @@
         <EditText
             android:layout_width="130dp"
             android:layout_height="wrap_content"
+            android:hint="Focal Length"
             android:paddingRight="20dp"
             android:textSize="18dp"
-            android:hint="Focal Length"
-            />
+            tools:ignore="TouchTargetSizeCheck" />
     </LinearLayout>
 
 
@@ -167,10 +169,10 @@
         <EditText
             android:layout_width="130dp"
             android:layout_height="wrap_content"
+            android:hint="Aperture"
             android:paddingRight="20dp"
             android:textSize="18dp"
-            android:hint="Aperture"
-            />
+            tools:ignore="TouchTargetSizeCheck" />
 
     </LinearLayout>
 
@@ -195,9 +197,9 @@
         <EditText
             android:layout_width="130dp"
             android:layout_height="wrap_content"
-            android:textSize="18dp"
             android:hint="Mag. Value"
-            />
+            android:textSize="18dp"
+            tools:ignore="TouchTargetSizeCheck" />
 
     </LinearLayout>
 

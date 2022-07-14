@@ -10,7 +10,31 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Stargazing">
         <activity
-            android:name=".MainActivity"
+            android:name=".CCD_FilterSize"
+            android:exported="false" />
+        <activity
+            android:name=".CCD_Suitability"
+            android:exported="false" />
+        <activity
+            android:name=".CCD_Calculators"
+            android:exported="false" />
+        <activity
+            android:name=".BinocularCalculators"
+            android:exported="false" />
+        <activity
+            android:name=".TelescopeCapabilities"
+            android:exported="false" />
+        <activity
+            android:name=".FieldOfView"
+            android:exported="false" />
+        <activity
+            android:name=".FocalLenghtRatio"
+            android:exported="false" />
+        <activity
+            android:name=".MagnificationCalcActivity"
+            android:exported="false" />
+        <activity
+            android:name=".HomeActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
