@@ -1,3 +1,28 @@
 <resources>
+    <!--Title Name-->
     <string name="app_name">Stargazing</string>
+    <string name="focal_calc_title">Focal Length and Ratio Calculators</string>
+    <string name="magnification_calc_title">Magnification Calculators</string>
+    <string name="field_of_view_calc_title">Field of View Calculators</string>
+    <string name="telescope_capabilities_calc_title">Telescope Capabilities Calculators</string>
+    <string name="binocular_calc_title">Binocular Calculators</string>
+    <string name="ccd_calc_title">CCD Calculators</string>
+    <string name="ccd_telescope_combination_calc_title">CCD-Telescope Combination Calculator</string>
+    <string name="ccd_filter_size_calc_title">CCD Filter Size Calculator</string>
+    <string name="guidescope_calc_title">Guidescope Calculators</string>
+    <string name="unit_converter_title">Unit Converter</string>
+    <string name="weather_forecast_title">Weather Forecast</string>
+    <string name="red_light_tool_title">Red Light</string>
+    <string name="obs_log_book_title">Observation Log Book</string>
+    <string name="about_title">About</string>
+    <string name="credit_and_data_source_title">Credit and Data Source</string>
+    <string name="privacy_policy_title">Privacy Policy</string>
+
+    <!--Another String Values-->
+    <string name="about_text">VP Public Relation KAI Joni Martinus menegaskan bahwa PT KAI tidak menurunkan pelayanan kepada calon penumpang, bahkan untuk kelas ekonomi. Terkait dengan seat atau kursi penumpang 2-2 yang dianggap kurang sesuai dengan kelas ekonomi premium, Joni menyampaikan alasannya. \'Ini enggak ada penurunan pelayanan (downgrade), masih sama-sama layanan kelas ekonomi,\' ujarnya kepada Kompas.com, Sabtu (16/7/2022). \'(Soal seat 2-2) Hal itu dikarenakan perputaran sarana yang dioperasikan, sehingga ada perubahan sarana yang digunakan dengan tetap sesuai standar layanan yang ditetapkan,\' lanjutnya.</string>
+    <string name="magnification_value">Magnification Value</string>
+    <string name="eyepiece_fl_value">Eyepiece Focal Length Value</string>
+    <string name="telescope_fl">Telescope Focal Length</string>
+
+
 </resources>

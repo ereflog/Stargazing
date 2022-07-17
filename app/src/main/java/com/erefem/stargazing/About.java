@@ -4,11 +4,14 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class FieldOfView extends AppCompatActivity {
+public class About extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.fieldofview);
+        setContentView(R.layout.activity_about);
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().setTitle(R.string.about_title);
+        }
     }
 }

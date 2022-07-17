@@ -4,14 +4,14 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class TelescopeCapabilities extends AppCompatActivity {
+public class BinocularCalc extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.telescope_capabilities);
+        setContentView(R.layout.binocular_calc);
         if (getSupportActionBar() != null) {
-            getSupportActionBar().setTitle(R.string.telescope_capabilities_calc_title);
+            getSupportActionBar().setTitle(R.string.binocular_calc_title);
         }
     }
 }

@@ -4,13 +4,13 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MagnificationCalcActivity">
+    tools:context=".MagnificationCalc">
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Telescope Magnification"
+        android:text="@string/magnification_value"
         android:textColor="@color/black"
         android:textStyle="bold"
         android:textSize="24dp"
@@ -115,7 +115,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Eyepiece Focal Length"
+        android:text="@string/eyepiece_fl_value"
         android:textColor="@color/black"
         android:textStyle="bold"
         android:textSize="24dp"
@@ -131,8 +131,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingLeft="10dp"
-            android:textSize="18dp"
-            android:text="Telescope Focal Length" />
+            android:textSize="18sp"
+            android:text="@string/telescope_fl" />
 
         <Space
             android:layout_width="0dp"

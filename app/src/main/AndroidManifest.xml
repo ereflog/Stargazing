@@ -10,28 +10,52 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Stargazing">
         <activity
-            android:name=".CCD_FilterSize"
+            android:name=".RedLightTool"
             android:exported="false" />
         <activity
-            android:name=".CCD_Suitability"
+            android:name=".PrivacyPolicy"
             android:exported="false" />
         <activity
-            android:name=".CCD_Calculators"
+            android:name=".CreditAndDataSource"
             android:exported="false" />
         <activity
-            android:name=".BinocularCalculators"
+            android:name=".About"
+            android:exported="false" />
+        <activity
+            android:name=".WeatherForecast"
+            android:exported="false" />
+        <activity
+            android:name=".ObsLogBook"
+            android:exported="false" />
+        <activity
+            android:name=".UnitConverter"
+            android:exported="false" />
+        <activity
+            android:name=".GuidescopeCalc"
+            android:exported="false" />
+        <activity
+            android:name=".CCD_FilterSizeCalc"
+            android:exported="false" />
+        <activity
+            android:name=".CCDTelescopeCombinationCalc"
+            android:exported="false" />
+        <activity
+            android:name=".CCD_Calc"
+            android:exported="false" />
+        <activity
+            android:name=".BinocularCalc"
             android:exported="false" />
         <activity
             android:name=".TelescopeCapabilities"
             android:exported="false" />
         <activity
-            android:name=".FieldOfView"
+            android:name=".FieldOfViewCalc"
             android:exported="false" />
         <activity
-            android:name=".FocalLenghtRatio"
+            android:name=".FocalLenghtRatioCalc"
             android:exported="false" />
         <activity
-            android:name=".MagnificationCalcActivity"
+            android:name=".MagnificationCalc"
             android:exported="false" />
         <activity
             android:name=".HomeActivity"

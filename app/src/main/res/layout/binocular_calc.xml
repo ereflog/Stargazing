@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".FieldOfView">
+    tools:context=".BinocularCalc">
 
     <TextView
-        android:text="Field Of View"
+        android:text="Binocular Calculator"
         android:textSize="35dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
