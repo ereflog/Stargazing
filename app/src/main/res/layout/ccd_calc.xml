@@ -2,15 +2,388 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="16dp"
     tools:context=".CCD_Calc">
 
     <TextView
-        android:text="CCD Calculator"
-        android:textSize="35dp"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        />
+        android:text="CCD Resolution"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:padding="10dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:text="CCD Pixel Size:" />
+
+        <Space
+            android:layout_width="55dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent" />
+
+        <EditText
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:hint="Pixel Size"
+            android:inputType="number"
+            android:textSize="11sp"
+            tools:ignore="TouchTargetSizeCheck" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:layout_weight="1"
+            android:text="µm" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:text="Telescope Focal Length:" />
+
+        <Space
+            android:layout_width="6dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent" />
+
+        <EditText
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:textSize="11sp"
+            android:hint="Focal Length"
+            tools:ignore="TouchTargetSizeCheck" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:layout_weight="1"
+            android:text="mm" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:text="=   Resolution:" />
+
+        <Space
+            android:layout_width="63dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:hint="Value"
+            tools:ignore="TouchTargetSizeCheck" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:layout_weight="1"
+            android:text="'/pixel" />
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CCD Pixel Size"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:padding="10dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:text="Dimensions:" />
+
+
+        <EditText
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:hint="Horizontal Size"
+            android:inputType="number"
+            android:textSize="11sp"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="X" />
+
+
+        <EditText
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:hint="Vertical Size"
+            android:inputType="number"
+            android:textSize="11sp"
+            tools:ignore="TouchTargetSizeCheck" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:layout_weight="1"
+            android:text="mm" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:text="Resolution:" />
+
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Horizontal Resolution"
+            android:inputType="number"
+            android:textSize="11sp"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="X" />
+
+
+        <EditText
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:hint="Vertical Resolution"
+            android:inputType="number"
+            android:textSize="11sp"
+            tools:ignore="TouchTargetSizeCheck" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:layout_weight="1"
+            android:text="px" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:text="= Pixel Size:" />
+
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Horizontal Pixel Size"
+            android:inputType="number"
+            android:textSize="11sp"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="X" />
+
+
+        <EditText
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:hint="Vertical Pixel Size"
+            android:inputType="number"
+            android:textSize="11sp"
+            tools:ignore="TouchTargetSizeCheck" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:layout_weight="1"
+            android:text="µm" />
+
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CCD Chip Size "
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:padding="10dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:text="CCD Pixel Size:" />
+        <Space
+            android:layout_width="45dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent" />
+
+        <EditText
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:hint="Pixel Size"
+            android:inputType="number"
+            android:textSize="11sp"
+            tools:ignore="TouchTargetSizeCheck" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:layout_weight="1"
+            android:text="µm" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:text="Resolution:" />
+
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Horizontal Resolution"
+            android:inputType="number"
+            android:textSize="11sp"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="X" />
+
+
+        <EditText
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:hint="Vertical Resolution"
+            android:inputType="number"
+            android:textSize="11sp"
+            tools:ignore="TouchTargetSizeCheck" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:layout_weight="1"
+            android:text="px" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:text="=   CCD Size:" />
+
+
+        <EditText
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:hint="Horizontal Size"
+            android:inputType="number"
+            android:textSize="11sp"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="X" />
+
+
+        <EditText
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:hint="Vertical Size"
+            android:inputType="number"
+            android:textSize="11sp"
+            tools:ignore="TouchTargetSizeCheck" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:layout_weight="1"
+            android:text="mm" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:text="Diagonally:" />
+        <Space
+            android:layout_width="11dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent" />
+
+
+        <EditText
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:hint="Diagonal"
+            android:inputType="number"
+            android:textSize="11sp"
+            tools:ignore="TouchTargetSizeCheck" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:layout_weight="1"
+            android:text="mm" />
+    </LinearLayout>
 </LinearLayout>
