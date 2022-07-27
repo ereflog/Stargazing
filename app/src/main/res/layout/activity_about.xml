@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="16dp"
+    android:orientation="vertical"
     tools:context=".About">
 
     <TextView
@@ -12,4 +14,41 @@
         android:text="@string/about_text"
         android:textAlignment="center"
         android:padding="20dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Stargazing"
+        android:textAlignment="center"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:paddingTop="20dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Version 1.0.1"
+        android:textAlignment="center"
+        android:textStyle="italic"
+        android:textSize="16sp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="2022"
+        android:textAlignment="center"
+        android:textSize="16sp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:paddingTop="25dp"
+        android:text="Developers: Roni Firmansyah, Boy Agus Sugianto, Anton Purwanto, Fortuno Ery Fakih"
+        android:textAlignment="center"/>
+    <TextView
+        android:id="@+id/tvcontact"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Contact Us"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:paddingTop="20dp"/>
 </LinearLayout>

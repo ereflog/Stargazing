@@ -19,7 +19,9 @@
     <string name="privacy_policy_title">Privacy Policy</string>
 
     <!--Another String Values-->
-    <string name="about_text">VP Public Relation KAI Joni Martinus menegaskan bahwa PT KAI tidak menurunkan pelayanan kepada calon penumpang, bahkan untuk kelas ekonomi. Terkait dengan seat atau kursi penumpang 2-2 yang dianggap kurang sesuai dengan kelas ekonomi premium, Joni menyampaikan alasannya. \'Ini enggak ada penurunan pelayanan (downgrade), masih sama-sama layanan kelas ekonomi,\' ujarnya kepada Kompas.com, Sabtu (16/7/2022). \'(Soal seat 2-2) Hal itu dikarenakan perputaran sarana yang dioperasikan, sehingga ada perubahan sarana yang digunakan dengan tetap sesuai standar layanan yang ditetapkan,\' lanjutnya.</string>
+    <string name="about_text">Stargazing is an app to help make planning your astronomical observations or astrophotography easier.
+there are various calculators for calculating telescope and camera parameters, weather forecasts, an observation log book, and a handy unit converter.
+</string>
     <string name="tv_magnification_value">Magnification Value</string>
     <string name="eyepiece_fl_value">Eyepiece Focal Length Value</string>
     <string name="telescope_fl">Telescope Focal Length</string>
