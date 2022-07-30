@@ -33,6 +33,7 @@
             android:layout_height="match_parent" />
 
         <EditText
+            android:id="@+id/ettfl"
             android:layout_width="80dp"
             android:layout_height="wrap_content"
             android:hint="mm"
@@ -66,6 +67,7 @@
             android:layout_height="match_parent" />
 
         <EditText
+            android:id="@+id/etefl"
             android:layout_width="80dp"
             android:layout_height="wrap_content"
             android:hint="mm"
@@ -99,6 +101,7 @@
             android:layout_height="match_parent" />
 
         <TextView
+            android:id="@+id/tvmag"
             android:layout_width="75dp"
             android:layout_height="wrap_content"
             android:textSize="18sp"
@@ -114,7 +117,7 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnmag"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Calculate Magnification"
@@ -153,6 +156,7 @@
             android:layout_height="match_parent" />
 
         <EditText
+            android:id="@+id/ettfl2"
             android:layout_width="80dp"
             android:layout_height="wrap_content"
             android:hint="mm"
@@ -187,6 +191,7 @@
             android:layout_height="match_parent" />
 
         <EditText
+            android:id="@+id/etta"
             android:layout_width="80dp"
             android:layout_height="wrap_content"
             android:hint="mm"
@@ -220,6 +225,7 @@
             android:layout_height="match_parent" />
 
         <EditText
+            android:id="@+id/etmag2"
             android:layout_width="80dp"
             android:layout_height="wrap_content"
             android:hint="x"
@@ -253,6 +259,7 @@
             android:layout_height="match_parent" />
 
         <TextView
+            android:id="@+id/tvefl"
             android:layout_width="75dp"
             android:layout_height="wrap_content"
             android:textSize="18sp"
@@ -268,6 +275,7 @@
     </LinearLayout>
 
     <Button
+        android:id="@+id/btneyepiece"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Calculate Eyepiece"
