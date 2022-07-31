@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    tools:context=".ImagingGuidingRatioCalc">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="Imaging-Guiding Ratio"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="24sp" />
+
+        <!--IMAGING CAMERA-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/border"
+                android:orientation="vertical"
+                android:padding="15dp">
+
+                <!--Focal Length-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:text="Focal Length" />
+
+                    <Space
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent" />
+
+                    <EditText
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:hint="mm"
+                        android:inputType="number"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:textSize="20sp"
+                        android:textAlignment="center"
+                        android:text="mm" />
+
+                </LinearLayout>
+
+                <!--Barlow/Reducer-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:text="Barlow or Reducer" />
+
+                    <Space
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent" />
+
+                    <Spinner
+                        android:id="@+id/dd_barlow_reducer_imaging_dropdown"
+                        android:layout_width="130dp"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:entries="@array/barlow_reducer"
+                        android:background="@android:drawable/btn_dropdown"
+                        android:spinnerMode="dropdown"/>
+
+                </LinearLayout>
+
+                <!--CCD Pixel Size-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:text="CCD Pixel Size" />
+
+                    <Space
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent" />
+
+                    <EditText
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:hint="μm"
+                        android:inputType="number"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:textSize="20sp"
+                        android:textAlignment="center"
+                        android:text="μm" />
+
+                </LinearLayout>
+
+                <!--CCD Binning-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:text="CCD Binning" />
+
+                    <Space
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent" />
+
+                    <Spinner
+                        android:id="@+id/binning_imaging_dropdown"
+                        android:layout_width="130dp"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:entries="@array/ccd_binning"
+                        android:background="@android:drawable/btn_dropdown"
+                        android:spinnerMode="dropdown"/>
+
+                </LinearLayout>
+
+                <!--Result (Resolution)-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="12dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:text="Resolution" />
+
+                    <Space
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent" />
+
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:hint="result"
+                        android:inputType="number"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:textSize="20sp"
+                        android:textAlignment="center"
+                        android:text="''/pixel" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="15dp"
+                android:background="#ffffff"
+                android:text="   Telescope with Imaging Camera   "
+                android:textSize="17sp" />
+
+        </RelativeLayout>
+
+        <!--GUIDESCOPE-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/border"
+                android:orientation="vertical"
+                android:padding="15dp">
+
+                <!--Focal Length-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Focal Length"
+                        android:textSize="18sp" />
+
+                    <Space
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+
+                    <EditText
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:hint="mm"
+                        android:inputType="number"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:text="mm"
+                        android:textAlignment="center"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+
+                <!--Barlow/Reducer-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Barlow or Reducer"
+                        android:textSize="18sp" />
+
+                    <Space
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+
+                    <Spinner
+                        android:id="@+id/barlow_reducer_guide_dropdown"
+                        android:layout_width="130dp"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:background="@android:drawable/btn_dropdown"
+                        android:entries="@array/barlow_reducer"
+                        android:spinnerMode="dropdown" />
+
+                </LinearLayout>
+
+                <!--CCD Pixel Size-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="CCD Pixel Size"
+                        android:textSize="18sp" />
+
+                    <Space
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+
+                    <EditText
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:hint="μm"
+                        android:inputType="number"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:text="μm"
+                        android:textAlignment="center"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+
+                <!--CCD Binning-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="CCD Binning"
+                        android:textSize="18sp" />
+
+                    <Space
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+
+                    <Spinner
+                        android:id="@+id/binning_guide_dropdown"
+                        android:layout_width="130dp"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:background="@android:drawable/btn_dropdown"
+                        android:entries="@array/ccd_binning"
+                        android:spinnerMode="dropdown" />
+
+                </LinearLayout>
+
+                <!--Result (Resolution)-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Resolution"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <Space
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:hint="result"
+                        android:inputType="number"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:text="''/pixel"
+                        android:textAlignment="center"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="15dp"
+                android:background="#ffffff"
+                android:text="   Telescope with Guidescope   "
+                android:textSize="17sp" />
+        </RelativeLayout>
+
+        <!--IMAGING AND GUIDING RATIO-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/border"
+                android:orientation="horizontal"
+                android:padding="20dp">
+
+                <TextView
+                    android:id="@+id/tvImagingGuidingRatio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:text="The ratio is: " />
+
+                <TextView
+                    android:id="@+id/tvImagingGuidingRatioResult"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textSize="18sp"
+                    android:hint="result"
+                    android:text=""/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="15dp"
+                android:background="#ffffff"
+                android:text="   Imaging and Guiding Ratio   "
+                android:textSize="17sp" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</ScrollView>

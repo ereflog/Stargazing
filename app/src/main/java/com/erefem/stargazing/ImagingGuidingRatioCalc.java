@@ -4,14 +4,14 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class GuidescopeCalc extends AppCompatActivity {
+public class ImagingGuidingRatioCalc extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.guidescope_calc);
+        setContentView(R.layout.imaging_guiding_ratio_calc);
         if (getSupportActionBar() != null) {
-            getSupportActionBar().setTitle(R.string.guidescope_calc_title);
+            getSupportActionBar().setTitle(R.string.imaging_guiding_ratio_calc_title);
         }
     }
 }

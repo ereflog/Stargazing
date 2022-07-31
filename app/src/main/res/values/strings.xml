@@ -9,7 +9,7 @@
     <string name="ccd_calc_title">CCD Calculators</string>
     <string name="ccd_telescope_combination_calc_title">CCD-Telescope Combination Calculator</string>
     <string name="ccd_filter_size_calc_title">CCD Filter Size Calculator</string>
-    <string name="guidescope_calc_title">Guidescope Calculators</string>
+    <string name="imaging_guiding_ratio_calc_title">Imaging-Guiding Ratio Calculator</string>
     <string name="unit_converter_title">Unit Converter</string>
     <string name="weather_forecast_title">Weather Forecast</string>
     <string name="red_light_tool_title">Red Light</string>
@@ -26,6 +26,36 @@ there are various calculators for calculating telescope and camera parameters, w
     <string name="eyepiece_fl_value">Eyepiece Focal Length Value</string>
     <string name="telescope_fl">Telescope Focal Length</string>
     <string name="true_fov">True Field of View Value</string>
-
+    <string-array name="ccd_binning">
+        <item>1x1</item>
+        <item>2x2</item>
+        <item>3x3</item>
+        <item>4x4</item>
+        <item>5x5</item>
+    </string-array>
+    <string-array name="barlow_reducer">
+        <item>None</item>
+        <item>0.33</item>
+        <item>0.4</item>
+        <item>0.5</item>
+        <item>0.63</item>
+        <item>0.67</item>
+        <item>0.7</item>
+        <item>0.72</item>
+        <item>0.73</item>
+        <item>0.8</item>
+        <item>0.85</item>
+        <item>1.15</item>
+        <item>1.5</item>
+        <item>1.6</item>
+        <item>2</item>
+        <item>2.25</item>
+        <item>2.5</item>
+        <item>2.75</item>
+        <item>3</item>
+        <item>4</item>
+        <item>4.2</item>
+        <item>5</item>
+    </string-array>
 
 </resources>

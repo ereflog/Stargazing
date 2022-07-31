@@ -40,7 +40,7 @@ public class HomeActivity extends AppCompatActivity {
                 getString(R.string.ccd_calc_title),
                 getString(R.string.ccd_telescope_combination_calc_title),
                 getString(R.string.ccd_filter_size_calc_title),
-                getString(R.string.guidescope_calc_title),
+                getString(R.string.imaging_guiding_ratio_calc_title),
                 getString(R.string.unit_converter_title),
                 getString(R.string.obs_log_book_title),
                 getString(R.string.weather_forecast_title),
@@ -92,7 +92,7 @@ public class HomeActivity extends AppCompatActivity {
                     startActivity(intent);
                 }
                 if (i == 8){
-                    Intent intent = new Intent(view.getContext(),GuidescopeCalc.class);
+                    Intent intent = new Intent(view.getContext(),ImagingGuidingRatioCalc.class);
                     startActivity(intent);
                 }
                 if (i == 9){
