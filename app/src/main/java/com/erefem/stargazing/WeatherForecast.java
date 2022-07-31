@@ -16,6 +16,7 @@ public class WeatherForecast extends AppCompatActivity {
             getSupportActionBar().setTitle(R.string.weather_forecast_title);
         }
 
+        //coba-coba pakai webview
         WebView webView = (WebView) findViewById(R.id.wv_weather_forecast);
         webView.getSettings().setLoadsImagesAutomatically(true);
         webView.getSettings().setJavaScriptEnabled(true);
