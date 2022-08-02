@@ -33,6 +33,7 @@
             android:layout_height="match_parent" />
 
         <EditText
+            android:id="@+id/et_pixsize"
             android:layout_width="130dp"
             android:layout_height="wrap_content"
             android:hint="Pixel Size"
@@ -63,6 +64,7 @@
             android:layout_height="match_parent" />
 
         <EditText
+            android:id="@+id/et_tfl"
             android:layout_width="130dp"
             android:layout_height="wrap_content"
             android:inputType="number"
@@ -93,6 +95,7 @@
             android:layout_height="match_parent" />
 
         <TextView
+            android:id="@+id/tv_resolution"
             android:layout_width="130dp"
             android:layout_height="wrap_content"
             android:textAlignment="center"
@@ -106,6 +109,12 @@
             android:layout_weight="1"
             android:text="'/pixel" />
     </LinearLayout>
+    <Button
+        android:id="@+id/btn_resolution"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="Calculate Resolution"
+        android:layout_gravity="center" />
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -127,6 +136,7 @@
 
 
         <EditText
+            android:id="@+id/et_dim_hor"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:hint="Horizontal Size"
@@ -141,6 +151,7 @@
 
 
         <EditText
+            android:id="@+id/et_dim_ver"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:hint="Vertical Size"
@@ -168,6 +179,7 @@
 
 
         <EditText
+            android:id="@+id/et_res_hor"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:hint="Horizontal Resolution"
@@ -182,6 +194,7 @@
 
 
         <EditText
+            android:id="@+id/et_res_ver"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:hint="Vertical Resolution"
@@ -208,13 +221,12 @@
             android:text="= Pixel Size:" />
 
 
-        <EditText
+        <TextView
+            android:id="@+id/tv_pix_hor"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="Horizontal Pixel Size"
-            android:inputType="number"
-            android:textSize="11sp"
-            tools:ignore="TouchTargetSizeCheck" />
+            android:hint="     Horizontal Value"
+            android:textSize="13sp" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -222,13 +234,12 @@
             android:text="X" />
 
 
-        <EditText
-            android:layout_width="100dp"
+        <TextView
+            android:id="@+id/tv_pix_ver"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="Vertical Pixel Size"
-            android:inputType="number"
-            android:textSize="11sp"
-            tools:ignore="TouchTargetSizeCheck" />
+            android:hint="    Vertical Value"
+            android:textSize="13sp" />
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -237,6 +248,12 @@
             android:text="µm" />
 
     </LinearLayout>
+    <Button
+        android:id="@+id/btn_pixel"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="Calculate Pixel Size"
+        android:layout_gravity="center" />
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -261,6 +278,7 @@
             android:layout_height="match_parent" />
 
         <EditText
+            android:id="@+id/et_ccd_pix"
             android:layout_width="130dp"
             android:layout_height="wrap_content"
             android:hint="Pixel Size"
@@ -287,6 +305,7 @@
 
 
         <EditText
+            android:id="@+id/et_res_hor2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:hint="Horizontal Resolution"
@@ -301,6 +320,7 @@
 
 
         <EditText
+            android:id="@+id/et_res_ver2"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:hint="Vertical Resolution"
@@ -327,13 +347,12 @@
             android:text="=   CCD Size:" />
 
 
-        <EditText
+        <TextView
+            android:id="@+id/tv_ccd_hor"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
-            android:hint="Horizontal Size"
-            android:inputType="number"
-            android:textSize="11sp"
-            tools:ignore="TouchTargetSizeCheck" />
+            android:hint="  Horizontal Size"
+            android:textSize="13sp" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -341,13 +360,12 @@
             android:text="X" />
 
 
-        <EditText
+        <TextView
+            android:id="@+id/tv_ccd_ver"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:hint="Vertical Size"
-            android:inputType="number"
-            android:textSize="11sp"
-            tools:ignore="TouchTargetSizeCheck" />
+            android:textSize="13sp" />
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -372,13 +390,12 @@
             android:layout_height="match_parent" />
 
 
-        <EditText
+        <TextView
+            android:id="@+id/tv_diagonal"
             android:layout_width="130dp"
             android:layout_height="wrap_content"
             android:hint="Diagonal"
-            android:inputType="number"
-            android:textSize="11sp"
-            tools:ignore="TouchTargetSizeCheck" />
+            android:textSize="14sp" />
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -386,4 +403,10 @@
             android:layout_weight="1"
             android:text="mm" />
     </LinearLayout>
+    <Button
+        android:id="@+id/btn_ccd"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="Calculate CCD Size"
+        android:layout_gravity="center" />
 </LinearLayout>

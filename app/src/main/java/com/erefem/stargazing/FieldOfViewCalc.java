@@ -43,10 +43,10 @@ public class FieldOfViewCalc extends AppCompatActivity {
             } else if (ettfl.getText().toString().isEmpty()) {
                 Toast.makeText(FieldOfViewCalc.this, "Telescope Focal Length is Empty!!!", Toast.LENGTH_SHORT).show();
             } else {
-                int Eyepiecefov = Integer.valueOf(etefov.getText().toString());
-                int Eyepiecefocallength = Integer.valueOf(etefl.getText().toString());
-                int Telescopefocallength = Integer.valueOf(ettfl.getText().toString());
-                int Actualvieldofview = Eyepiecefov * Eyepiecefocallength / Telescopefocallength ;
+                float Eyepiecefov = Integer.parseInt(etefov.getText().toString());
+                float Eyepiecefocallength = Integer.parseInt(etefl.getText().toString());
+                float Telescopefocallength = Integer.parseInt(ettfl.getText().toString());
+                float Actualvieldofview = Eyepiecefov * Eyepiecefocallength / Telescopefocallength ;
                 tvafov.setText(String.valueOf(Actualvieldofview));
             }
         });
