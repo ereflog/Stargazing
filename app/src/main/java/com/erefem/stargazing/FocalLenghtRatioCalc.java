@@ -62,8 +62,10 @@ public class FocalLenghtRatioCalc extends AppCompatActivity {
             } else if (etaperturratio.getText().toString().isEmpty()) {
                 Toast.makeText(FocalLenghtRatioCalc.this, "Aperture is Empty!!!", Toast.LENGTH_SHORT).show();
             } else {
-                float Focallenght = Integer.parseInt(etfocallenght.getText().toString());
-                float Apertureratio = Integer.parseInt(etaperturratio.getText().toString());
+                //float Focallenght = Integer.parseInt(etfocallenght.getText().toString());
+                float Focallenght =SUtils.getInteger(etfocallenght);
+                //float Apertureratio = Integer.parseInt(etaperturratio.getText().toString());
+                float Apertureratio=SUtils.getInteger(etaperturratio);
                 float Focalratio = Focallenght / Apertureratio;
                 tvfocalrasio.setText(String.valueOf(Focalratio));
             }
