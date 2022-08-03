@@ -18,7 +18,9 @@ public class SUtils {
     public static Double getDouble(EditText editTxt){
         return Double.parseDouble(editTxt.getText().toString());
     }
-
+    public static Boolean isEmpty(EditText editTxt){
+        return editTxt.getText().toString().isEmpty();
+    }
 
 
 

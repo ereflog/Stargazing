@@ -43,13 +43,14 @@ public class FocalLenghtRatioCalc extends AppCompatActivity {
 
         btnfl.setOnClickListener(view -> {
 
-            if (etapertur.getText().toString().isEmpty()) {
+            if (SUtils.isEmpty(etapertur)) {
                 Toast.makeText(FocalLenghtRatioCalc.this, "Aperture is Empty!!!", Toast.LENGTH_SHORT).show();
-            } else if (etfocalratio.getText().toString().isEmpty()) {
+            } else if (SUtils.isEmpty(etfocalratio)) {
                 Toast.makeText(FocalLenghtRatioCalc.this, "Focal Ratio is Empty!!!", Toast.LENGTH_SHORT).show();
             } else {
-                float Aperture = Integer.parseInt(etapertur.getText().toString());
-                float Focalratio = Integer.parseInt(etfocalratio.getText().toString());
+                //float Aperture = Integer.parseInt(etapertur.getText().toString());
+                float Aperture = SUtils.getInteger(etapertur);
+                float Focalratio = SUtils.getInteger(etfocalratio);
                 float Focallenght = Aperture * Focalratio;
                 tvfocallenght.setText(String.valueOf(Focallenght));
             }
@@ -57,9 +58,9 @@ public class FocalLenghtRatioCalc extends AppCompatActivity {
 
         btnfr.setOnClickListener(view -> {
 
-            if (etfocallenght.getText().toString().isEmpty()) {
+            if (SUtils.isEmpty(etfocallenght)) {
                 Toast.makeText(FocalLenghtRatioCalc.this, "Focal Lenght is Empty!!!", Toast.LENGTH_SHORT).show();
-            } else if (etaperturratio.getText().toString().isEmpty()) {
+            } else if (SUtils.isEmpty(etaperturratio)) {
                 Toast.makeText(FocalLenghtRatioCalc.this, "Aperture is Empty!!!", Toast.LENGTH_SHORT).show();
             } else {
                 //float Focallenght = Integer.parseInt(etfocallenght.getText().toString());
