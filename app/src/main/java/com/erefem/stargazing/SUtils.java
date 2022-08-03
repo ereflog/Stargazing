@@ -22,6 +22,12 @@ public class SUtils {
         return editTxt.getText().toString().isEmpty();
     }
 
+    public static void setToast(EditText editTxt, String string){
+        editTxt.requestFocus();
+        editTxt.setError(string);
+    }
+
+
 
 
 }
