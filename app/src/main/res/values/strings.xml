@@ -57,5 +57,12 @@ there are various calculators for calculating telescope and camera parameters, w
         <item>4.2</item>
         <item>5</item>
     </string-array>
+    <string-array name="Seeing">
+        <item>Exceptional Seeing (0.5–1" FWHM)</item>
+        <item>Good Seeing (1–2" FWHM)</item>
+        <item>OK Seeing (2–4" FWHM)</item>
+        <item>Poor Seeing (4–5" FWHM)</item>
+        <item>Very Poor Seeing (5–6" FWHM)</item>
+    </string-array>
 
 </resources>

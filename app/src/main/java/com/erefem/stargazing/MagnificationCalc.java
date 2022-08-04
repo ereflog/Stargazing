@@ -41,13 +41,19 @@ public class MagnificationCalc extends AppCompatActivity {
 
         btnmag.setOnClickListener(view -> {
 
-            if (ettfl.getText().toString().isEmpty()) {
-                Toast.makeText(MagnificationCalc.this, "Telescope Focal Length is Empty!!!", Toast.LENGTH_SHORT).show();
-            } else if (etefl.getText().toString().isEmpty()) {
-                Toast.makeText(MagnificationCalc.this, "Eyepiece Focal Length is Empty!!!", Toast.LENGTH_SHORT).show();
+            //if (SUtils.isEmpty(etefl)ettfl.getText().toString().isEmpty()) {
+            if (SUtils.isEmpty(ettfl)){
+                //Toast.makeText(MagnificationCalc.this, "Telescope Focal Length is Empty!!!", Toast.LENGTH_SHORT).show();
+                //ettfl.requestFocus();
+                //ettfl.setError("Telescope Focal Length is Empty!!!");
+                SUtils.setToast(ettfl,"Telescope Focal Length is Empty!!!");
+            //} else if (etefl.getText().toString().isEmpty()) {
+            } else if (SUtils.isEmpty(etefl)) {
+                //Toast.makeText(MagnificationCalc.this, "Eyepiece Focal Length is Empty!!!", Toast.LENGTH_SHORT).show();
+                SUtils.setToast(ettfl,"Eyepiece Focal Length is Empty!!!");
             } else {
-                float Telescopefocallength = Integer.parseInt(ettfl.getText().toString());
-                float Eyepiecefocallength = Integer.parseInt(etefl.getText().toString());
+                float Telescopefocallength = SUtils.getInteger(ettfl);
+                float Eyepiecefocallength = SUtils.getInteger(etefl);
                 float Magnification = Telescopefocallength / Eyepiecefocallength;
                 tvmag.setText(String.valueOf(Magnification));
             }
@@ -55,16 +61,19 @@ public class MagnificationCalc extends AppCompatActivity {
 
         btneyepiece.setOnClickListener(view -> {
 
-            if (ettfl2.getText().toString().isEmpty()) {
-                Toast.makeText(MagnificationCalc.this, "Telescope Focal Length is Empty!!!", Toast.LENGTH_SHORT).show();
-            } else if (etta.getText().toString().isEmpty()) {
-                Toast.makeText(MagnificationCalc.this, "Telescope Aperture is Empty!!!", Toast.LENGTH_SHORT).show();
-            } else if (etmag2.getText().toString().isEmpty()) {
-                Toast.makeText(MagnificationCalc.this, "Magnification is Empty!!!", Toast.LENGTH_SHORT).show();
+            if (SUtils.isEmpty(ettfl2)) {
+                //Toast.makeText(MagnificationCalc.this, "Telescope Focal Length is Empty!!!", Toast.LENGTH_SHORT).show();
+                SUtils.setToast(ettfl2,"Telescope Focal Length is Empty!!!");
+            } else if (SUtils.isEmpty(etta)) {
+                //Toast.makeText(MagnificationCalc.this, "Telescope Aperture is Empty!!!", Toast.LENGTH_SHORT).show();
+                SUtils.setToast(etta,"Telescope Aperture is Empty!!!");
+            } else if (SUtils.isEmpty(etmag2)) {
+                //Toast.makeText(MagnificationCalc.this, "Magnification is Empty!!!", Toast.LENGTH_SHORT).show();
+                SUtils.setToast(etmag2,"Magnification is Empty!!!");
             } else {
-                float Telescopefocallength = Integer.parseInt(ettfl2.getText().toString());
-                float Telescopeaperture = Integer.parseInt(etta.getText().toString());
-                float Magnification = Integer.parseInt(etmag2.getText().toString());
+                float Telescopefocallength = SUtils.getInteger(ettfl2);
+                float Telescopeaperture = SUtils.getInteger(etta);
+                float Magnification = SUtils.getInteger(etmag2);
                 float Eyepiece = Telescopefocallength / Magnification;
                 tvefl.setText(String.valueOf(Eyepiece));
             }
