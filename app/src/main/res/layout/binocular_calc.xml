@@ -1,374 +1,483 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:padding="16dp"
     tools:context=".BinocularCalc">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Real Field of View in Degrees"
-        android:textColor="@color/black"
-        android:textStyle="bold"
-        android:textSize="18sp" />
     <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:layout_height="wrap_content">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="16sp"
-            android:text="Field of View @ 1000m" />
-
-        <Space
-            android:layout_width="0dp"
+        <RelativeLayout
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1" />
+            android:layout_marginBottom="20dp">
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/border"
+                android:orientation="vertical"
+                android:padding="15dp">
 
-        <EditText
-            android:id="@+id/et_fov1000m"
-            android:layout_width="130dp"
-            android:layout_height="wrap_content"
-            android:hint="FOV @ 1000m"
-            android:inputType="number"
-            android:textSize="11sp"
-            tools:ignore="TouchTargetSizeCheck" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAlignment="center"
-            android:layout_weight="1"
-            android:text="m" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="FOV @1000m"
+                        android:textSize="18sp" />
 
-    </LinearLayout>
+                    <Space
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+                    <EditText
+                        android:id="@+id/et_fov1000m"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:hint="m"
+                        android:inputType="number"
+                        android:textSize="18sp" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="16sp"
-            android:text="=   Real Field of View" />
-        <Space
-            android:layout_width="10dp"
-            android:layout_weight="1"
-            android:layout_height="match_parent" />
+                    <TextView
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:text="m"
+                        android:textAlignment="center"
+                        android:textSize="20sp" />
 
-        <TextView
-            android:id="@+id/tv_real_fov"
-            android:layout_width="130dp"
-            android:layout_height="wrap_content"
-            android:hint="Value"
-            android:textSize="16sp" />
+                </LinearLayout>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAlignment="center"
-            android:layout_weight="1"
-            android:text="\u00b0" />
-    </LinearLayout>
-    <Button
-        android:id="@+id/btn_degrees"
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"
-        android:text="Calculate Degrees"
-        android:layout_gravity="center" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="horizontal">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Real Field of View @ 1000m"
-        android:textColor="@color/black"
-        android:textStyle="bold"
-        android:textSize="18sp" />
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Real Field of View"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="16sp"
-            android:text="Field of View" />
+                    <Space
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
 
-        <Space
-            android:layout_width="60dp"
-            android:layout_weight="1"
-            android:layout_height="match_parent" />
+                    <TextView
+                        android:id="@+id/tv_real_fov"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:hint="value"
+                        android:textAlignment="center"
+                        android:textSize="18sp" />
 
-        <EditText
-            android:id="@+id/et_fov"
-            android:layout_width="130dp"
-            android:layout_height="wrap_content"
-            android:hint="Deg"
-            android:inputType="number"
-            android:textSize="11sp"
-            tools:ignore="TouchTargetSizeCheck" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAlignment="center"
-            android:layout_weight="1"
-            android:text="\u00b0" />
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:text="\u00b0"
+                        android:textAlignment="center"
+                        android:textSize="20sp" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="16sp"
-            android:text="=   Real Field of View" />
-        <Space
-            android:layout_width="0dp"
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btn_degrees"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:layout_gravity="center"
+                    android:text="Calculate Degrees" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="15dp"
+                android:background="#ffffff"
+                android:text="   Real Field of View in Degrees :   "
+                android:textSize="17sp" />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1" />
+            android:layout_marginBottom="20dp">
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/border"
+                android:orientation="vertical"
+                android:padding="15dp">
 
-        <TextView
-            android:id="@+id/tv_real_fov2"
-            android:layout_width="130dp"
-            android:layout_height="wrap_content"
-            android:textSize="16sp"
-            android:hint="Value" />
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:textAlignment="center"
-            android:textSize="7sp"
-            android:text="m@1000m" />
-    </LinearLayout>
-    <Button
-        android:id="@+id/btn_1000m"
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"
-        android:text="Calculate @1000m"
-        android:layout_gravity="center" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Apparent Field of View (Simple)"
-        android:textColor="@color/black"
-        android:textSize="18sp"
-        android:textStyle="bold" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Field of View"
+                        android:textSize="18sp" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+                    <Space
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="16sp"
-            android:text="Angular FOV" />
+                    <EditText
+                        android:id="@+id/et_fov"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:hint="deg"
+                        android:inputType="number"
+                        android:textSize="18sp" />
 
-        <Space
-            android:layout_width="65dp"
-            android:layout_weight="1"
-            android:layout_height="match_parent" />
+                    <TextView
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:text="\u00b0"
+                        android:textAlignment="center"
+                        android:textSize="20sp" />
 
-        <EditText
-            android:id="@+id/et_ang_fov"
-            android:layout_width="130dp"
-            android:layout_height="wrap_content"
-            android:hint="Deg"
-            android:inputType="number"
-            android:textSize="11sp"
-            tools:ignore="TouchTargetSizeCheck" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAlignment="center"
-            android:layout_weight="1"
-            android:text="\u00b0" />
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+                </LinearLayout>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="16sp"
-            android:text="Magnification" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="horizontal">
 
-        <Space
-            android:layout_width="60dp"
-            android:layout_weight="1"
-            android:layout_height="match_parent" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Real Field of View"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
 
-        <EditText
-            android:id="@+id/et_mag"
-            android:layout_width="130dp"
-            android:layout_height="wrap_content"
-            android:hint="Mag."
-            android:inputType="number"
-            android:textSize="11sp"
-            tools:ignore="TouchTargetSizeCheck" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAlignment="center"
-            android:layout_weight="1"
-            android:text="x" />
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+                    <Space
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="16sp"
-            android:text="=   Apparent FOV" />
+                    <TextView
+                        android:id="@+id/tv_real_fov2"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:hint="value"
+                        android:textAlignment="center"
+                        android:textSize="18sp" />
 
-        <Space
-            android:layout_width="40dp"
+                    <TextView
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:text="m"
+                        android:textAlignment="center"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+                <Button
+                    android:id="@+id/btn_1000m"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:text="Calculate @1000m"
+                    android:layout_gravity="center" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="15dp"
+                android:background="#ffffff"
+                android:text="   Real Field of View @1000m :   "
+                android:textSize="17sp" />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1" />
+            android:layout_marginBottom="20dp">
 
-        <TextView
-            android:id="@+id/tv_apparent_fov"
-            android:layout_width="130dp"
-            android:layout_height="wrap_content"
-            android:textSize="16sp"
-            android:hint="Value" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAlignment="center"
-            android:layout_weight="1"
-            android:text="\u00b0" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/border"
+                android:orientation="vertical"
+                android:padding="15dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Angular FOV"
+                        android:textSize="18sp" />
+
+                    <Space
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+
+                    <EditText
+                        android:id="@+id/et_ang_fov"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:hint="deg"
+                        android:inputType="number"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:text="\u00b0"
+                        android:textAlignment="center"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Magnification"
+                        android:textSize="18sp" />
+
+                    <Space
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+
+                    <EditText
+                        android:id="@+id/et_mag"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:hint="mag"
+                        android:inputType="number"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:text="x"
+                        android:textAlignment="center"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Apparent FOV"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <Space
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:id="@+id/tv_apparent_fov"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:hint="value"
+                        android:textAlignment="center"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:text="\u00b0"
+                        android:textAlignment="center"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btn_apparent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:layout_gravity="center"
+                    android:text="Calculate apparent" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="15dp"
+                android:background="#ffffff"
+                android:text="   Apparent Field of View (Simple) :   "
+                android:textSize="17sp" />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/border"
+                android:orientation="vertical"
+                android:padding="15dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Angular FOV"
+                        android:textSize="18sp" />
+
+                    <Space
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+
+                    <EditText
+                        android:id="@+id/et_ang_fov2"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:hint="deg"
+                        android:inputType="number"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:text="\u00b0"
+                        android:textAlignment="center"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Magnification"
+                        android:textSize="18sp" />
+
+                    <Space
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+
+                    <EditText
+                        android:id="@+id/et_mag2"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:hint="mag"
+                        android:inputType="number"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:text="x"
+                        android:textAlignment="center"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Apparent FOV"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <Space
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:id="@+id/tv_apparent_fov2"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:hint="value"
+                        android:textAlignment="center"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:text="\u00b0"
+                        android:textAlignment="center"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btn_apparent2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:layout_gravity="center"
+                    android:text="Calculate apparent" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="15dp"
+                android:background="#ffffff"
+                android:text="Apparent FOV (ISO 14132-1:2002)   "
+                android:textSize="17sp" />
+
+        </RelativeLayout>
+
     </LinearLayout>
-    <Button
-        android:id="@+id/btn_apparent"
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"
-        android:text="Calculate apparent"
-        android:layout_gravity="center" />
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Apparent Field of View (ISO 14132-1:2002 Standard)"
-        android:textColor="@color/black"
-        android:textStyle="bold"
-        android:textSize="18sp"/>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="16sp"
-            android:text="Angular FOV" />
-
-        <Space
-            android:layout_width="65dp"
-            android:layout_weight="1"
-            android:layout_height="match_parent" />
-
-        <EditText
-            android:id="@+id/et_ang_fov2"
-            android:layout_width="130dp"
-            android:layout_height="wrap_content"
-            android:hint="Deg"
-            android:inputType="number"
-            android:textSize="11sp"
-            tools:ignore="TouchTargetSizeCheck" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAlignment="center"
-            android:layout_weight="1"
-            android:text="\u00b0" />
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="16sp"
-            android:text="Magnification" />
-
-        <Space
-            android:layout_width="60dp"
-            android:layout_weight="1"
-            android:layout_height="match_parent" />
-
-        <EditText
-            android:id="@+id/et_mag2"
-            android:layout_width="130dp"
-            android:layout_height="wrap_content"
-            android:hint="Mag."
-            android:inputType="number"
-            android:textSize="11sp"
-            tools:ignore="TouchTargetSizeCheck" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAlignment="center"
-            android:layout_weight="1"
-            android:text="x" />
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="16sp"
-            android:text="=   Apparent FOV" />
-
-        <Space
-            android:layout_width="40dp"
-            android:layout_weight="1"
-            android:layout_height="match_parent" />
-
-        <TextView
-            android:id="@+id/tv_apparent_fov2"
-            android:layout_width="130dp"
-            android:layout_height="wrap_content"
-            android:textSize="16sp"
-            android:hint="Value" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAlignment="center"
-            android:layout_weight="1"
-            android:text="\u00b0" />
-    </LinearLayout>
-    <Button
-        android:id="@+id/btn_apparent2"
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"
-        android:text="Calculate apparent"
-        android:layout_gravity="center" />
-
-</LinearLayout>
+</ScrollView>
