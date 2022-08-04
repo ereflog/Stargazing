@@ -384,7 +384,7 @@
                 android:layout_alignParentTop="true"
                 android:layout_marginLeft="15dp"
                 android:background="#ffffff"
-                android:text="   Telescope with Guidescope   "
+                android:text="   Guidescope with Camera   "
                 android:textSize="17sp" />
         </RelativeLayout>
 
