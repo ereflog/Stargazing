@@ -33,48 +33,6 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Telescope"
-                        android:textSize="18sp" />
-
-
-                    <EditText
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="Custom"
-                        android:textAlignment="center"
-                        android:textSize="18sp" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Camera"
-                        android:textSize="18sp" />
-
-
-                    <EditText
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="Custom"
-                        android:textAlignment="center"
-                        android:textSize="18sp" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
                         android:text="Barlow or Reducer"
                         android:textSize="18sp" />
 
@@ -111,6 +69,7 @@
                         android:layout_weight="1" />
 
                     <EditText
+                        android:id="@+id/et_fs_aperture"
                         android:layout_width="80dp"
                         android:layout_height="wrap_content"
                         android:hint="mm"
@@ -142,6 +101,7 @@
                         android:layout_weight="1" />
 
                     <EditText
+                        android:id="@+id/et_fs_fl"
                         android:layout_width="80dp"
                         android:layout_height="wrap_content"
                         android:hint="mm"
@@ -174,10 +134,11 @@
                         android:layout_weight="1" />
 
                     <EditText
+                        android:id="@+id/et_fs_diagonal"
                         android:layout_width="80dp"
                         android:layout_height="wrap_content"
                         android:hint="mm"
-                        android:inputType="number"
+                        android:inputType="numberDecimal"
                         android:textSize="18sp" />
 
                     <TextView
@@ -206,6 +167,7 @@
                         android:layout_weight="1" />
 
                     <EditText
+                        android:id="@+id/et_fs_distance"
                         android:layout_width="80dp"
                         android:layout_height="wrap_content"
                         android:hint="mm"
@@ -238,6 +200,7 @@
                         android:layout_weight="1" />
 
                     <TextView
+                        android:id="@+id/tv_fs_min"
                         android:layout_width="75dp"
                         android:layout_height="wrap_content"
                         android:hint="mm"
@@ -253,6 +216,7 @@
                 </LinearLayout>
 
                 <Button
+                    android:id="@+id/btn_fs_min"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
