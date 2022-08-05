@@ -53,6 +53,7 @@
                         android:layout_weight="1" />
 
                     <EditText
+                        android:id="@+id/et_tele_fl"
                         android:layout_width="80dp"
                         android:layout_height="wrap_content"
                         android:hint="mm"
@@ -114,10 +115,11 @@
                         android:layout_weight="1" />
 
                     <EditText
+                        android:id="@+id/et_tele_ps"
                         android:layout_width="80dp"
                         android:layout_height="wrap_content"
                         android:hint="μm"
-                        android:inputType="number"
+                        android:inputType="numberDecimal"
                         android:textSize="18sp" />
 
                     <TextView
@@ -177,6 +179,7 @@
                         android:layout_weight="1" />
 
                     <TextView
+                        android:id="@+id/tv_resolution_tele"
                         android:layout_width="80dp"
                         android:layout_height="wrap_content"
                         android:hint="result"
@@ -237,6 +240,7 @@
                         android:layout_weight="1" />
 
                     <EditText
+                        android:id="@+id/et_cam_fl"
                         android:layout_width="80dp"
                         android:layout_height="wrap_content"
                         android:hint="mm"
@@ -298,10 +302,11 @@
                         android:layout_weight="1" />
 
                     <EditText
+                        android:id="@+id/et_cam_ps"
                         android:layout_width="80dp"
                         android:layout_height="wrap_content"
                         android:hint="μm"
-                        android:inputType="number"
+                        android:inputType="numberDecimal"
                         android:textSize="18sp" />
 
                     <TextView
@@ -361,6 +366,7 @@
                         android:layout_weight="1" />
 
                     <TextView
+                        android:id="@+id/tv_cam_resolution"
                         android:layout_width="80dp"
                         android:layout_height="wrap_content"
                         android:hint="result"
@@ -414,9 +420,31 @@
                     android:id="@+id/tvImagingGuidingRatioResult"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:hint="result"
-                    android:text=""
+                    android:hint="__"
                     android:textSize="18sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textStyle="bold"
+                    android:text=":"
+                    android:textSize="18sp" />
+                <TextView
+                    android:id="@+id/tvImagingGuidingRatioResult2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:hint="__"
+                    android:textSize="18sp" />
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+
+                <Button
+                    android:id="@+id/btn_enter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:layout_gravity="center"
+                    android:text="enter" />
             </LinearLayout>
 
             <TextView
