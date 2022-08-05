@@ -53,7 +53,7 @@ public class CCD_Calc extends AppCompatActivity {
             } else if (et_tfl.getText().toString().isEmpty()) {
                 Toast.makeText(CCD_Calc.this, "Telescope Focal Length is Empty!!!", Toast.LENGTH_SHORT).show();
             } else {
-                float CCDpixel = Integer.parseInt(et_pixsize.getText().toString());
+                float CCDpixel = Float.parseFloat(et_pixsize.getText().toString());
                 float TeleFL = Integer.parseInt(et_tfl.getText().toString());
                 float Resolution =
                         (float) (CCDpixel / TeleFL * 206.265);
@@ -93,7 +93,7 @@ public class CCD_Calc extends AppCompatActivity {
             } else if (et_res_ver2.getText().toString().isEmpty()) {
                 Toast.makeText(CCD_Calc.this, "Vertical Resolution is Empty!!!", Toast.LENGTH_SHORT).show();
             } else {
-                float CCD_pixel = Integer.parseInt(et_ccd_pix.getText().toString());
+                float CCD_pixel = Float.parseFloat(et_ccd_pix.getText().toString());
                 float Resolution_Hor2 = Integer.parseInt(et_res_hor2.getText().toString());
                 float Resolution_Ver2 = Integer.parseInt(et_res_ver2.getText().toString());
                 float Hor_Size = CCD_pixel * Resolution_Hor2 / 1000;
