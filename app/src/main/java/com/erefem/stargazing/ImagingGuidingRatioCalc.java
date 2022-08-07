@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 public class ImagingGuidingRatioCalc extends AppCompatActivity {
@@ -13,6 +14,10 @@ public class ImagingGuidingRatioCalc extends AppCompatActivity {
             et_tele_fl, et_tele_ps, et_cam_fl, et_cam_ps;
     TextView
             tv_resolution_tele, tv_cam_resolution, tvImagingGuidingRatioResult, tvImagingGuidingRatioResult2;
+
+    Spinner
+            barlow_reducer_imaging_dropdown, barlow_reducer_guide_dropdown, binning_imaging_dropdown,
+            binning_guide_dropdown;
 
     Button
             btn_enter;
@@ -49,6 +54,8 @@ public class ImagingGuidingRatioCalc extends AppCompatActivity {
                 SUtils.setToast(et_cam_ps,"is Empty!!!");
 
             } else {
+                float dd_barlow_reducer_imaging = SUtils.getBinningSpinnerValue(barlow_reducer_imaging_dropdown);
+                float dd_barlow_reducer_guide_dropdown = SUtils.getBinningSpinnerValue(barlow_reducer_guide_dropdown);
                 float Tele_Fl = Integer.parseInt(et_tele_fl.getText().toString());
                 float Tele_Ps = Float.parseFloat(et_tele_ps.getText().toString());
                 float Cam_Fl = Integer.parseInt(et_cam_fl.getText().toString());
