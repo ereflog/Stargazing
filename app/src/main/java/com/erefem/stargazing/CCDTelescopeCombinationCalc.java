@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 public class CCDTelescopeCombinationCalc extends AppCompatActivity {
@@ -13,6 +14,8 @@ public class CCDTelescopeCombinationCalc extends AppCompatActivity {
             et_pixel_size, et_focal_lenght;
     TextView
             tv_resolution;
+    Spinner
+            dd_barlow_reducer_ccd_imaging_dropdown, binning_spinner;
 
     Button
             btn_resolution;
@@ -38,10 +41,12 @@ public class CCDTelescopeCombinationCalc extends AppCompatActivity {
             } else if (SUtils.isEmpty(et_focal_lenght)) {
                 SUtils.setToast(et_focal_lenght,"is Empty!!!");
             } else {
+                float dd_barlow_reducer =SUtils.getFloatSpinnerValue(dd_barlow_reducer_ccd_imaging_dropdown);
                 float Pixel_size = Float.parseFloat(et_pixel_size.getText().toString());
-                float Focal_lenght = Integer.parseInt(et_focal_lenght.getText().toString());
+                float Focal_lenght = SUtils.getFloat(et_focal_lenght) * dd_barlow_reducer;
+                float dd_binning = SUtils.getBinningSpinnerValue(binning_spinner);
                 float Resolution =
-                        (float) (Pixel_size / Focal_lenght * 206.265);
+                        (float) (Pixel_size / Focal_lenght * 206.265) * dd_binning;
                 tv_resolution.setText(String.valueOf(Resolution));
             }
         });
