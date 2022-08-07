@@ -43,7 +43,7 @@ public class MagnificationCalc extends AppCompatActivity {
             if (SUtils.isEmpty(ettfl)){
                 SUtils.setToast(ettfl,"is Empty!!!");
             } else if (SUtils.isEmpty(etefl)) {
-                SUtils.setToast(ettfl,"is Empty!!!");
+                SUtils.setToast(etefl,"is Empty!!!");
             } else {
                 float Telescopefocallength = SUtils.getInteger(ettfl);
                 float Eyepiecefocallength = SUtils.getInteger(etefl);
