@@ -26,6 +26,29 @@ there are various calculators for calculating telescope and camera parameters, w
     <string name="eyepiece_fl_value">Eyepiece Focal Length Value</string>
     <string name="telescope_fl">Telescope Focal Length</string>
     <string name="true_fov">True Field of View Value</string>
+    <string name="e_g_john_doe">e.g John Doe</string>
+    <string name="observation_log_book">Observation Log Book</string>
+    <string name="object_name">Object Name :</string>
+    <string name="e_g_moon_mars_stars_etc">e.g Moon, Mars, Stars, etc</string>
+    <string name="observer">Observer :</string>
+    <string name="coordinate">Coordinate :</string>
+    <string name="latitude">Latitude</string>
+    <string name="longitude">Longitude</string>
+    <string name="date">Date :</string>
+    <string name="ddmmyyyy">DDMMYYYY</string>
+    <string name="time">Time :</string>
+    <string name="save_log_book">Save Log Book</string>
+    <string name="description_of_object">Description of Object</string>
+    <string name="comment">Comment :</string>
+    <string name="e_g_original_soft_warm_etc">e.g Original, soft, Warm etc</string>
+    <string name="filter">Filter:</string>
+    <string name="e_g_100x_200x_etc">e.g 100x, 200x, etc</string>
+    <string name="magnification">Magnification :</string>
+    <string name="e_g_telescope_camera_etc">e.g Telescope, Camera, Etc</string>
+    <string name="instrument">Instrument:</string>
+    <string name="seeing_poor">Seeing Poor</string>
+    <string name="seeing_excellent">Seeing Excellent</string>
+    <string name="_00_00">00:00</string>
     <string-array name="ccd_binning">
         <item>1x1</item>
         <item>2x2</item>
