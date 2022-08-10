@@ -3,18 +3,30 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/boyst_000/AndroidStudioProjects/Stargazing/app/src/main/res/drawable/border.xml" value="0.17291666666666666" />
-        <entry key="..\:/Users/boyst_000/AndroidStudioProjects/Stargazing/app/src/main/res/layout/activity_about.xml" value="0.22" />
-        <entry key="..\:/Users/boyst_000/AndroidStudioProjects/Stargazing/app/src/main/res/layout/binocular_calc.xml" value="0.25" />
-        <entry key="..\:/Users/boyst_000/AndroidStudioProjects/Stargazing/app/src/main/res/layout/ccd_calc.xml" value="0.25" />
-        <entry key="..\:/Users/boyst_000/AndroidStudioProjects/Stargazing/app/src/main/res/layout/ccd_filter_size_calc.xml" value="0.15677083333333333" />
-        <entry key="..\:/Users/boyst_000/AndroidStudioProjects/Stargazing/app/src/main/res/layout/field_of_view_calc.xml" value="0.25" />
-        <entry key="..\:/Users/boyst_000/AndroidStudioProjects/Stargazing/app/src/main/res/layout/focal_length_ratio_calc.xml" value="0.25" />
-        <entry key="..\:/Users/boyst_000/AndroidStudioProjects/Stargazing/app/src/main/res/layout/home.xml" value="0.15677083333333333" />
-        <entry key="..\:/Users/boyst_000/AndroidStudioProjects/Stargazing/app/src/main/res/layout/magnification_calc.xml" value="0.25" />
-        <entry key="..\:/Users/boyst_000/AndroidStudioProjects/Stargazing/app/src/main/res/layout/privacy_policy.xml" value="0.15677083333333333" />
+        <entry key="..\:/Applications/Stargazing/app/src/main/res/layout/activity_about.xml" value="0.36666666666666664" />
+        <entry key="..\:/Applications/Stargazing/app/src/main/res/layout/activity_home_second.xml" value="0.36666666666666664" />
+        <entry key="..\:/Applications/Stargazing/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
+        <entry key="..\:/Applications/Stargazing/app/src/main/res/layout/calc.xml" value="0.36102564102564105" />
+        <entry key="..\:/Applications/Stargazing/app/src/main/res/layout/ccd_calculators.xml" value="0.20416666666666666" />
+        <entry key="..\:/Applications/Stargazing/app/src/main/res/layout/ccd_suitability.xml" value="0.36666666666666664" />
+        <entry key="..\:/Applications/Stargazing/app/src/main/res/layout/contoh_calc.xml" value="0.36666666666666664" />
+        <entry key="..\:/Applications/Stargazing/app/src/main/res/layout/credit_and_data_source.xml" value="0.35260416666666666" />
+        <entry key="..\:/Applications/Stargazing/app/src/main/res/layout/focallenghtratio.xml" value="0.33" />
+        <entry key="..\:/Applications/Stargazing/app/src/main/res/layout/fragment_home_second.xml" value="0.36666666666666664" />
+        <entry key="..\:/Applications/Stargazing/app/src/main/res/layout/guidescope_calculator.xml" value="0.36666666666666664" />
+        <entry key="..\:/Applications/Stargazing/app/src/main/res/layout/home.xml" value="0.25" />
+        <entry key="..\:/Applications/Stargazing/app/src/main/res/layout/home2.xml" value="0.25" />
+        <entry key="..\:/Applications/Stargazing/app/src/main/res/layout/magnification_calc.xml" value="0.36666666666666664" />
+        <entry key="..\:/Applications/Stargazing/app/src/main/res/layout/magnificationcalc.xml" value="0.36666666666666664" />
+        <entry key="..\:/Applications/Stargazing/app/src/main/res/layout/privacy_policy.xml" value="0.36666666666666664" />
+        <entry key="..\:/Applications/Stargazing/app/src/main/res/layout/red_light_tool.xml" value="0.36666666666666664" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_15" project-jdk-name="17" project-jdk-type="JavaSDK" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
 </project>
