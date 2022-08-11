@@ -2,7 +2,11 @@ package com.erefem.stargazing;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.graphics.Color;
 import android.os.Bundle;
+import android.view.Window;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 
 public class RedLightTool extends AppCompatActivity {
 
@@ -10,8 +14,6 @@ public class RedLightTool extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.red_light_tool);
-        if (getSupportActionBar() != null) {
-            getSupportActionBar().setTitle(R.string.red_light_tool_title);
-        }
+
     }
 }
