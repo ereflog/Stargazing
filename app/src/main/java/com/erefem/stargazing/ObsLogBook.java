@@ -25,7 +25,7 @@ public class  ObsLogBook extends AppCompatActivity {
             excellent,
             poor;
     Button
-            btn_save;
+            btn_save_log;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,8 +34,8 @@ public class  ObsLogBook extends AppCompatActivity {
         if (getSupportActionBar() != null) {
             getSupportActionBar().setTitle(R.string.obs_log_book_title);
 
-
         }
+
         et_object_name = findViewById(R.id.et_object_name);
         et_observer = findViewById(R.id.et_observer);
         et_latitude = findViewById(R.id.et_latitude);
@@ -48,8 +48,7 @@ public class  ObsLogBook extends AppCompatActivity {
         et_magnification = findViewById(R.id.et_magnification);
         et_filter = findViewById(R.id.et_filter);
         et_comment = findViewById(R.id.et_comment);
-        btn_save = findViewById(R.id.btn_save);
-
+        btn_save_log = findViewById(R.id.btn_save_log);
 
     }
 }
