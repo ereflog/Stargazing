@@ -13,13 +13,8 @@
         android:layout_height="wrap_content">
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:text="Imaging-Guiding Ratio"
-            android:textColor="@color/black"
-            android:textStyle="bold"
-            android:textSize="24sp" />
+            style="@style/TextTitle.Name"
+            android:text="Imaging-Guiding Ratio" />
 
         <!--IMAGING CAMERA-->
         <RelativeLayout
@@ -28,12 +23,7 @@
             android:layout_marginBottom="20dp">
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/border"
-                android:orientation="vertical"
-                android:padding="15dp">
+                style="@style/BorderParam">
 
                 <!--Focal Length-->
                 <LinearLayout
@@ -42,30 +32,19 @@
                     android:orientation="horizontal">
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Focal Length"
-                        android:textSize="18sp" />
+                        style="@style/TextParameter.Name"
+                        android:text="Focal Length" />
 
-                    <Space
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1" />
+                    <Space style="@style/Spacing" />
 
                     <EditText
                         android:id="@+id/et_tele_fl"
-                        android:layout_width="80dp"
-                        android:layout_height="wrap_content"
-                        android:hint="mm"
-                        android:inputType="number"
-                        android:textSize="18sp" />
+                        style="@style/TextParameter.InputNumber"
+                        android:hint="mm" />
 
                     <TextView
-                        android:layout_width="70dp"
-                        android:layout_height="wrap_content"
-                        android:text="mm"
-                        android:textAlignment="center"
-                        android:textSize="20sp" />
+                        style="@style/TextParameter.Unit"
+                        android:text="mm" />
 
                 </LinearLayout>
 
@@ -76,15 +55,10 @@
                     android:orientation="horizontal">
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Barlow or Reducer"
-                        android:textSize="18sp" />
+                        style="@style/TextParameter.Name"
+                        android:text="Barlow or Reducer" />
 
-                    <Space
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1" />
+                    <Space style="@style/Spacing" />
 
                     <Spinner
                         android:id="@+id/dd_barlow_reducer_imaging_dropdown"
@@ -104,30 +78,19 @@
                     android:orientation="horizontal">
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="CCD Pixel Size"
-                        android:textSize="18sp" />
+                        style="@style/TextParameter.Name"
+                        android:text="CCD Pixel Size" />
 
-                    <Space
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1" />
+                    <Space style="@style/Spacing" />
 
                     <EditText
                         android:id="@+id/et_tele_ps"
-                        android:layout_width="80dp"
-                        android:layout_height="wrap_content"
-                        android:hint="μm"
-                        android:inputType="numberDecimal"
-                        android:textSize="18sp" />
+                        style="@style/TextParameter.InputDecimal"
+                        android:hint="μm" />
 
                     <TextView
-                        android:layout_width="70dp"
-                        android:layout_height="wrap_content"
-                        android:text="μm"
-                        android:textAlignment="center"
-                        android:textSize="20sp" />
+                        style="@style/TextParameter.Unit"
+                        android:text="μm" />
 
                 </LinearLayout>
 
@@ -138,15 +101,10 @@
                     android:orientation="horizontal">
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="CCD Binning"
-                        android:textSize="18sp" />
+                        style="@style/TextParameter.Name"
+                        android:text="CCD Binning" />
 
-                    <Space
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1" />
+                    <Space style="@style/Spacing" />
 
                     <Spinner
                         android:id="@+id/binning_imaging_dropdown"
@@ -167,44 +125,26 @@
                     android:orientation="horizontal">
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Resolution"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
+                        style="@style/TextParameter.Name"
+                        android:text="Resolution" />
 
-                    <Space
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1" />
+                    <Space style="@style/Spacing" />
 
-                    <TextView
+                    <EditText
                         android:id="@+id/tv_resolution_tele"
-                        android:layout_width="80dp"
-                        android:layout_height="wrap_content"
-                        android:hint="result"
-                        android:inputType="number"
-                        android:textSize="18sp" />
+                        style="@style/TextParameter.Result" />
 
                     <TextView
-                        android:layout_width="70dp"
-                        android:layout_height="wrap_content"
-                        android:text="''/pixel"
-                        android:textAlignment="center"
-                        android:textSize="20sp" />
+                        style="@style/TextParameter.Unit"
+                        android:text="''/pixel" />
 
                 </LinearLayout>
 
             </LinearLayout>
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
-                android:layout_marginLeft="15dp"
-                android:background="#ffffff"
-                android:text="   Telescope with Imaging Camera   "
-                android:textSize="17sp" />
+                style="@style/TextSubTitle.Body"
+                android:text="   Telescope with Imaging Camera   " />
 
         </RelativeLayout>
 
@@ -215,12 +155,7 @@
             android:layout_marginBottom="20dp">
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/border"
-                android:orientation="vertical"
-                android:padding="15dp">
+                style="@style/BorderParam">
 
                 <!--Focal Length-->
                 <LinearLayout
@@ -229,30 +164,20 @@
                     android:orientation="horizontal">
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Focal Length"
-                        android:textSize="18sp" />
+                        style="@style/TextParameter.Name"
+                        android:text="Focal Length" />
 
                     <Space
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1" />
+                        style="@style/Spacing"/>
 
                     <EditText
+                        style="@style/TextParameter.InputNumber"
                         android:id="@+id/et_cam_fl"
-                        android:layout_width="80dp"
-                        android:layout_height="wrap_content"
-                        android:hint="mm"
-                        android:inputType="number"
-                        android:textSize="18sp" />
+                        android:hint="mm" />
 
                     <TextView
-                        android:layout_width="70dp"
-                        android:layout_height="wrap_content"
-                        android:text="mm"
-                        android:textAlignment="center"
-                        android:textSize="20sp" />
+                        style="@style/TextParameter.Unit"
+                        android:text="mm" />
 
                 </LinearLayout>
 
@@ -263,24 +188,20 @@
                     android:orientation="horizontal">
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Barlow or Reducer"
-                        android:textSize="18sp" />
+                        style="@style/TextParameter.Name"
+                        android:text="Barlow or Reducer" />
 
                     <Space
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1" />
+                        style="@style/Spacing"/>
 
                     <Spinner
                         android:id="@+id/dd_barlow_reducer_guide_dropdown"
                         android:layout_width="130dp"
                         android:layout_height="wrap_content"
-                        android:textAlignment="center"
                         android:background="@android:drawable/btn_dropdown"
                         android:entries="@array/barlow_reducer"
-                        android:spinnerMode="dropdown" />
+                        android:spinnerMode="dropdown"
+                        android:textAlignment="center" />
 
                 </LinearLayout>
 
@@ -291,30 +212,20 @@
                     android:orientation="horizontal">
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="CCD Pixel Size"
-                        android:textSize="18sp" />
+                        style="@style/TextParameter.Name"
+                        android:text="CCD Pixel Size" />
 
                     <Space
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1" />
+                        style="@style/Spacing"/>
 
                     <EditText
+                        style="@style/TextParameter.InputDecimal"
                         android:id="@+id/et_cam_ps"
-                        android:layout_width="80dp"
-                        android:layout_height="wrap_content"
-                        android:hint="μm"
-                        android:inputType="numberDecimal"
-                        android:textSize="18sp" />
+                        android:hint="μm" />
 
                     <TextView
-                        android:layout_width="70dp"
-                        android:layout_height="wrap_content"
-                        android:text="μm"
-                        android:textAlignment="center"
-                        android:textSize="20sp" />
+                        style="@style/TextParameter.Unit"
+                        android:text="μm" />
 
                 </LinearLayout>
 
@@ -325,24 +236,20 @@
                     android:orientation="horizontal">
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="CCD Binning"
-                        android:textSize="18sp" />
+                        style="@style/TextParameter.Name"
+                        android:text="CCD Binning" />
 
                     <Space
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1" />
+                        style="@style/Spacing"/>
 
                     <Spinner
                         android:id="@+id/binning_guide_dropdown"
                         android:layout_width="130dp"
                         android:layout_height="wrap_content"
-                        android:textAlignment="center"
                         android:background="@android:drawable/btn_dropdown"
                         android:entries="@array/ccd_binning"
-                        android:spinnerMode="dropdown" />
+                        android:spinnerMode="dropdown"
+                        android:textAlignment="center" />
 
                 </LinearLayout>
 
@@ -354,44 +261,27 @@
                     android:orientation="horizontal">
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Resolution"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
+                        style="@style/TextParameter.Name"
+                        android:text="Resolution" />
 
                     <Space
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1" />
+                        style="@style/Spacing"/>
+
+                    <EditText
+                        style="@style/TextParameter.Result"
+                        android:id="@+id/tv_cam_resolution" />
 
                     <TextView
-                        android:id="@+id/tv_cam_resolution"
-                        android:layout_width="80dp"
-                        android:layout_height="wrap_content"
-                        android:hint="result"
-                        android:inputType="number"
-                        android:textSize="18sp" />
-
-                    <TextView
-                        android:layout_width="70dp"
-                        android:layout_height="wrap_content"
-                        android:text="''/pixel"
-                        android:textAlignment="center"
-                        android:textSize="20sp" />
+                        style="@style/TextParameter.Unit"
+                        android:text="''/pixel" />
 
                 </LinearLayout>
 
             </LinearLayout>
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
-                android:layout_marginLeft="15dp"
-                android:background="#ffffff"
-                android:text="   Guidescope with Camera   "
-                android:textSize="17sp" />
+                style="@style/TextSubTitle.Body"
+                android:text="   Guidescope with Camera   " />
         </RelativeLayout>
 
         <!--IMAGING AND GUIDING RATIO-->
@@ -401,60 +291,56 @@
             android:layout_marginBottom="20dp">
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/border"
-                android:orientation="horizontal"
-                android:padding="20dp">
+                style="@style/BorderParam" >
 
-                <TextView
-                    android:id="@+id/tvImagingGuidingRatio"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:text="The ratio is: "
-                    android:textSize="18sp"
-                    android:textStyle="bold" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
 
-                <TextView
-                    android:id="@+id/tvImagingGuidingRatioResult"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:hint="__"
-                    android:textSize="18sp" />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:textStyle="bold"
-                    android:text=":"
-                    android:textSize="18sp" />
-                <TextView
-                    android:id="@+id/tvImagingGuidingRatioResult2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:hint="__"
-                    android:textSize="18sp" />
-                <Space
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1" />
+                    <TextView
+                        android:id="@+id/tvImagingGuidingRatio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="The ratio is: "
+                        android:layout_marginTop="10dp"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvImagingGuidingRatioResult"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:hint=" ______ "
+                        android:layout_marginTop="10dp"
+                        android:textSize="18sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:textStyle="bold"
+                        android:text=":"
+                        android:layout_marginTop="10dp"
+                        android:textSize="18sp" />
+                    <TextView
+                        android:id="@+id/tvImagingGuidingRatioResult2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:hint=" ______ "
+                        android:layout_marginTop="10dp"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
 
                 <Button
+                    style="@style/ButtonParam"
                     android:id="@+id/btn_enter"
-                    android:layout_width="wrap_content"
-                    android:layout_height="45dp"
-                    android:layout_gravity="center"
-                    android:text="enter" />
-            </LinearLayout>
+                    android:text="Calculate Ratio" />
+
+                </LinearLayout>
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
-                android:layout_marginLeft="15dp"
-                android:background="#ffffff"
-                android:text="   Imaging and Guiding Ratio   "
-                android:textSize="17sp" />
+                style="@style/TextSubTitle.Body"
+                android:text="   Imaging and Guiding Ratio   " />
         </RelativeLayout>
 
     </LinearLayout>

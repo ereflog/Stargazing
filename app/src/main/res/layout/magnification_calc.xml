@@ -7,14 +7,10 @@
     android:padding="16dp"
     tools:context=".MagnificationCalc">
 
+<!--    MAGNIFICATION VALUE-->
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        android:text="@string/tv_magnification_value"
-        android:textColor="@color/black"
-        android:textStyle="bold"
-        android:textSize="24sp" />
+        style="@style/TextTitle.Name"
+        android:text="@string/tv_magnification_value" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -22,63 +18,42 @@
         android:orientation="horizontal">
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="18sp"
+            style="@style/TextParameter.Name"
             android:text="Telescope Focal Length" />
 
         <Space
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="match_parent" />
+            style="@style/Spacing"/>
 
         <EditText
             android:id="@+id/ettfl"
-            android:layout_width="80dp"
-            android:layout_height="wrap_content"
+            style="@style/TextParameter.InputDecimal"
             android:hint="mm"
-            android:inputType="number"
-            android:textSize="18sp" />
+            />
 
         <TextView
-            android:layout_width="70dp"
-            android:layout_height="wrap_content"
-            android:textSize="18sp"
-            android:textAlignment="center"
+            style="@style/TextParameter.Unit"
             android:text="mm" />
     </LinearLayout>
-
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginBottom="15dp">
+        android:orientation="horizontal" >
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="18sp"
+            style="@style/TextParameter.Name"
             android:text="Eyepiece Focal Length" />
 
         <Space
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="match_parent" />
+            style="@style/Spacing" />
 
         <EditText
             android:id="@+id/etefl"
-            android:layout_width="80dp"
-            android:layout_height="wrap_content"
-            android:hint="mm"
-            android:inputType="number"
-            android:textSize="18sp" />
+            style="@style/TextParameter.InputDecimal"
+            android:hint="mm" />
 
         <TextView
-            android:layout_width="70dp"
-            android:layout_height="wrap_content"
-            android:textSize="18sp"
-            android:textAlignment="center"
+            style="@style/TextParameter.Unit"
             android:text="mm" />
 
     </LinearLayout>
@@ -86,58 +61,34 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginBottom="15dp">
+        android:orientation="horizontal">
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="18sp"
+            style="@style/TextParameter.Name"
             android:text="Magnification" />
 
         <Space
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="match_parent" />
+            style="@style/Spacing" />
+
+        <EditText
+            style="@style/TextParameter.Result"
+            android:id="@+id/tvmag" />
 
         <TextView
-            android:id="@+id/tvmag"
-            android:layout_width="75dp"
-            android:layout_height="wrap_content"
-            android:textSize="18sp"
-            android:hint="value" />
-
-        <TextView
-            android:layout_width="70dp"
-            android:layout_height="wrap_content"
-            android:textSize="18sp"
-            android:textAlignment="center"
+            style="@style/TextParameter.Unit"
             android:hint="x" />
 
     </LinearLayout>
 
     <Button
+        style="@style/ButtonParam"
         android:id="@+id/btnmag"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Calculate Magnification"
-        android:layout_gravity="center"
-        android:layout_marginBottom="25dp"/>
+        android:text="Calculate Magnification" />
 
-
-
-
-
-
+<!--    EYEPIECE FOCAL LENGTH VALUE-->
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        android:text="@string/eyepiece_fl_value"
-        android:textColor="@color/black"
-        android:textStyle="bold"
-        android:textSize="24sp" />
-
+        style="@style/TextTitle.Name"
+        android:text="@string/eyepiece_fl_value" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -145,34 +96,22 @@
         android:orientation="horizontal">
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="18sp"
+            style="@style/TextParameter.Name"
             android:text="@string/telescope_fl" />
 
         <Space
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="match_parent" />
+            style="@style/Spacing"/>
 
         <EditText
+            style="@style/TextParameter.InputNumber"
             android:id="@+id/ettfl2"
-            android:layout_width="80dp"
-            android:layout_height="wrap_content"
-            android:hint="mm"
-            android:inputType="number"
-            android:textSize="18sp" />
+            android:hint="mm" />
 
         <TextView
-            android:layout_width="70dp"
-            android:layout_height="wrap_content"
-            android:textSize="18sp"
-            android:textAlignment="center"
+            style="@style/TextParameter.Unit"
             android:text="mm" />
 
-
     </LinearLayout>
-
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -180,29 +119,19 @@
         android:orientation="horizontal">
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="18sp"
+            style="@style/TextParameter.Name"
             android:text="Telescope Aperture" />
 
         <Space
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="match_parent" />
+            style="@style/Spacing" />
 
         <EditText
+            style="@style/TextParameter.InputNumber"
             android:id="@+id/etta"
-            android:layout_width="80dp"
-            android:layout_height="wrap_content"
-            android:hint="mm"
-            android:inputType="number"
-            android:textSize="18sp" />
+            android:hint="mm" />
 
         <TextView
-            android:layout_width="70dp"
-            android:layout_height="wrap_content"
-            android:textSize="18sp"
-            android:textAlignment="center"
+            style="@style/TextParameter.Unit"
             android:text="mm" />
 
     </LinearLayout>
@@ -210,33 +139,22 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginBottom="15dp">
+        android:orientation="horizontal">
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="18sp"
+            style="@style/TextParameter.Name"
             android:text="Magnification" />
 
         <Space
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="match_parent" />
+            style="@style/Spacing" />
 
         <EditText
+            style="@style/TextParameter.InputNumber"
             android:id="@+id/etmag2"
-            android:layout_width="80dp"
-            android:layout_height="wrap_content"
-            android:hint="x"
-            android:inputType="number"
-            android:textSize="18sp" />
+            android:hint="x" />
 
         <TextView
-            android:layout_width="70dp"
-            android:layout_height="wrap_content"
-            android:textSize="18sp"
-            android:textAlignment="center"
+            style="@style/TextParameter.Unit"
             android:text="x" />
 
     </LinearLayout>
@@ -244,42 +162,28 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginBottom="15dp">
+        android:orientation="horizontal">
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="18sp"
+            style="@style/TextParameter.Name"
             android:text="Eyepiece Focal Length" />
 
         <Space
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="match_parent" />
+            style="@style/Spacing" />
+
+        <EditText
+            style="@style/TextParameter.Result"
+            android:id="@+id/tvefl" />
 
         <TextView
-            android:id="@+id/tvefl"
-            android:layout_width="75dp"
-            android:layout_height="wrap_content"
-            android:textSize="18sp"
-            android:hint="value" />
-
-        <TextView
-            android:layout_width="70dp"
-            android:layout_height="wrap_content"
-            android:textSize="18sp"
-            android:textAlignment="center"
+            style="@style/TextParameter.Unit"
             android:hint="mm" />
 
     </LinearLayout>
 
     <Button
+        style="@style/ButtonParam"
         android:id="@+id/btneyepiece"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Calculate Eyepiece"
-        android:layout_gravity="center"
-        android:layout_marginBottom="25dp"/>
+        android:text="Calculate Eyepiece" />
 
 </LinearLayout>

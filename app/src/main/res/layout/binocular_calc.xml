@@ -18,12 +18,7 @@
             android:layout_marginBottom="20dp">
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/border"
-                android:orientation="vertical"
-                android:padding="15dp">
+                style="@style/BorderParam">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -31,99 +26,65 @@
                     android:orientation="horizontal">
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="FOV @1000m"
-                        android:textSize="18sp" />
+                        style="@style/TextParameter.Name"
+                        android:text="FOV @1000m" />
 
                     <Space
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1" />
+                        style="@style/Spacing" />
 
                     <EditText
+                        style="@style/TextParameter.InputNumber"
                         android:id="@+id/et_fov1000m"
-                        android:layout_width="80dp"
-                        android:layout_height="wrap_content"
-                        android:hint="m"
-                        android:inputType="number"
-                        android:textSize="18sp" />
+                        android:hint="m" />
 
                     <TextView
-                        android:layout_width="70dp"
-                        android:layout_height="wrap_content"
-                        android:text="m"
-                        android:textAlignment="center"
-                        android:textSize="20sp" />
+                        style="@style/TextParameter.Unit"
+                        android:text="m" />
 
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
                     android:orientation="horizontal">
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Real Field of View"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
+                        style="@style/TextParameter.Name"
+                        android:text="Real Field of View" />
 
                     <Space
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1" />
+                        style="@style/Spacing" />
+
+                    <EditText
+                        style="@style/TextParameter.Result"
+                        android:id="@+id/tv_real_fov" />
 
                     <TextView
-                        android:id="@+id/tv_real_fov"
-                        android:layout_width="80dp"
-                        android:layout_height="wrap_content"
-                        android:hint="value"
-                        android:textAlignment="center"
-                        android:textSize="18sp" />
-
-                    <TextView
-                        android:layout_width="70dp"
-                        android:layout_height="wrap_content"
-                        android:text="\u00b0"
-                        android:textAlignment="center"
-                        android:textSize="20sp" />
+                        style="@style/TextParameter.Unit"
+                        android:text="\u00b0" />
 
                 </LinearLayout>
 
                 <Button
+                    style="@style/ButtonParam"
                     android:id="@+id/btn_degrees"
-                    android:layout_width="wrap_content"
-                    android:layout_height="45dp"
-                    android:layout_gravity="center"
                     android:text="Calculate Degrees" />
 
             </LinearLayout>
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
-                android:layout_marginLeft="15dp"
-                android:background="#ffffff"
-                android:text="   Real Field of View in Degrees :   "
-                android:textSize="17sp" />
+                style="@style/TextSubTitle.Body"
+                android:text="   Real Field of View in Degrees   " />
 
         </RelativeLayout>
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginBottom="20dp">
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/border"
-                android:orientation="vertical"
-                android:padding="15dp">
+                style="@style/BorderParam">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -131,98 +92,65 @@
                     android:orientation="horizontal">
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Field of View"
-                        android:textSize="18sp" />
+                        style="@style/TextParameter.Name"
+                        android:text="Field of View" />
 
                     <Space
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1" />
+                        style="@style/Spacing"/>
 
                     <EditText
+                        style="@style/TextParameter.InputNumber"
                         android:id="@+id/et_fov"
-                        android:layout_width="80dp"
-                        android:layout_height="wrap_content"
-                        android:hint="deg"
-                        android:inputType="number"
-                        android:textSize="18sp" />
+                        android:hint="deg" />
 
                     <TextView
-                        android:layout_width="70dp"
-                        android:layout_height="wrap_content"
-                        android:text="\u00b0"
-                        android:textAlignment="center"
-                        android:textSize="20sp" />
+                        style="@style/TextParameter.Unit"
+                        android:text="\u00b0" />
 
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
                     android:orientation="horizontal">
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Real Field of View"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
+                        style="@style/TextParameter.Name"
+                        android:text="Real Field of View" />
 
                     <Space
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1" />
+                        style="@style/Spacing"/>
+
+                    <EditText
+                        style="@style/TextParameter.Result"
+                        android:id="@+id/tv_real_fov2" />
 
                     <TextView
-                        android:id="@+id/tv_real_fov2"
-                        android:layout_width="80dp"
-                        android:layout_height="wrap_content"
-                        android:hint="value"
-                        android:textAlignment="center"
-                        android:textSize="18sp" />
-
-                    <TextView
-                        android:layout_width="70dp"
-                        android:layout_height="wrap_content"
-                        android:text="m"
-                        android:textAlignment="center"
-                        android:textSize="20sp" />
+                        style="@style/TextParameter.Unit"
+                        android:text="m" />
 
                 </LinearLayout>
+
                 <Button
+                    style="@style/ButtonParam"
                     android:id="@+id/btn_1000m"
-                    android:layout_width="wrap_content"
-                    android:layout_height="45dp"
-                    android:text="Calculate @1000m"
-                    android:layout_gravity="center" />
+                    android:text="Calculate @1000m" />
 
             </LinearLayout>
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
-                android:layout_marginLeft="15dp"
-                android:background="#ffffff"
-                android:text="   Real Field of View @1000m :   "
-                android:textSize="17sp" />
+                style="@style/TextSubTitle.Body"
+                android:text="   Real Field of View @1000m   " />
 
         </RelativeLayout>
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginBottom="20dp">
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/border"
-                android:orientation="vertical"
-                android:padding="15dp">
+                style="@style/BorderParam">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -230,30 +158,20 @@
                     android:orientation="horizontal">
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Angular FOV"
-                        android:textSize="18sp" />
+                        style="@style/TextParameter.Name"
+                        android:text="Angular FOV" />
 
                     <Space
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1" />
+                        style="@style/Spacing"/>
 
                     <EditText
+                        style="@style/TextParameter.InputNumber"
                         android:id="@+id/et_ang_fov"
-                        android:layout_width="80dp"
-                        android:layout_height="wrap_content"
-                        android:hint="deg"
-                        android:inputType="number"
-                        android:textSize="18sp" />
+                        android:hint="deg" />
 
                     <TextView
-                        android:layout_width="70dp"
-                        android:layout_height="wrap_content"
-                        android:text="\u00b0"
-                        android:textAlignment="center"
-                        android:textSize="20sp" />
+                        style="@style/TextParameter.Unit"
+                        android:text="\u00b0" />
 
                 </LinearLayout>
 
@@ -263,99 +181,64 @@
                     android:orientation="horizontal">
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Magnification"
-                        android:textSize="18sp" />
+                        style="@style/TextParameter.Name"
+                        android:text="Magnification" />
 
                     <Space
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1" />
+                        style="@style/Spacing"/>
 
                     <EditText
+                        style="@style/TextParameter.InputNumber"
                         android:id="@+id/et_mag"
-                        android:layout_width="80dp"
-                        android:layout_height="wrap_content"
-                        android:hint="mag"
-                        android:inputType="number"
-                        android:textSize="18sp" />
+                        android:hint="mag" />
 
                     <TextView
-                        android:layout_width="70dp"
-                        android:layout_height="wrap_content"
-                        android:text="x"
-                        android:textAlignment="center"
-                        android:textSize="20sp" />
+                        style="@style/TextParameter.Unit"
+                        android:text="x" />
 
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
                     android:orientation="horizontal">
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Apparent FOV"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
+                        style="@style/TextParameter.Name"
+                        android:text="Apparent FOV" />
 
                     <Space
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1" />
+                        style="@style/Spacing"/>
+
+                    <EditText
+                        style="@style/TextParameter.Result"
+                        android:id="@+id/tv_apparent_fov" />
 
                     <TextView
-                        android:id="@+id/tv_apparent_fov"
-                        android:layout_width="80dp"
-                        android:layout_height="wrap_content"
-                        android:hint="value"
-                        android:textAlignment="center"
-                        android:textSize="18sp" />
-
-                    <TextView
-                        android:layout_width="70dp"
-                        android:layout_height="wrap_content"
-                        android:text="\u00b0"
-                        android:textAlignment="center"
-                        android:textSize="20sp" />
+                        style="@style/TextParameter.Unit"
+                        android:text="\u00b0" />
 
                 </LinearLayout>
 
                 <Button
-                    android:id="@+id/btn_apparent"
-                    android:layout_width="wrap_content"
-                    android:layout_height="45dp"
-                    android:layout_gravity="center"
+                    style="@style/ButtonParam"
                     android:text="Calculate apparent" />
 
             </LinearLayout>
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
-                android:layout_marginLeft="15dp"
-                android:background="#ffffff"
-                android:text="   Apparent Field of View (Simple) :   "
-                android:textSize="17sp" />
+                style="@style/TextSubTitle.Body"
+                android:text="   Apparent Field of View (Simple)   " />
 
         </RelativeLayout>
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginBottom="20dp">
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/border"
-                android:orientation="vertical"
-                android:padding="15dp">
+                style="@style/BorderParam">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -363,30 +246,20 @@
                     android:orientation="horizontal">
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Angular FOV"
-                        android:textSize="18sp" />
+                        style="@style/TextParameter.Name"
+                        android:text="Angular FOV" />
 
                     <Space
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1" />
+                        style="@style/Spacing"/>
 
                     <EditText
+                        style="@style/TextParameter.InputNumber"
                         android:id="@+id/et_ang_fov2"
-                        android:layout_width="80dp"
-                        android:layout_height="wrap_content"
-                        android:hint="deg"
-                        android:inputType="number"
-                        android:textSize="18sp" />
+                        android:hint="deg" />
 
                     <TextView
-                        android:layout_width="70dp"
-                        android:layout_height="wrap_content"
-                        android:text="\u00b0"
-                        android:textAlignment="center"
-                        android:textSize="20sp" />
+                        style="@style/TextParameter.Unit"
+                        android:text="\u00b0" />
 
                 </LinearLayout>
 
@@ -396,85 +269,56 @@
                     android:orientation="horizontal">
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Magnification"
-                        android:textSize="18sp" />
+                        style="@style/TextParameter.Name"
+                        android:text="Magnification" />
 
                     <Space
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1" />
+                        style="@style/Spacing"/>
 
                     <EditText
+                        style="@style/TextParameter.InputNumber"
                         android:id="@+id/et_mag2"
-                        android:layout_width="80dp"
-                        android:layout_height="wrap_content"
-                        android:hint="mag"
-                        android:inputType="number"
-                        android:textSize="18sp" />
+                        android:hint="mag" />
 
                     <TextView
-                        android:layout_width="70dp"
-                        android:layout_height="wrap_content"
-                        android:text="x"
-                        android:textAlignment="center"
-                        android:textSize="20sp" />
+                        style="@style/TextParameter.Unit"
+                        android:text="x" />
 
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
                     android:orientation="horizontal">
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Apparent FOV"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
+                        style="@style/TextParameter.Name"
+                        android:text="Apparent FOV" />
 
                     <Space
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1" />
+                        style="@style/Spacing"/>
 
-                    <TextView
+                    <EditText
+                        style="@style/TextParameter.Result"
                         android:id="@+id/tv_apparent_fov2"
-                        android:layout_width="80dp"
-                        android:layout_height="wrap_content"
-                        android:hint="value"
-                        android:textAlignment="center"
-                        android:textSize="18sp" />
+                        android:hint="value" />
 
                     <TextView
-                        android:layout_width="70dp"
-                        android:layout_height="wrap_content"
-                        android:text="\u00b0"
-                        android:textAlignment="center"
-                        android:textSize="20sp" />
+                        style="@style/TextParameter.Unit"
+                        android:text="\u00b0" />
 
                 </LinearLayout>
 
                 <Button
+                    style="@style/ButtonParam"
                     android:id="@+id/btn_apparent2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="45dp"
-                    android:layout_gravity="center"
                     android:text="Calculate apparent" />
 
             </LinearLayout>
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
-                android:layout_marginLeft="15dp"
-                android:background="#ffffff"
-                android:text="Apparent FOV (ISO 14132-1:2002)   "
-                android:textSize="17sp" />
+                style="@style/TextSubTitle.Body"
+                android:text="  Apparent FOV (ISO 14132-1:2002)   " />
 
         </RelativeLayout>
 
