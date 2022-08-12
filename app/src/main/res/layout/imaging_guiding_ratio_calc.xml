@@ -274,7 +274,7 @@
                         android:layout_weight="1" />
 
                     <Spinner
-                        android:id="@+id/barlow_reducer_guide_dropdown"
+                        android:id="@+id/dd_barlow_reducer_guide_dropdown"
                         android:layout_width="130dp"
                         android:layout_height="wrap_content"
                         android:textAlignment="center"
