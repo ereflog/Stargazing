@@ -16,10 +16,9 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-
             android:textSize="17sp"
             android:layout_marginLeft="8dp"
-            android:text=" Inches to MM Calculator  " />
+            android:text=" Inches to Millimetres  " />
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -42,8 +41,8 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textSize="18sp"
-                        android:text="Inches" />
+                        android:text="Inches"
+                        android:textSize="18sp" />
 
                     <Space
                         android:layout_width="0dp"
@@ -51,19 +50,19 @@
                         android:layout_weight="1" />
 
                     <EditText
-                        android:id="@+id/et_inctomm"
+                        android:id="@+id/et_inches"
                         android:layout_width="80dp"
                         android:layout_height="wrap_content"
-                        android:hint="mm"
+                        android:hint="inch"
                         android:inputType="numberDecimal"
                         android:textSize="18sp" />
 
                     <TextView
                         android:layout_width="70dp"
                         android:layout_height="wrap_content"
+                        android:text="inch"
                         android:textAlignment="center"
-                        android:textSize="20sp"
-                        android:text="mm" />
+                        android:textSize="20sp" />
 
                 </LinearLayout>
 
@@ -79,7 +78,7 @@
                         android:layout_height="wrap_content"
                         android:textSize="18sp"
                         android:textStyle="bold"
-                        tools:text="Max.Resolution" />
+                        android:text="Millimetres" />
 
                     <Space
                         android:layout_width="0dp"
@@ -87,18 +86,18 @@
                         android:layout_weight="1" />
 
                     <TextView
-                        android:id="@+id/tv_result_inctomm"
+                        android:id="@+id/tv_millimetres"
                         android:layout_width="80dp"
                         android:layout_height="wrap_content"
-                        android:textSize="18sp"
-                        android:hint="result" />
+                        android:hint="mm"
+                        android:textSize="18sp" />
 
                     <TextView
                         android:layout_width="70dp"
                         android:layout_height="wrap_content"
+                        android:text="mm"
                         android:textAlignment="center"
-                        android:textSize="20sp"
-                        android:text="arc second" />
+                        android:textSize="20sp" />
 
                 </LinearLayout>
 
@@ -110,15 +109,15 @@
                     android:text="Calculate " />
 
             </LinearLayout>
+
         </RelativeLayout>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
-
             android:textSize="17sp"
-            tools:layout_marginLeft="8dp"
-            android:text="   MM to Inches Calculator   " />
+            android:layout_marginLeft="8dp"
+            android:text="   Millimetres to Inches  " />
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -144,7 +143,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textSize="18sp"
-                        android:text="Telescope Aperture" />
+                        android:text="Millimetres" />
 
                     <Space
                         android:layout_width="0dp"
@@ -152,7 +151,7 @@
                         android:layout_weight="1" />
 
                     <EditText
-                        android:id="@+id/et_mmtoinc"
+                        android:id="@+id/et_millimeter"
                         android:layout_width="80dp"
                         android:layout_height="wrap_content"
                         android:hint="mm"
@@ -180,7 +179,7 @@
                         android:layout_height="wrap_content"
                         android:textSize="18sp"
                         android:textStyle="bold"
-                        android:text="Max.Resolution" />
+                        android:text="Inches" />
 
                     <Space
                         android:layout_width="0dp"
@@ -188,18 +187,18 @@
                         android:layout_weight="1" />
 
                     <TextView
-                        android:id="@+id/tv_result_mmtoinc"
+                        android:id="@+id/tv_inches"
                         android:layout_width="80dp"
                         android:layout_height="wrap_content"
                         android:textSize="18sp"
-                        android:hint="result" />
+                        android:hint="inch" />
 
                     <TextView
                         android:layout_width="70dp"
                         android:layout_height="wrap_content"
                         android:textAlignment="center"
                         android:textSize="20sp"
-                        android:text="arc second" />
+                        android:text="inch" />
 
                 </LinearLayout>
 
