@@ -71,8 +71,8 @@
             style="@style/Spacing" />
 
         <EditText
-            android:id="@+id/tvmag"
-            style="@style/TextParameter.Result"/>
+            style="@style/TextParameter.Result"
+            android:id="@+id/tvmag" />
 
         <TextView
             style="@style/TextParameter.Unit"

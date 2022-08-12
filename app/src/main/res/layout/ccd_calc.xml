@@ -19,12 +19,7 @@
             android:layout_marginBottom="20dp">
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/border"
-                android:orientation="vertical"
-                android:padding="15dp">
+                style="@style/BorderParam">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -32,30 +27,20 @@
                     android:orientation="horizontal">
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="CCD Pixel Size"
-                        android:textSize="18sp" />
+                        style="@style/TextParameter.Name"
+                        android:text="CCD Pixel Size" />
 
                     <Space
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1" />
+                        style="@style/Spacing"/>
 
                     <EditText
+                        style="@style/TextParameter.InputDecimal"
                         android:id="@+id/et_pixsize"
-                        android:layout_width="80dp"
-                        android:layout_height="wrap_content"
-                        android:hint="µm"
-                        android:inputType="numberDecimal"
-                        android:textSize="18sp" />
+                        android:hint="µm" />
 
                     <TextView
-                        android:layout_width="70dp"
-                        android:layout_height="wrap_content"
-                        android:text="µm"
-                        android:textAlignment="center"
-                        android:textSize="20sp" />
+                        style="@style/TextParameter.Unit"
+                        android:text="µm" />
 
                 </LinearLayout>
 
@@ -65,84 +50,55 @@
                     android:orientation="horizontal">
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Telescope FL"
-                        android:textSize="18sp" />
+                        style="@style/TextParameter.Name"
+                        android:text="Telescope FL" />
 
                     <Space
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1" />
+                        style="@style/Spacing"/>
 
                     <EditText
+                        style="@style/TextParameter.InputNumber"
                         android:id="@+id/et_tfl"
-                        android:layout_width="80dp"
-                        android:layout_height="wrap_content"
-                        android:hint="mm"
-                        android:inputType="number"
-                        android:textSize="18sp" />
+                        android:hint="mm" />
 
                     <TextView
-                        android:layout_width="70dp"
-                        android:layout_height="wrap_content"
-                        android:text="mm"
-                        android:textAlignment="center"
-                        android:textSize="20sp" />
+                        style="@style/TextParameter.Unit"
+                        android:text="mm" />
 
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
                     android:orientation="horizontal">
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Resolution"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
+                        style="@style/TextParameter.Name"
+                        android:text="Resolution" />
 
                     <Space
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1" />
+                        style="@style/Spacing"/>
+
+                    <EditText
+                        style="@style/TextParameter.Result"
+                        android:id="@+id/tv_resolution" />
 
                     <TextView
-                        android:id="@+id/tv_resolution"
-                        android:layout_width="80dp"
-                        android:layout_height="wrap_content"
-                        android:hint="result"
-                        android:textSize="18sp" />
-
-                    <TextView
-                        android:layout_width="70dp"
-                        android:layout_height="wrap_content"
-                        android:text="''/pixel"
-                        android:textAlignment="center"
-                        android:textSize="20sp" />
+                        style="@style/TextParameter.Unit"
+                        android:text="''/pixel" />
 
                 </LinearLayout>
 
                 <Button
+                    style="@style/ButtonParam"
                     android:id="@+id/btn_resolution"
-                    android:layout_width="wrap_content"
-                    android:layout_height="45dp"
-                    android:layout_gravity="center"
                     android:text="Calculate Resolution" />
 
             </LinearLayout>
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
-                android:layout_marginLeft="15dp"
-                android:background="@color/blush"
-                android:text="   CCD Resolution :   "
-                android:textSize="17sp" />
+                style="@style/TextSubTitle.Body"
+                android:text="   CCD Resolution   " />
 
         </RelativeLayout>
 
@@ -152,12 +108,7 @@
             android:layout_marginBottom="20dp">
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/border"
-                android:orientation="vertical"
-                android:padding="15dp">
+                style="@style/BorderParam">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -165,114 +116,16 @@
                     android:orientation="horizontal">
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Dimensions"
-                        android:textSize="18sp" />
-
-
-
-                    <EditText
-                        android:id="@+id/et_dim_hor"
-                        android:layout_width="80dp"
-                        android:layout_height="wrap_content"
-                        android:hint="hor"
-                        android:textAlignment="center"
-                        android:inputType="number"
-                        android:textSize="18sp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="X"
-                        android:textStyle="bold" />
-
-                    <EditText
-                        android:id="@+id/et_dim_ver"
-                        android:layout_width="80dp"
-                        android:textAlignment="center"
-                        android:layout_height="wrap_content"
-                        android:hint="ver"
-                        android:inputType="number"
-                        android:textSize="18sp" />
-
-                    <TextView
-                        android:layout_width="70dp"
-                        android:layout_height="wrap_content"
-                        android:text="mm"
-                        android:textSize="20sp" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Resolution"
-                        android:textSize="18sp" />
-
-
-                    <EditText
-                        android:id="@+id/et_res_hor"
-                        android:layout_width="80dp"
-                        android:layout_height="wrap_content"
-                        android:hint="hor"
-                        android:textAlignment="center"
-                        android:inputType="number"
-                        android:textSize="18sp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="X"
-                        android:textStyle="bold" />
-
-                    <EditText
-                        android:id="@+id/et_res_ver"
-                        android:layout_width="80dp"
-                        android:layout_height="wrap_content"
-                        android:hint="ver"
-                        android:textAlignment="center"
-                        android:inputType="number"
-                        android:textSize="18sp" />
-
-                    <TextView
-                        android:layout_width="70dp"
-                        android:layout_height="wrap_content"
-                        android:text="px"
-                        android:textSize="20sp" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Pixel Size"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
+                        style="@style/TextParameter.Name"
+                        android:text="Dimensions" />
 
                     <Space
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1" />
+                        style="@style/Spacing" />
 
-                    <TextView
-                        android:id="@+id/tv_pix_hor"
-                        android:layout_width="80dp"
-                        android:layout_height="wrap_content"
-                        android:hint="0"
-                        android:textAlignment="center"
-                        android:textSize="18sp" />
+                    <EditText
+                        style="@style/TextParameter.InputNumber"
+                        android:id="@+id/et_dim_hor"
+                        android:hint="hor" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -280,40 +133,97 @@
                         android:text="X"
                         android:textStyle="bold" />
 
-                    <TextView
-                        android:id="@+id/tv_pix_ver"
-                        android:layout_width="80dp"
-                        android:layout_height="wrap_content"
-                        android:hint="0"
-                        android:textAlignment="center"
-                        android:textSize="18sp" />
+                    <EditText
+                        style="@style/TextParameter.InputNumber"
+                        android:id="@+id/et_dim_ver"
+                        android:hint="ver" />
 
                     <TextView
-                        android:layout_width="70dp"
+                        style="@style/TextParameter.Unit"
+                        android:text="mm" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/TextParameter.Name"
+                        android:text="Resolution" />
+
+                    <Space
+                        style="@style/Spacing" />
+
+                    <EditText
+                        style="@style/TextParameter.InputNumber"
+                        android:id="@+id/et_res_hor"
+                        android:hint="hor" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="µm"
-                        android:textAlignment="center"
-                        android:textSize="20sp" />
+                        android:text="X"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        style="@style/TextParameter.InputNumber"
+                        android:id="@+id/et_res_ver"
+                        android:hint="ver" />
+
+                    <TextView
+                        style="@style/TextParameter.Unit"
+                        android:text="px" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/TextParameter.Name"
+                        android:text="Pixel Size" />
+
+                    <Space
+                        style="@style/Spacing"/>
+
+                    <EditText
+                        style="@style/TextParameter.Result"
+                        android:id="@+id/tv_pix_hor"
+                        android:hint="0"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="X"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        style="@style/TextParameter.Result"
+                        android:id="@+id/tv_pix_ver"
+                        android:hint="0"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        style="@style/TextParameter.Unit"
+                        android:text="µm" />
 
                 </LinearLayout>
 
                 <Button
+                    style="@style/ButtonParam"
                     android:id="@+id/btn_pixel"
-                    android:layout_width="wrap_content"
-                    android:layout_height="45dp"
-                    android:layout_gravity="center"
                     android:text="Calculate Pixel Size" />
 
             </LinearLayout>
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
-                android:layout_marginLeft="15dp"
-                android:background="@color/blush"
-                android:text="   CCD Pixel Size :   "
-                android:textSize="17sp" />
+                style="@style/TextSubTitle.Body"
+                android:text="   CCD Pixel Size   " />
         </RelativeLayout>
 
         <RelativeLayout
@@ -322,12 +232,7 @@
             android:layout_marginBottom="20dp">
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/border"
-                android:orientation="vertical"
-                android:padding="15dp">
+                style="@style/BorderParam">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -335,53 +240,41 @@
                     android:orientation="horizontal">
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="CCD Pixel Size"
-                        android:textSize="18sp" />
+                        style="@style/TextParameter.Name"
+                        android:text="CCD Pixel Size" />
 
                     <Space
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1" />
+                        style="@style/Spacing"/>
 
 
                     <EditText
+                        style="@style/TextParameter.InputDecimal"
                         android:id="@+id/et_ccd_pix"
-                        android:layout_width="80dp"
-                        android:layout_height="wrap_content"
-                        android:hint="µm"
-                        android:inputType="numberDecimal"
-                        android:textSize="18sp" />
+                        android:hint="µm" />
 
                     <TextView
-                        android:layout_width="70dp"
-                        android:layout_height="wrap_content"
-                        android:text="µm"
-                        android:textAlignment="center"
-                        android:textSize="20sp" />
+                        style="@style/TextParameter.Unit"
+                        android:text="µm" />
 
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Resolution"
-                        android:textSize="18sp" />
+                        style="@style/TextParameter.Name"
+                        android:text="Resolution" />
 
+                    <Space
+                        style="@style/Spacing"/>
 
                     <EditText
+                        style="@style/TextParameter.InputNumber"
                         android:id="@+id/et_res_hor2"
-                        android:layout_width="80dp"
-                        android:layout_height="wrap_content"
                         android:hint="hor"
-                        android:textAlignment="center"
-                        android:inputType="number"
-                        android:textSize="18sp" />
+                        android:textAlignment="center" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -390,46 +283,34 @@
                         android:textStyle="bold" />
 
                     <EditText
+                        style="@style/TextParameter.InputNumber"
                         android:id="@+id/et_res_ver2"
-                        android:layout_width="80dp"
-                        android:layout_height="wrap_content"
                         android:hint="ver"
-                        android:textAlignment="center"
-                        android:inputType="number"
-                        android:textSize="18sp" />
+                        android:textAlignment="center" />
 
                     <TextView
-                        android:layout_width="70dp"
-                        android:layout_height="wrap_content"
-                        android:text="px"
-                        android:textSize="20sp" />
+                        style="@style/TextParameter.Unit"
+                        android:text="px" />
 
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
                     android:orientation="horizontal">
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="CCD Size"
-                        android:textStyle="bold"
-                        android:textSize="18sp" />
+                        style="@style/TextParameter.Name"
+                        android:text="CCD Size" />
 
                     <Space
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1" />
+                        style="@style/Spacing"/>
 
-                    <TextView
+                    <EditText
+                        style="@style/TextParameter.Result"
                         android:id="@+id/tv_ccd_hor"
-                        android:layout_width="80dp"
-                        android:layout_height="wrap_content"
                         android:hint="0"
-                        android:textAlignment="center"
-                        android:textSize="18sp" />
+                        android:textAlignment="center" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -437,74 +318,51 @@
                         android:text="X"
                         android:textStyle="bold" />
 
-                    <TextView
+                    <EditText
+                        style="@style/TextParameter.Result"
                         android:id="@+id/tv_ccd_ver"
-                        android:layout_width="80dp"
-                        android:layout_height="wrap_content"
                         android:hint="0"
-                        android:textAlignment="center"
-                        android:textSize="18sp" />
+                        android:textAlignment="center" />
 
                     <TextView
-                        android:layout_width="70dp"
-                        android:layout_height="wrap_content"
-                        android:text="mm"
-                        android:textAlignment="center"
-                        android:textSize="20sp" />
+                        style="@style/TextParameter.Unit"
+                        android:text="mm" />
 
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
                     android:orientation="horizontal">
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Diagonally"
-                        android:textStyle="bold"
-                        android:textSize="18sp" />
+                        style="@style/TextParameter.Name"
+                        android:text="Diagonally" />
 
                     <Space
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1" />
+                        style="@style/Spacing" />
 
-
-                    <TextView
+                    <EditText
+                        style="@style/TextParameter.Result"
                         android:id="@+id/tv_diagonal"
-                        android:layout_width="80dp"
-                        android:layout_height="wrap_content"
-                        android:hint="mm"
-                        android:textSize="18sp" />
+                        android:hint="mm" />
 
                     <TextView
-                        android:layout_width="70dp"
-                        android:layout_height="wrap_content"
-                        android:text="mm"
-                        android:textAlignment="center"
-                        android:textSize="20sp" />
+                        style="@style/TextParameter.Unit"
+                        android:text="mm" />
 
                 </LinearLayout>
+
                 <Button
+                    style="@style/ButtonParam"
                     android:id="@+id/btn_ccd"
-                    android:layout_width="wrap_content"
-                    android:layout_height="45dp"
-                    android:text="Calculate CCD Size"
-                    android:layout_gravity="center" />
+                    android:text="Calculate CCD Size" />
 
             </LinearLayout>
 
-
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
-                android:layout_marginLeft="15dp"
-                android:background="@color/blush"
-                android:text="   CCD Chip Size :   "
-                android:textSize="17sp" />
+                style="@style/TextSubTitle.Body"
+                android:text="   CCD Chip Size   " />
 
         </RelativeLayout>
 

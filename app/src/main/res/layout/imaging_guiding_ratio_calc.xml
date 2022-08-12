@@ -336,7 +336,7 @@
                     android:id="@+id/btn_enter"
                     android:text="Calculate Ratio" />
 
-            </LinearLayout>
+                </LinearLayout>
 
             <TextView
                 style="@style/TextSubTitle.Body"
