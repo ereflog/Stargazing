@@ -140,7 +140,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
                 android:layout_marginLeft="15dp"
-                android:background="#ffffff"
+                android:background="@color/blush"
                 android:text="   CCD Resolution :   "
                 android:textSize="17sp" />
 
@@ -311,7 +311,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
                 android:layout_marginLeft="15dp"
-                android:background="#ffffff"
+                android:background="@color/blush"
                 android:text="   CCD Pixel Size :   "
                 android:textSize="17sp" />
         </RelativeLayout>
@@ -502,7 +502,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
                 android:layout_marginLeft="15dp"
-                android:background="#ffffff"
+                android:background="@color/blush"
                 android:text="   CCD Chip Size :   "
                 android:textSize="17sp" />
 
