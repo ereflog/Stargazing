@@ -195,7 +195,7 @@
                         style="@style/Spacing"/>
 
                     <Spinner
-                        android:id="@+id/barlow_reducer_guide_dropdown"
+                        android:id="@+id/dd_barlow_reducer_guide_dropdown"
                         android:layout_width="130dp"
                         android:layout_height="wrap_content"
                         android:background="@android:drawable/btn_dropdown"
