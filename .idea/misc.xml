@@ -3,13 +3,6 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Applications/Stargazing/app/src/main/res/drawable/border.xml" value="0.18076923076923077" />
-        <entry key="..\:/Applications/Stargazing/app/src/main/res/layout/activity_about.xml" value="0.1675213675213675" />
-        <entry key="..\:/Applications/Stargazing/app/src/main/res/layout/binocular_calc.xml" value="0.33" />
-        <entry key="..\:/Applications/Stargazing/app/src/main/res/layout/ccd_calc.xml" value="0.33" />
-        <entry key="..\:/Applications/Stargazing/app/src/main/res/layout/ccd_filter_size_calc.xml" value="0.1675213675213675" />
-        <entry key="..\:/Applications/Stargazing/app/src/main/res/layout/imaging_guiding_ratio_calc.xml" value="0.4284153005464481" />
-        <entry key="..\:/Applications/Stargazing/app/src/main/res/layout/magnification_calc.xml" value="0.33" />
         <entry key="..\:/Applications/Stargazing/app/src/main/res/layout/ccd_filter_size_calc.xml" value="0.1675213675213675" />
         <entry key="..\:/Applications/Stargazing/app/src/main/res/layout/imaging_guiding_ratio_calc.xml" value="0.25" />
         <entry key="..\:/Users/boyst_000/AndroidStudioProjects/Stargazing/app/src/main/res/drawable/border.xml" value="0.17291666666666666" />
@@ -29,16 +22,14 @@
         <entry key="..\:/Users/boyst_000/AndroidStudioProjects/Stargazing/app/src/main/res/layout/home.xml" value="0.15677083333333333" />
         <entry key="..\:/Users/boyst_000/AndroidStudioProjects/Stargazing/app/src/main/res/layout/imaging_guiding_ratio_calc.xml" value="0.25" />
         <entry key="..\:/Users/boyst_000/AndroidStudioProjects/Stargazing/app/src/main/res/layout/magnification_calc.xml" value="0.25" />
-        <entry key="..\:/Users/boyst_000/AndroidStudioProjects/Stargazing/app/src/main/res/layout/obs_log_book.xml" value="0.15677083333333333" />
+        <entry key="..\:/Users/boyst_000/AndroidStudioProjects/Stargazing/app/src/main/res/layout/obs_log_book.xml" value="0.2" />
         <entry key="..\:/Users/boyst_000/AndroidStudioProjects/Stargazing/app/src/main/res/layout/privacy_policy.xml" value="0.15677083333333333" />
-        <entry key="..\:/Users/boyst_000/AndroidStudioProjects/Stargazing/app/src/main/res/layout/unit_converter.xml" value="0.15677083333333333" />
         <entry key="..\:/Users/boyst_000/AndroidStudioProjects/Stargazing/app/src/main/res/layout/red_light_tool.xml" value="0.15677083333333333" />
         <entry key="..\:/Users/boyst_000/AndroidStudioProjects/Stargazing/app/src/main/res/layout/telescope_capabilities.xml" value="0.25" />
         <entry key="..\:/Users/boyst_000/AndroidStudioProjects/Stargazing/app/src/main/res/layout/unit_converter.xml" value="0.25" />
         <entry key="..\:/Users/boyst_000/AndroidStudioProjects/Stargazing/app/src/main/res/layout/weather_forecast.xml" value="0.15677083333333333" />
-        <entry key="app/src/main/res/layout/obs_log_book.xml" value="0.21" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="17" project-jdk-type="JavaSDK" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="17" project-jdk-type="JavaSDK" />
 </project>

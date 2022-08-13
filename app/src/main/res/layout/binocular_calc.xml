@@ -221,6 +221,7 @@
                 </LinearLayout>
 
                 <Button
+                    android:id="@+id/btn_apparent"
                     style="@style/ButtonParam"
                     android:text="Calculate apparent" />
 

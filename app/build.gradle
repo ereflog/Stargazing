@@ -33,20 +33,21 @@ android {
 
 dependencies {
 
-    implementation 'androidx.appcompat:appcompat:1.4.2'
+    implementation 'androidx.appcompat:appcompat:1.5.0'
     implementation 'com.google.android.material:material:1.6.1'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
-    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.3.1'
-    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1'
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.5.1'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1'
     testImplementation 'junit:junit:4.+'
+    androidTestImplementation "androidx.compose.ui:ui-test-junit4:1.2.1"
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
 
     //HMS kit yang ditambahkan ada di bawah ini
     implementation 'com.huawei.hms:location:6.4.0.300'
-    implementation 'com.huawei.hms:ads-lite:13.4.45.304'
+    implementation 'com.huawei.hms:ads-lite:13.4.55.300'
     implementation 'com.huawei.hms:ads:3.4.45.304'
     implementation 'com.huawei.hms:ads-consent:3.4.45.304'
-    implementation 'com.huawei.hms:push:5.3.0.304'
-    implementation 'com.huawei.hms:hianalytics:6.0.0.301'
+    implementation 'com.huawei.hms:push:6.5.0.300'
+    implementation 'com.huawei.hms:hianalytics:6.6.0.300'
 }
