@@ -8,12 +8,8 @@
     tools:context=".CreditAndDataSource">
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        android:text="Credit and Data Source"
-        android:textStyle="bold"
-        android:textSize="24sp" />
+        style="@style/TextTitle.Name"
+        android:text="Credit and Data Source" />
 
     <TableLayout
         android:layout_width="match_parent"
@@ -35,10 +31,13 @@
                 android:text="Credit" />
 
             <TextView
+                android:id="@+id/tv_credit_list"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="16sp"
-                android:text="Weather forecast by Windy.com \n" />
+                android:layout_weight="1"
+                android:maxLines="10"
+                android:text="@string/credit_list"/>
+
         </TableRow>
 
         <TableRow
@@ -54,8 +53,9 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:maxLines="10"
-                android:text="- number one \n- number two \n- number three" />
+                android:text="- number one \n- number two \n- number three \n- nomor empat" />
         </TableRow>
 
     </TableLayout>

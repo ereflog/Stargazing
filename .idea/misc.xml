@@ -3,7 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Applications/Stargazing/app/src/main/res/layout/activity_about.xml" value="0.33" />
         <entry key="..\:/Applications/Stargazing/app/src/main/res/layout/ccd_filter_size_calc.xml" value="0.1675213675213675" />
+        <entry key="..\:/Applications/Stargazing/app/src/main/res/layout/credit_and_data_source.xml" value="0.33" />
         <entry key="..\:/Applications/Stargazing/app/src/main/res/layout/imaging_guiding_ratio_calc.xml" value="0.25" />
         <entry key="..\:/Users/boyst_000/AndroidStudioProjects/Stargazing/app/src/main/res/drawable/border.xml" value="0.17291666666666666" />
         <entry key="..\:/Users/boyst_000/AndroidStudioProjects/Stargazing/app/src/main/res/drawable/ic_launcher_background.xml" value="0.17291666666666666" />
