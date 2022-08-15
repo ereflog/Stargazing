@@ -21,10 +21,15 @@ import android.widget.Toast;
 
 import com.huawei.hmf.tasks.OnFailureListener;
 import com.huawei.hmf.tasks.OnSuccessListener;
+import com.huawei.hms.analytics.HiAnalytics;
+import com.huawei.hms.analytics.HiAnalyticsInstance;
 import com.huawei.hms.location.FusedLocationProviderClient;
 import com.huawei.hms.location.LocationServices;
 
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Date;
+import java.util.Locale;
 
 public class  ObsLogBook extends AppCompatActivity {
 
@@ -56,10 +61,13 @@ public class  ObsLogBook extends AppCompatActivity {
     private FusedLocationProviderClient
             locationProviderClient;
 
+    HiAnalyticsInstance instance;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.obs_log_book);
+        instance = HiAnalytics.getInstance(this);
         et_object_name=
                 findViewById(R.id.et_object_name);
         et_observer=
@@ -155,6 +163,9 @@ public class  ObsLogBook extends AppCompatActivity {
                 LocationServices.getFusedLocationProviderClient(ObsLogBook.this);
         btn_generate.setOnClickListener(v ->
                 getLocation());
+        obslogBookPageEvt(new String[]{SUtils.getString(et_object_name),
+                SUtils.getString(et_observer),
+                SUtils.getString(tv_latitude)+","+SUtils.getString(tv_longitude)});
     }
 
     @Override
@@ -202,6 +213,18 @@ public class  ObsLogBook extends AppCompatActivity {
                 }
             });
         }
+    }
+    private void obslogBookPageEvt(String... data) {
+
+        Bundle bundle = new Bundle();
+        bundle.putString("object",data[0]);
+        bundle.putString("observer",data[1]);
+        bundle.putString("latitudeLongitude",data[2]);
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.ENGLISH);
+        bundle.putString("answerTime",sdf.format(new Date()));
+
+        // Report a custom event.
+        instance.onEvent("obsLogBook", bundle);
     }
 }
 

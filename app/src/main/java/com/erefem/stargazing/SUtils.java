@@ -33,6 +33,14 @@ public class SUtils {
     }
 
     @NonNull
+    public static String getString(EditText editTxt){
+        return editTxt.getText().toString();
+    }
+
+    public static String getString(TextView txt){
+        return txt.getText().toString();
+    }
+
     public static Float getFloatSpinnerValue(Spinner spinner){
         float fl;
         String tspinner = spinner.getSelectedItem().toString();
