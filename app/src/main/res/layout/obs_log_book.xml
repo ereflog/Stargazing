@@ -107,12 +107,11 @@
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
 
-                        <EditText
-                            android:id="@+id/et_latitude"
+                        <TextView
+                            android:id="@+id/tv_latitude"
                             android:layout_width="200dp"
                             android:layout_height="wrap_content"
                             android:hint="Latitude"
-                            android:inputType="text"
                             android:textSize="18sp" />
 
                         <Space
@@ -120,13 +119,19 @@
                             android:layout_height="match_parent"
                             android:layout_weight="1" />
 
-                        <EditText
-                            android:id="@+id/et_longitude"
+                        <TextView
+                            android:id="@+id/tv_longitude"
                             android:layout_width="200dp"
                             android:layout_height="wrap_content"
                             android:hint="Longitude"
-                            android:inputType="text"
                             android:textSize="18sp" />
+                        <Button
+                            android:id="@+id/btn_generate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="48dp"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="16dp"
+                            android:text="Generate " />
                     </LinearLayout>
 
                 </LinearLayout>
