@@ -7,10 +7,14 @@ import androidx.core.app.ActivityCompat;
 import android.Manifest;
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
+import android.content.Context;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Location;
-import android.os.Build;
+import android.location.LocationManager;
 import android.os.Bundle;
+import android.os.Looper;
+import android.provider.Settings;
 import android.text.InputType;
 import android.widget.Button;
 import android.widget.EditText;
@@ -19,11 +23,12 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.huawei.hmf.tasks.OnFailureListener;
-import com.huawei.hmf.tasks.OnSuccessListener;
 import com.huawei.hms.analytics.HiAnalytics;
 import com.huawei.hms.analytics.HiAnalyticsInstance;
 import com.huawei.hms.location.FusedLocationProviderClient;
+import com.huawei.hms.location.LocationCallback;
+import com.huawei.hms.location.LocationRequest;
+import com.huawei.hms.location.LocationResult;
 import com.huawei.hms.location.LocationServices;
 
 import java.text.SimpleDateFormat;
@@ -32,6 +37,8 @@ import java.util.Date;
 import java.util.Locale;
 
 public class  ObsLogBook extends AppCompatActivity {
+    FusedLocationProviderClient
+            fusedLocationProviderClient;
 
     EditText
             et_object_name,
@@ -58,16 +65,24 @@ public class  ObsLogBook extends AppCompatActivity {
 
     private EditText
             et_date;
-    private FusedLocationProviderClient
-            locationProviderClient;
 
-    HiAnalyticsInstance instance;
+    HiAnalyticsInstance
+            instance;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.obs_log_book);
-        instance = HiAnalytics.getInstance(this);
+
+        LocationRequest
+                mLocationRequest;
+        mLocationRequest=
+                new LocationRequest();
+        mLocationRequest.setInterval(10000);
+        mLocationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
+
+        instance=
+                HiAnalytics.getInstance(this);
         et_object_name=
                 findViewById(R.id.et_object_name);
         et_observer=
@@ -159,59 +174,88 @@ public class  ObsLogBook extends AppCompatActivity {
 
         });
 
-        locationProviderClient=
+        fusedLocationProviderClient=
                 LocationServices.getFusedLocationProviderClient(ObsLogBook.this);
-        btn_generate.setOnClickListener(v ->
-                getLocation());
+
         obslogBookPageEvt(new String[]{SUtils.getString(et_object_name),
                 SUtils.getString(et_observer),
-                SUtils.getString(tv_latitude)+","+SUtils.getString(tv_longitude)});
+                SUtils.getString(tv_latitude) + "," + SUtils.getString(tv_longitude)});
+
+        btn_generate.setOnClickListener(view -> {
+
+            if (ActivityCompat.checkSelfPermission(ObsLogBook.this,
+                    Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED
+                    && ActivityCompat.checkSelfPermission(ObsLogBook.this,
+                    Manifest.permission.ACCESS_COARSE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
+                getLocation();
+
+                } else {
+                ActivityCompat.requestPermissions(ObsLogBook.this
+                        , new String[]{Manifest.permission.ACCESS_FINE_LOCATION
+                                , Manifest.permission.ACCESS_COARSE_LOCATION}
+                        , 100);
+            }
+
+        });
+
     }
 
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-        if (requestCode == 10) {
-            if (ActivityCompat.checkSelfPermission(this,
-                    Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED &&
-                    ActivityCompat.checkSelfPermission(this,
-                            Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-                Toast.makeText(getApplicationContext(), "Your Location Service Not Active", Toast.LENGTH_SHORT).show();
-            } else {
-                getLocation();
-            }
+        if (requestCode == 100 && grantResults.length > 0 && (grantResults[0] + grantResults[1]
+                == PackageManager.PERMISSION_GRANTED)) {
+
+            getLocation();
+
+        } else {
+            Toast.makeText(getApplicationContext(), "Permission Denied", Toast.LENGTH_SHORT).show();
         }
     }
 
     private void getLocation() {
-        if (ActivityCompat.checkSelfPermission(this,
-                Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED &&
-                ActivityCompat.checkSelfPermission(this,
-                        Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-                requestPermissions(new String[]{
-                        Manifest.permission.ACCESS_FINE_LOCATION,
-                        Manifest.permission.ACCESS_COARSE_LOCATION
-                }, 10);
-            }
-        } else {
+        LocationManager locationManager=(LocationManager) getSystemService(
+                Context.LOCATION_SERVICE);
+        if (locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER)
+                || locationManager.isProviderEnabled(LocationManager.NETWORK_PROVIDER))
 
-            locationProviderClient.getLastLocation().addOnSuccessListener(new OnSuccessListener<Location>() {
-                @Override
-                public void onSuccess(Location location) {
-                    if (location != null) {
-                        tv_latitude.setText(String.valueOf(location.getLatitude()));
-                        tv_longitude.setText(String.valueOf(location.getLongitude()));
-                    } else {
-                        Toast.makeText(getApplicationContext(), "Your Location Servise Not Active", Toast.LENGTH_SHORT).show();
-                    }
-                }
-            }).addOnFailureListener(new OnFailureListener() {
-                @Override
-                public void onFailure(@NonNull Exception e) {
-                    Toast.makeText(getApplicationContext(), e.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
+
+            fusedLocationProviderClient.getLastLocation().addOnCompleteListener(task -> {
+                Location
+                        location=
+                        task.getResult();
+                if (location != null) {
+                    tv_latitude.setText(String.valueOf(location.getLatitude()));
+                    tv_longitude.setText(String.valueOf(location.getLongitude()));
+                } else {
+                    LocationRequest
+                            locationRequest=
+                            new LocationRequest()
+                                    .setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY)
+                                    .setInterval(10000)
+                                    .setFastestInterval(1000)
+                                    .setNumUpdates(1);
+                    LocationCallback
+                            locationCallback=
+                            new LocationCallback() {
+                                @Override
+                                public void onLocationResult(LocationResult locationResult) {
+                                    Location
+                                            location1=
+                                            locationResult.getLastLocation();
+                                    tv_latitude.setText(String.valueOf(location1.getLatitude()));
+                                    tv_longitude.setText(String.valueOf(location1.getLongitude()));
+                                }
+                            };
+                    fusedLocationProviderClient.requestLocationUpdates(locationRequest,
+                            locationCallback, Looper.myLooper());
                 }
             });
+
+        else{
+
+           startActivity(new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS)
+                .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
         }
     }
     private void obslogBookPageEvt(String... data) {
