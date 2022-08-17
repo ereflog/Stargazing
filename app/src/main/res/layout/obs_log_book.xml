@@ -37,15 +37,11 @@
                         android:orientation="horizontal">
 
                         <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Object Name"
-                            android:textSize="18sp" />
+                            style="@style/TextParameter.Name"
+                            android:text="Object Name" />
 
                         <Space
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1" />
+                            style="@style/Spacing" />
 
                         <EditText
                             android:id="@+id/et_object_name"
@@ -57,7 +53,6 @@
 
                     </LinearLayout>
 
-
                 </LinearLayout>
 
                 <LinearLayout
@@ -66,15 +61,11 @@
                     android:orientation="horizontal">
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Observer"
-                        android:textSize="18sp" />
+                        style="@style/TextParameter.Name"
+                        android:text="Observer" />
 
                     <Space
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1" />
+                        style="@style/Spacing" />
 
                     <EditText
                         android:id="@+id/et_observer"
@@ -92,46 +83,35 @@
                     android:orientation="horizontal">
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Coordinate"
-                        android:textSize="18sp" />
+                        style="@style/TextParameter.Name"
+                        android:text="Coordinate" />
 
                     <Space
-                        android:layout_width="180dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1" />
+                        style="@style/Spacing"/>
 
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
 
-                        <TextView
+                        <EditText
+                            style="@style/TextParameter.DataOutput"
                             android:id="@+id/tv_latitude"
-                            android:layout_width="200dp"
-                            android:layout_height="wrap_content"
-                            android:hint="Latitude"
-                            android:textSize="18sp" />
+                            android:hint="Latitude" />
 
                         <Space
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1" />
+                            style="@style/Spacing" />
 
-                        <TextView
+                        <EditText
+                            style="@style/TextParameter.DataOutput"
                             android:id="@+id/tv_longitude"
-                            android:layout_width="200dp"
-                            android:layout_height="wrap_content"
-                            android:hint="Longitude"
-                            android:textSize="18sp" />
+                            android:hint="Longitude" />
+
                         <Button
+                            style="@style/ButtonParam"
                             android:id="@+id/btn_generate"
-                            android:layout_width="wrap_content"
-                            android:layout_height="48dp"
-                            android:layout_gravity="center"
-                            android:layout_marginTop="16dp"
-                            android:text="Generate " />
+                            android:text="Get Coordinate" />
+
                     </LinearLayout>
 
                 </LinearLayout>
@@ -142,27 +122,19 @@
                     android:orientation="horizontal">
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Date"
-                        android:textSize="18sp" />
+                        style="@style/TextParameter.Name"
+                        android:text="Date" />
 
                     <Space
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1" />
+                        style="@style/Spacing"/>
 
                     <EditText
+                        style="@style/TextParameter.DataOutput"
                         android:id="@+id/et_date"
-                        android:layout_width="200dp"
-                        android:layout_height="wrap_content"
                         android:hint="Set Date "
-                        android:inputType="none"
-                        android:textSize="18sp" />
-
+                        android:inputType="date" />
 
                 </LinearLayout>
-
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -170,57 +142,83 @@
                     android:orientation="horizontal">
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Time"
-                        android:textSize="18sp" />
+                        style="@style/TextParameter.Name"
+                        android:text="Time" />
 
                     <Space
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1" />
+                        style="@style/Spacing" />
 
                     <EditText
+                        style="@style/TextParameter.DataOutput"
                         android:id="@+id/et_time"
-                        android:layout_width="200dp"
-                        android:layout_height="wrap_content"
                         android:hint="Set Time"
-                        android:inputType="none"
-                        android:textSize="18sp" />
+                        android:inputType="time" />
 
                 </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
 
                 <TextView
+                    style="@style/TextParameter.Name"
+                    android:text="Seeing" />
+
+                <Space style="@style/Spacing" />
+
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Seeing"
-                    android:textSize="18sp" />
+                    android:orientation="vertical">
 
-
-                <RadioGroup
-                    android:id="@+id/rg_seeing"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_centerHorizontal="true"
-                    android:orientation="horizontal">
-
-
-                    <RadioButton
-                        android:id="@+id/excellent"
-                        android:layout_width="0dp"
+                    <RadioGroup
+                        android:id="@+id/rg_seeing"
+                        android:layout_width="200dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:checked="true"
-                        android:text="@string/seeing_excellent" />
+                        android:orientation="vertical">
 
-                    <RadioButton
-                        android:id="@+id/poor"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="@string/seeing_poor" />
+                        <RadioButton
+                            android:id="@+id/rb_seeing_excellent"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:checked="true"
+                            android:text="@string/seeing_excellent" />
 
-                </RadioGroup>
+                        <RadioButton
+                            android:id="@+id/rb_seeing_good"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/seeing_good" />
+
+                        <RadioButton
+                            android:id="@+id/rb_seeing_ok"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/seeing_ok" />
+
+                        <RadioButton
+                            android:id="@+id/rb_seeing_poor"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/seeing_poor" />
+
+                        <RadioButton
+                            android:id="@+id/rb_seeing_very_poor"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/seeing_very_poor" />
+
+                    </RadioGroup>
+
+                </LinearLayout>
+
+            </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -228,23 +226,17 @@
                     android:orientation="horizontal">
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Instrument"
-                        android:textSize="18sp" />
+                        style="@style/TextParameter.Name"
+                        android:text="Instrument" />
 
                     <Space
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1" />
+                        style="@style/Spacing"/>
 
                     <EditText
+                        style="@style/TextParameter.DataOutput"
                         android:id="@+id/et_instrument"
-                        android:layout_width="200dp"
-                        android:layout_height="wrap_content"
                         android:hint="Telescope, Camera, Etc"
-                        android:inputType="text"
-                        android:textSize="18sp" />
+                        android:inputType="text" />
 
                 </LinearLayout>
 
@@ -254,23 +246,17 @@
                     android:orientation="horizontal">
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Magnification"
-                        android:textSize="18sp" />
+                        style="@style/TextParameter.Name"
+                        android:text="Magnification" />
 
                     <Space
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1" />
+                        style="@style/Spacing" />
 
                     <EditText
+                        style="@style/TextParameter.DataOutput"
                         android:id="@+id/et_magnification"
-                        android:layout_width="200dp"
-                        android:layout_height="wrap_content"
-                        android:hint="100x , 200x"
-                        android:inputType="text"
-                        android:textSize="18sp" />
+                        android:hint="40x, 60x, etc"
+                        android:inputType="text" />
 
                 </LinearLayout>
 
@@ -280,23 +266,17 @@
                     android:orientation="horizontal">
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Filter"
-                        android:textSize="18sp" />
+                        style="@style/TextParameter.Name"
+                        android:text="Filter" />
 
                     <Space
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1" />
+                        style="@style/Spacing" />
 
                     <EditText
+                        style="@style/TextParameter.DataOutput"
                         android:id="@+id/et_filter"
-                        android:layout_width="200dp"
-                        android:layout_height="wrap_content"
                         android:hint="Original, Soft, Warm"
-                        android:inputType="text"
-                        android:textSize="18sp" />
+                        android:inputType="text" />
 
                 </LinearLayout>
 
@@ -306,39 +286,33 @@
                     android:orientation="horizontal">
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Comment"
-                        android:textSize="18sp" />
+                        style="@style/TextParameter.Name"
+                        android:text="Comment" />
 
                     <Space
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1" />
+                        style="@style/Spacing"/>
 
                     <EditText
+                        style="@style/TextParameter.DataOutput"
                         android:id="@+id/et_comment"
-                        android:layout_width="200dp"
-                        android:layout_height="wrap_content"
-                        android:hint="description of object"
-                        android:inputType="textMultiLine"
-                        android:textSize="18sp" />
+                        android:hint="Description of object"
+                        android:inputType="textMultiLine" />
 
                 </LinearLayout>
 
                 <Button
+                    style="@style/ButtonParam"
                     android:id="@+id/btn_save_log"
-                    android:layout_width="wrap_content"
-                    android:layout_height="48dp"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="16dp"
                     android:text="Save Log Book " />
-
 
             </LinearLayout>
 
-        </RelativeLayout>
-    </LinearLayout>
+            <TextView
+                style="@style/TextSubTitle.Body"
+                android:text="   Observation Log Book   " />
 
+        </RelativeLayout>
+
+    </LinearLayout>
 
 </ScrollView>

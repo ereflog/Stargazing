@@ -50,4 +50,5 @@ dependencies {
     implementation 'com.huawei.hms:ads-consent:3.4.45.304'
     implementation 'com.huawei.hms:push:6.5.0.300'
     implementation 'com.huawei.hms:hianalytics:6.6.0.300'
+    implementation 'com.huawei.agconnect:agconnect-cloud-database:1.5.3.300'
 }

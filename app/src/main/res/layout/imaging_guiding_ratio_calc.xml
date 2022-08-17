@@ -22,8 +22,7 @@
             android:layout_height="match_parent"
             android:layout_marginBottom="20dp">
 
-            <LinearLayout
-                style="@style/BorderParam">
+            <LinearLayout style="@style/BorderParam">
 
                 <!--Focal Length-->
                 <LinearLayout
@@ -121,7 +120,6 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
                     android:orientation="horizontal">
 
                     <TextView
@@ -257,7 +255,6 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
                     android:orientation="horizontal">
 
                     <TextView

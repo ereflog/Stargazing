@@ -93,7 +93,7 @@
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginTop">12dp</item>
-        <item name="android:layout_marginBottom">25dp</item>
+        <item name="android:layout_marginBottom">12dp</item>
         <item name="android:layout_gravity">center</item>
         <item name="android:backgroundTint">@color/indigo</item>
     </style>
@@ -111,6 +111,16 @@
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">match_parent</item>
         <item name="android:layout_weight">1</item>
+    </style>
+
+    <style name="TextParameter.DataOutput">
+        <item name="android:layout_width">200dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:inputType">none</item>
+        <item name="android:focusable">false</item>
+        <item name="android:clickable">false</item>
+        <item name="android:cursorVisible">false</item>
+        <item name="android:focusableInTouchMode">false</item>
     </style>
 
 </resources>

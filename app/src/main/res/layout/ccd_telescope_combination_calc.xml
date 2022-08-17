@@ -4,10 +4,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
-    android:padding="16dp"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:padding="16dp"
     tools:context=".CCDTelescopeCombinationCalc">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -19,12 +20,7 @@
             android:layout_marginBottom="20dp">
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/border"
-                android:orientation="vertical"
-                android:padding="15dp">
+                style="@style/BorderParam">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -32,19 +28,15 @@
                     android:orientation="horizontal">
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Seeing"
-                        android:textSize="18sp" />
+                        style="@style/TextParameter.Name"
+                        android:text="Seeing" />
 
                     <Space
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1" />
+                        style="@style/Spacing"/>
 
                     <Spinner
                         android:id="@+id/seeing_spinner"
-                        android:layout_width="300dp"
+                        android:layout_width="230dp"
                         android:layout_height="wrap_content"
                         android:background="@android:drawable/btn_dropdown"
                         android:entries="@array/Seeing"
@@ -58,19 +50,15 @@
                     android:orientation="horizontal">
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Barlow or Reducer"
-                        android:textSize="18sp" />
+                        style="@style/TextParameter.Name"
+                        android:text="Barlow or Reducer" />
 
                     <Space
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1" />
+                        style="@style/Spacing"/>
 
                     <Spinner
                         android:id="@+id/dd_barlow_reducer_ccd_imaging_dropdown"
-                        android:layout_width="130dp"
+                        android:layout_width="120dp"
                         android:layout_height="wrap_content"
                         android:background="@android:drawable/btn_dropdown"
                         android:entries="@array/barlow_reducer"
@@ -85,30 +73,20 @@
                     android:orientation="horizontal">
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="CCD Pixel Size"
-                        android:textSize="18sp" />
+                        style="@style/TextParameter.Name"
+                        android:text="CCD Pixel Size" />
 
                     <Space
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1" />
+                        style="@style/Spacing" />
 
                     <EditText
+                        style="@style/TextParameter.InputDecimal"
                         android:id="@+id/et_pixel_size"
-                        android:layout_width="80dp"
-                        android:layout_height="wrap_content"
-                        android:hint="µm"
-                        android:inputType="numberDecimal"
-                        android:textSize="18sp" />
+                        android:hint="µm" />
 
                     <TextView
-                        android:layout_width="70dp"
-                        android:layout_height="wrap_content"
-                        android:text="µm"
-                        android:textAlignment="center"
-                        android:textSize="20sp" />
+                        style="@style/TextParameter.Unit"
+                        android:text="µm" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -117,30 +95,20 @@
                     android:orientation="horizontal">
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Focal Length"
-                        android:textSize="18sp" />
+                        style="@style/TextParameter.Name"
+                        android:text="Focal Length" />
 
                     <Space
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1" />
+                        style="@style/Spacing"/>
 
                     <EditText
+                        style="@style/TextParameter.InputNumber"
                         android:id="@+id/et_focal_lenght"
-                        android:layout_width="80dp"
-                        android:layout_height="wrap_content"
-                        android:hint="mm"
-                        android:inputType="number"
-                        android:textSize="18sp" />
+                        android:hint="mm" />
 
                     <TextView
-                        android:layout_width="70dp"
-                        android:layout_height="wrap_content"
-                        android:text="mm"
-                        android:textAlignment="center"
-                        android:textSize="18sp" />
+                        style="@style/TextParameter.Unit"
+                        android:text="mm" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -149,19 +117,15 @@
                     android:orientation="horizontal">
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="CCD Binning"
-                        android:textSize="18sp" />
+                        style="@style/TextParameter.Name"
+                        android:text="CCD Binning" />
 
                     <Space
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1" />
+                        style="@style/Spacing"/>
 
                     <Spinner
                         android:id="@+id/binning_spinner"
-                        android:layout_width="130dp"
+                        android:layout_width="120dp"
                         android:layout_height="wrap_content"
                         android:background="@android:drawable/btn_dropdown"
                         android:entries="@array/ccd_binning"
@@ -173,58 +137,37 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="15dp"
                     android:orientation="horizontal">
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="=   Resolution:"
-                        android:textSize="18sp" />
+                        style="@style/TextParameter.Name"
+                        android:text="Resolution" />
 
                     <Space
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1" />
+                        style="@style/Spacing"/>
+
+                    <EditText
+                        style="@style/TextParameter.Result"
+                        android:id="@+id/tv_resolution_combination" />
 
                     <TextView
-                        android:id="@+id/tv_resolution_combination"
-                        android:layout_width="75dp"
-                        android:layout_height="wrap_content"
-                        android:hint="result"
-                        android:inputType="number"
-                        android:textSize="18sp" />
-
-                    <TextView
-                        android:layout_width="70dp"
-                        android:layout_height="wrap_content"
-                        android:text="' / pixel"
-                        android:textAlignment="center"
-                        android:textSize="20sp" />
+                        style="@style/TextParameter.Unit"
+                        android:text="' / pixel" />
                 </LinearLayout>
 
                 <Button
+                    style="@style/ButtonParam"
                     android:id="@+id/btn_resolution_combination"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginBottom="25dp"
                     android:text="Calculate Resolution" />
 
             </LinearLayout>
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
-                android:layout_marginLeft="15dp"
-                android:background="#ffffff"
-                android:text="  CCD Suitability Calculator   "
-                android:textSize="17sp" />
-
+                style="@style/TextSubTitle.Body"
+                android:text="   CCD Suitability Calculator   " />
 
         </RelativeLayout>
-    </LinearLayout>
 
+    </LinearLayout>
 
 </ScrollView>

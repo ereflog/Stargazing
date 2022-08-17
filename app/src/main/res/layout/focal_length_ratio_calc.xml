@@ -1,249 +1,198 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:padding="16dp"
     tools:context=".FocalLenghtRatioCalc">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        android:text="Focal Length Value"
-        android:textColor="@color/black"
-        android:textStyle="bold"
-        android:textSize="24sp" />
-
     <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <!--    FOCAL LENGTH VALUE-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp">
+
+        <LinearLayout
+            style="@style/BorderParam">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/TextParameter.Name"
+                    android:text="Aperture" />
+
+                <Space
+                    style="@style/Spacing" />
+
+                <EditText
+                    style="@style/TextParameter.InputNumber"
+                    android:id="@+id/etapertur"
+                    android:hint="mm" />
+
+                <TextView
+                    style="@style/TextParameter.Unit"
+                    android:text="mm" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/TextParameter.Name"
+                    android:text="Focal Ratio" />
+
+                <Space
+                    style="@style/Spacing" />
+
+                <TextView
+                    style="@style/TextParameter.Unit"
+                    android:text="f/" />
+
+                <EditText
+                    style="@style/TextParameter.Result"
+                    android:id="@+id/etfocalratio" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/TextParameter.Name"
+                    android:text="Focal Length" />
+
+                <Space
+                    style="@style/Spacing" />
+
+                <EditText
+                    style="@style/TextParameter.Result"
+                    android:id="@+id/tvfocallenght" />
+
+                <TextView
+                    style="@style/TextParameter.Unit"
+                    android:hint="mm" />
+
+            </LinearLayout>
+
+            <Button
+                style="@style/ButtonParam"
+                android:id="@+id/btnfl"
+                android:text="Calculate Focal Length" />
+
+        </LinearLayout>
+
+        <TextView
+            style="@style/TextSubTitle.Body"
+            android:text="   Focal Length Value   " />
+
+    </RelativeLayout>
+
+    <!--    FOCAL RATIO VALUE-->
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:layout_marginBottom="20dp">
+
+        <LinearLayout
+            style="@style/BorderParam">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/TextParameter.Name"
+                    android:text="Focal Length" />
+
+                <Space
+                   style="@style/Spacing"/>
+
+                <EditText
+                    style="@style/TextParameter.InputNumber"
+                    android:id="@+id/etfocallenght"
+                    android:hint="mm" />
+
+                <TextView
+                    style="@style/TextParameter.Unit"
+                    android:text="mm" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/TextParameter.Name"
+                    android:text="Aperture" />
+
+                <Space
+                    style="@style/Spacing" />
+
+                <EditText
+                    style="@style/TextParameter.InputNumber"
+                    android:id="@+id/etaperturratio"
+                    android:hint="mm" />
+
+                <TextView
+                    style="@style/TextParameter.Unit"
+                    android:text="mm" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/TextParameter.Name"
+                    android:text="Focal Ratio" />
+
+                <Space
+                    style="@style/Spacing" />
+
+                <TextView
+                    style="@style/TextParameter.Unit"
+                    android:id="@+id/tvfocalrasio"
+                    android:hint="f/" />
+
+                <EditText
+                    style="@style/TextParameter.Result" />
+
+            </LinearLayout>
+
+            <Button
+                style="@style/ButtonParam"
+                android:id="@+id/btnfr"
+                android:text="Calculate Focal Ratio" />
+
+        </LinearLayout>
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="18sp"
-            android:text="Aperture" />
+            style="@style/TextSubTitle.Body"
+            android:text="   Focal Ratio Value   " />
 
-        <Space
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="match_parent" />
-
-        <EditText
-            android:id="@+id/etapertur"
-            android:layout_width="80dp"
-            android:layout_height="wrap_content"
-            android:hint="mm"
-            android:inputType="number"
-            android:textSize="18sp" />
-
-        <TextView
-            android:layout_width="70dp"
-            android:layout_height="wrap_content"
-            android:textSize="18sp"
-            android:textAlignment="center"
-            android:text="mm" />
-    </LinearLayout>
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginBottom="15dp">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="18sp"
-            android:text="Focal Ratio" />
-
-        <Space
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="match_parent" />
-
-        <TextView
-            android:layout_width="70dp"
-            android:layout_height="wrap_content"
-            android:textSize="18sp"
-            android:textAlignment="center"
-            android:text="f/" />
-
-        <EditText
-            android:id="@+id/etfocalratio"
-            android:layout_width="80dp"
-            android:layout_height="wrap_content"
-            android:hint="f/number"
-            android:inputType="number"
-            android:textSize="18sp" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginBottom="15dp">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="18sp"
-            android:text="Focal Length" />
-
-        <Space
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="match_parent" />
-
-        <TextView
-            android:id="@+id/tvfocallenght"
-            android:layout_width="75dp"
-            android:layout_height="wrap_content"
-            android:textSize="18sp"
-            android:hint="value" />
-
-        <TextView
-            android:layout_width="70dp"
-            android:layout_height="wrap_content"
-            android:textSize="18sp"
-            android:textAlignment="center"
-            android:hint="mm" />
-
-    </LinearLayout>
-
-    <Button
-        android:id="@+id/btnfl"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Calculate Focal Length"
-        android:layout_gravity="center"
-        android:layout_marginBottom="25dp"/>
-
-
-
-
-
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        android:text="Focal Ratio Value"
-        android:textColor="@color/black"
-        android:textStyle="bold"
-        android:textSize="24sp" />
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="18sp"
-            android:text="Focal Length" />
-
-        <Space
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="match_parent" />
-
-        <EditText
-            android:id="@+id/etfocallenght"
-            android:layout_width="80dp"
-            android:layout_height="wrap_content"
-            android:hint="mm"
-            android:inputType="number"
-            android:textSize="18sp" />
-
-        <TextView
-            android:layout_width="70dp"
-            android:layout_height="wrap_content"
-            android:textSize="18sp"
-            android:textAlignment="center"
-            android:text="mm" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginBottom="15dp">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="18sp"
-            android:text="Aperture" />
-
-        <Space
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="match_parent" />
-
-        <EditText
-            android:id="@+id/etaperturratio"
-            android:layout_width="80dp"
-            android:layout_height="wrap_content"
-            android:hint="mm"
-            android:inputType="number"
-            android:textSize="18sp" />
-
-        <TextView
-            android:layout_width="70dp"
-            android:layout_height="wrap_content"
-            android:textSize="18sp"
-            android:textAlignment="center"
-            android:text="mm" />
+        </RelativeLayout>
 
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginBottom="15dp">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="18sp"
-            android:text="Focal Ratio" />
-
-        <Space
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="match_parent" />
-
-        <TextView
-            android:layout_width="70dp"
-            android:layout_height="wrap_content"
-            android:textSize="18sp"
-            android:textAlignment="center"
-            android:hint="f/" />
-
-        <TextView
-            android:id="@+id/tvfocalrasio"
-            android:layout_width="75dp"
-            android:layout_height="wrap_content"
-            android:textSize="18sp"
-            android:hint="value" />
-
-    </LinearLayout>
-
-    <Button
-        android:id="@+id/btnfr"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Calculate Focal Ratio"
-        android:layout_gravity="center"
-        android:layout_marginBottom="25dp"/>
-
-</LinearLayout>
+</ScrollView>

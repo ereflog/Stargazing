@@ -7,183 +7,220 @@
     android:padding="16dp"
     tools:context=".MagnificationCalc">
 
-<!--    MAGNIFICATION VALUE-->
-    <TextView
-        style="@style/TextTitle.Name"
-        android:text="@string/tv_magnification_value" />
-
+    <!--    MAGNIFICATION VALUE-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="vertical">
 
-        <TextView
-            style="@style/TextParameter.Name"
-            android:text="Telescope Focal Length" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp">
 
-        <Space
-            style="@style/Spacing"/>
+            <LinearLayout
+                style="@style/BorderParam">
 
-        <EditText
-            android:id="@+id/ettfl"
-            style="@style/TextParameter.InputDecimal"
-            android:hint="mm"
-            />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
 
-        <TextView
-            style="@style/TextParameter.Unit"
-            android:text="mm" />
+                    <TextView
+                        style="@style/TextParameter.Name"
+                        android:text="Telescope F Length" />
+
+                    <Space
+                        style="@style/Spacing"/>
+
+                    <EditText
+                        android:id="@+id/ettfl"
+                        style="@style/TextParameter.InputDecimal"
+                        android:hint="mm"
+                        />
+
+                    <TextView
+                        style="@style/TextParameter.Unit"
+                        android:text="mm" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/TextParameter.Name"
+                        android:text="Eyepiece F Length" />
+
+                    <Space
+                        style="@style/Spacing" />
+
+                    <EditText
+                        android:id="@+id/etefl"
+                        style="@style/TextParameter.InputDecimal"
+                        android:hint="mm" />
+
+                    <TextView
+                        style="@style/TextParameter.Unit"
+                        android:text="mm" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/TextParameter.Name"
+                        android:text="Magnification" />
+
+                    <Space
+                        style="@style/Spacing" />
+
+                    <EditText
+                        style="@style/TextParameter.Result"
+                        android:id="@+id/tvmag" />
+
+                    <TextView
+                        style="@style/TextParameter.Unit"
+                        android:hint="x" />
+
+                </LinearLayout>
+
+                <Button
+                    style="@style/ButtonParam"
+                    android:id="@+id/btnmag"
+                    android:text="Calculate Magnification" />
+
+            </LinearLayout>
+
+            <TextView
+                style="@style/TextSubTitle.Body"
+                android:text="   Magnification Value   " />
+
+        </RelativeLayout>
+
     </LinearLayout>
 
+    <!--    EYEPIECE FOCAL LENGTH VALUE-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal" >
+        android:orientation="vertical">
 
-        <TextView
-            style="@style/TextParameter.Name"
-            android:text="Eyepiece Focal Length" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp">
 
-        <Space
-            style="@style/Spacing" />
+            <LinearLayout
+                style="@style/BorderParam">
 
-        <EditText
-            android:id="@+id/etefl"
-            style="@style/TextParameter.InputDecimal"
-            android:hint="mm" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
 
-        <TextView
-            style="@style/TextParameter.Unit"
-            android:text="mm" />
+                    <TextView
+                        style="@style/TextParameter.Name"
+                        android:text="@string/telescope_fl" />
 
-    </LinearLayout>
+                    <Space
+                        style="@style/Spacing"/>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+                    <EditText
+                        style="@style/TextParameter.InputNumber"
+                        android:id="@+id/ettfl2"
+                        android:hint="mm" />
 
-        <TextView
-            style="@style/TextParameter.Name"
-            android:text="Magnification" />
+                    <TextView
+                        style="@style/TextParameter.Unit"
+                        android:text="mm" />
 
-        <Space
-            style="@style/Spacing" />
+                </LinearLayout>
 
-        <EditText
-            style="@style/TextParameter.Result"
-            android:id="@+id/tvmag" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
 
-        <TextView
-            style="@style/TextParameter.Unit"
-            android:hint="x" />
+                    <TextView
+                        style="@style/TextParameter.Name"
+                        android:text="Telescope Aperture" />
 
-    </LinearLayout>
+                    <Space
+                        style="@style/Spacing" />
 
-    <Button
-        style="@style/ButtonParam"
-        android:id="@+id/btnmag"
-        android:text="Calculate Magnification" />
+                    <EditText
+                        style="@style/TextParameter.InputNumber"
+                        android:id="@+id/etta"
+                        android:hint="mm" />
 
-<!--    EYEPIECE FOCAL LENGTH VALUE-->
-    <TextView
-        style="@style/TextTitle.Name"
-        android:text="@string/eyepiece_fl_value" />
+                    <TextView
+                        style="@style/TextParameter.Unit"
+                        android:text="mm" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+                </LinearLayout>
 
-        <TextView
-            style="@style/TextParameter.Name"
-            android:text="@string/telescope_fl" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
 
-        <Space
-            style="@style/Spacing"/>
+                    <TextView
+                        style="@style/TextParameter.Name"
+                        android:text="Magnification" />
 
-        <EditText
-            style="@style/TextParameter.InputNumber"
-            android:id="@+id/ettfl2"
-            android:hint="mm" />
+                    <Space
+                        style="@style/Spacing" />
 
-        <TextView
-            style="@style/TextParameter.Unit"
-            android:text="mm" />
+                    <EditText
+                        style="@style/TextParameter.InputNumber"
+                        android:id="@+id/etmag2"
+                        android:hint="x" />
 
-    </LinearLayout>
+                    <TextView
+                        style="@style/TextParameter.Unit"
+                        android:text="x" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+                </LinearLayout>
 
-        <TextView
-            style="@style/TextParameter.Name"
-            android:text="Telescope Aperture" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
 
-        <Space
-            style="@style/Spacing" />
+                    <TextView
+                        style="@style/TextParameter.Name"
+                        android:text="Eyepiece F Length"/>
+                    <Space
+                        style="@style/Spacing" />
 
-        <EditText
-            style="@style/TextParameter.InputNumber"
-            android:id="@+id/etta"
-            android:hint="mm" />
+                    <EditText
+                        style="@style/TextParameter.Result"
+                        android:id="@+id/tvefl" />
 
-        <TextView
-            style="@style/TextParameter.Unit"
-            android:text="mm" />
+                    <TextView
+                        style="@style/TextParameter.Unit"
+                        android:hint="mm" />
 
-    </LinearLayout>
+                </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+                <Button
+                        style="@style/ButtonParam"
+                        android:id="@+id/btneyepiece"
+                        android:text="Calculate Eyepiece" />
 
-        <TextView
-            style="@style/TextParameter.Name"
-            android:text="Magnification" />
+            </LinearLayout>
 
-        <Space
-            style="@style/Spacing" />
+            <TextView
+                style="@style/TextSubTitle.Body"
+                android:text="   Eyepiece Focal Length Value   " />
 
-        <EditText
-            style="@style/TextParameter.InputNumber"
-            android:id="@+id/etmag2"
-            android:hint="x" />
-
-        <TextView
-            style="@style/TextParameter.Unit"
-            android:text="x" />
+        </RelativeLayout>
 
     </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <TextView
-            style="@style/TextParameter.Name"
-            android:text="Eyepiece Focal Length" />
-
-        <Space
-            style="@style/Spacing" />
-
-        <EditText
-            style="@style/TextParameter.Result"
-            android:id="@+id/tvefl" />
-
-        <TextView
-            style="@style/TextParameter.Unit"
-            android:hint="mm" />
-
-    </LinearLayout>
-
-    <Button
-        style="@style/ButtonParam"
-        android:id="@+id/btneyepiece"
-        android:text="Calculate Eyepiece" />
 
 </LinearLayout>
