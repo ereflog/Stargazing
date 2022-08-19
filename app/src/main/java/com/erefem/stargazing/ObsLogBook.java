@@ -97,10 +97,6 @@ public class  ObsLogBook extends AppCompatActivity {
                 findViewById(R.id.et_time);
         rg_seeing=
                 findViewById(R.id.rg_seeing);
-        excellent=
-                findViewById(R.id.excellent);
-        poor=
-                findViewById(R.id.poor);
         et_instrument=
                 findViewById(R.id.et_instrument);
         et_magnification=
@@ -187,6 +183,7 @@ public class  ObsLogBook extends AppCompatActivity {
                     Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED
                     && ActivityCompat.checkSelfPermission(ObsLogBook.this,
                     Manifest.permission.ACCESS_COARSE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
+
                 getLocation();
 
                 } else {
@@ -194,10 +191,9 @@ public class  ObsLogBook extends AppCompatActivity {
                         , new String[]{Manifest.permission.ACCESS_FINE_LOCATION
                                 , Manifest.permission.ACCESS_COARSE_LOCATION}
                         , 100);
-            }
+            }Toast.makeText(getApplicationContext(), "Please Wait", Toast.LENGTH_SHORT).show();
 
         });
-
     }
 
     @Override
