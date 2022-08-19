@@ -179,7 +179,7 @@
                         android:orientation="vertical">
 
                         <RadioButton
-                            android:id="@+id/rb_seeing_excellent"
+                            android:id="@+id/rb_seeing_exceptional"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -233,7 +233,7 @@
                         style="@style/Spacing"/>
 
                     <EditText
-                        style="@style/TextParameter.DataOutput"
+                        style="@style/TextParameter.DataInput"
                         android:id="@+id/et_instrument"
                         android:hint="Telescope, Camera, Etc"
                         android:inputType="text" />
@@ -253,7 +253,7 @@
                         style="@style/Spacing" />
 
                     <EditText
-                        style="@style/TextParameter.DataOutput"
+                        style="@style/TextParameter.DataInput"
                         android:id="@+id/et_magnification"
                         android:hint="40x, 60x, etc"
                         android:inputType="text" />
@@ -273,7 +273,7 @@
                         style="@style/Spacing" />
 
                     <EditText
-                        style="@style/TextParameter.DataOutput"
+                        style="@style/TextParameter.DataInput"
                         android:id="@+id/et_filter"
                         android:hint="Original, Soft, Warm"
                         android:inputType="text" />
@@ -293,7 +293,7 @@
                         style="@style/Spacing"/>
 
                     <EditText
-                        style="@style/TextParameter.DataOutput"
+                        style="@style/TextParameter.DataInput"
                         android:id="@+id/et_comment"
                         android:hint="Description of object"
                         android:inputType="textMultiLine" />

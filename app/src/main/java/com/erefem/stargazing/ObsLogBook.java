@@ -54,8 +54,11 @@ public class  ObsLogBook extends AppCompatActivity {
     RadioGroup
             rg_seeing;
     RadioButton
-            excellent,
-            poor;
+            exeptional,
+            good,
+            ok,
+            poor,
+            very_poor;
     Button
             btn_generate,
             btn_save_log;
@@ -73,6 +76,9 @@ public class  ObsLogBook extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.obs_log_book);
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().setTitle(R.string.obs_log_book_title);
+        }
 
         LocationRequest
                 mLocationRequest;
@@ -97,10 +103,16 @@ public class  ObsLogBook extends AppCompatActivity {
                 findViewById(R.id.et_time);
         rg_seeing=
                 findViewById(R.id.rg_seeing);
-        excellent=
-                findViewById(R.id.excellent);
+        exeptional=
+                findViewById(R.id.rb_seeing_exceptional);
+        good=
+                findViewById(R.id.rb_seeing_good);
+        ok=
+                findViewById(R.id.rb_seeing_ok);
         poor=
-                findViewById(R.id.poor);
+                findViewById(R.id.rb_seeing_poor);
+        very_poor=
+                findViewById(R.id.rb_seeing_very_poor);
         et_instrument=
                 findViewById(R.id.et_instrument);
         et_magnification=
