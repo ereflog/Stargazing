@@ -199,6 +199,7 @@ public class  ObsLogBook extends AppCompatActivity {
                     Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED
                     && ActivityCompat.checkSelfPermission(ObsLogBook.this,
                     Manifest.permission.ACCESS_COARSE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
+
                 getLocation();
 
                 } else {
@@ -206,10 +207,9 @@ public class  ObsLogBook extends AppCompatActivity {
                         , new String[]{Manifest.permission.ACCESS_FINE_LOCATION
                                 , Manifest.permission.ACCESS_COARSE_LOCATION}
                         , 100);
-            }
+            }Toast.makeText(getApplicationContext(), "Please Wait", Toast.LENGTH_SHORT).show();
 
         });
-
     }
 
     @Override
