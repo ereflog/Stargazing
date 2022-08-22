@@ -91,5 +91,13 @@ there are various calculators for calculating telescope and camera parameters, w
         <item>Poor (4–5" FWHM)</item>
         <item>Very Poor (5–6" FWHM)</item>
     </string-array>
+    <!--SplashScreen ads-->
+    <string name="ad_id_splash">testd7c5cewoj6</string>
+    <string name="ad_id_splash_landscape">testq6zq98hecj</string>
+    <string name="copyright_info">Copyright 2022. Version 1.0.1</string>
+    <string name="status_load_ad_success">Ad loading state: loaded successfully.</string>
+    <string name="status_load_ad_fail">Ad loading state: failed to be loaded. Error code: </string>
+    <string name="status_ad_dismissed">Ad is dismissed.</string>
+
 
 </resources>
