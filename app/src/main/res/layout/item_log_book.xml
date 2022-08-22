@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    android:orientation="vertical"
+    card_view:cardCornerRadius="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:orientation="vertical"
+        style="@style/BorderParam"
+        >
+        <TextView
+            android:id="@+id/tv_object_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Object Name"
+            />
+        <TextView
+            android:id="@+id/tv_observer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Observer Name"
+            android:layout_marginTop="4dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textSize="12sp"
+
+            />
+        <TextView
+            android:id="@+id/tv_coordinate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Coordinate"
+            android:layout_marginTop="4dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textSize="12sp"
+
+            />
+        <TextView
+            android:id="@+id/tv_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Date"
+            android:layout_marginTop="4dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textSize="12sp"
+
+
+            />
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="time"
+            android:layout_marginTop="4dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textSize="12sp"
+
+            />
+        <TextView
+            android:id="@+id/tv_seeing"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Seeing"
+            android:layout_marginTop="4dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textSize="12sp"
+
+            />
+        <TextView
+            android:id="@+id/tv_instrument"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Instrument"
+            android:layout_marginTop="4dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textSize="12sp"/>
+
+
+        <TextView
+            android:id="@+id/tv_magnification"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Magnification"
+            android:layout_marginTop="4dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textSize="12sp"
+            />
+
+        <TextView
+            android:id="@+id/tv_filter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Filter"
+            android:layout_marginTop="4dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textSize="12sp"
+            />
+        <TextView
+            android:id="@+id/tv_description_object"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Description the object"
+            android:layout_marginTop="4dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textSize="12sp"
+            />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center">
+
+        <ImageButton
+            android:id="@+id/edit"
+            android:src="@drawable/ic_baseline_edit_24"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?android:selectableItemBackground"
+            android:layout_marginRight="8dp"
+            />
+            <ImageButton
+                android:id="@+id/delete"
+                android:src="@drawable/ic_baseline_delete_24"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?android:selectableItemBackground"
+                android:layout_marginLeft="8dp"
+                />
+    </LinearLayout>
+
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
