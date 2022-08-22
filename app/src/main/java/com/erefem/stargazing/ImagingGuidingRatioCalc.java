@@ -57,8 +57,8 @@ public class ImagingGuidingRatioCalc extends AppCompatActivity {
                 SUtils.setToast(et_cam_ps,"is Empty!!!");
 
             } else {
-                float dd_barlow_reducer_imaging = SUtils.getBinningSpinnerValue(barlow_reducer_imaging_dropdown);
-                float dd_barlow_reducer_guide_dropdown = SUtils.getBinningSpinnerValue(barlow_reducer_guide_dropdown);
+                float dd_barlow_reducer_imaging = SUtils.getFloatSpinnerValue(barlow_reducer_imaging_dropdown);
+                float dd_barlow_reducer_guide_dropdown = SUtils.getFloatSpinnerValue(barlow_reducer_guide_dropdown);
                 float binning_guide =SUtils.getBinningSpinnerValue(binning_guide_dropdown);
                 float binning_imaging =SUtils.getBinningSpinnerValue(binning_imaging_dropdown);
                 float Tele_Fl = SUtils.getFloat(et_tele_fl) * dd_barlow_reducer_guide_dropdown;
