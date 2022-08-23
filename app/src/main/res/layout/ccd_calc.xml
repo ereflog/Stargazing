@@ -19,7 +19,9 @@
             android:layout_marginBottom="20dp">
 
             <LinearLayout
-                style="@style/BorderParam">
+                style="@style/BorderParam"
+                android:layout_width="374dp"
+                android:layout_height="wrap_content">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -30,12 +32,11 @@
                         style="@style/TextParameter.Name"
                         android:text="CCD Pixel Size" />
 
-                    <Space
-                        style="@style/Spacing"/>
+                    <Space style="@style/Spacing" />
 
                     <EditText
-                        style="@style/TextParameter.InputDecimal"
                         android:id="@+id/et_pixsize"
+                        style="@style/TextParameter.InputDecimal"
                         android:hint="µm" />
 
                     <TextView
@@ -53,12 +54,11 @@
                         style="@style/TextParameter.Name"
                         android:text="Telescope FL" />
 
-                    <Space
-                        style="@style/Spacing"/>
+                    <Space style="@style/Spacing" />
 
                     <EditText
-                        style="@style/TextParameter.InputNumber"
                         android:id="@+id/et_tfl"
+                        style="@style/TextParameter.InputNumber"
                         android:hint="mm" />
 
                     <TextView
@@ -76,12 +76,11 @@
                         style="@style/TextParameter.Name"
                         android:text="Resolution" />
 
-                    <Space
-                        style="@style/Spacing"/>
+                    <Space style="@style/Spacing" />
 
                     <EditText
-                        style="@style/TextParameter.Result"
-                        android:id="@+id/tv_resolution" />
+                        android:id="@+id/tv_resolution"
+                        style="@style/TextParameter.Result" />
 
                     <TextView
                         style="@style/TextParameter.Unit"
@@ -90,8 +89,8 @@
                 </LinearLayout>
 
                 <Button
-                    style="@style/ButtonParam"
                     android:id="@+id/btn_resolution"
+                    style="@style/ButtonParam"
                     android:text="Calculate Resolution" />
 
             </LinearLayout>

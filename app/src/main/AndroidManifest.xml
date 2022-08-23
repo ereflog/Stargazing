@@ -17,6 +17,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Stargazing">
         <activity
+            android:name=".AddObsLogBook"
+            android:parentActivityName=".ObsLogBook">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ObsLogBook"
+                />
+        </activity>
+        <activity
             android:name=".RedLightTool"
             android:exported="false" />
         <activity
@@ -66,20 +74,18 @@
             android:exported="false" />
         <activity
             android:name=".HomeActivity"
-            android:exported="false">
-        </activity>
+            android:exported="false"></activity>
         <activity
             android:name=".SplashActivity"
-            android:screenOrientation="fullSensor"
             android:configChanges="orientation|screenSize"
-            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
-            android:exported="true">
+            android:exported="true"
+            android:screenOrientation="fullSensor"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
-
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
 
         <service

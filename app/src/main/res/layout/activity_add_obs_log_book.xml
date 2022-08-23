@@ -1,0 +1,308 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".AddObsLogBook">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/border"
+                android:orientation="vertical"
+                android:padding="15dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/TextParameter.Name"
+                            android:text="Object Name" />
+
+                        <Space style="@style/Spacing" />
+
+                        <EditText
+                            android:id="@+id/et_object_name"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:hint="Moon, Jupiter, Mars, etc"
+                            android:inputType="text"
+                            android:textSize="18sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/TextParameter.Name"
+                        android:text="Observer" />
+
+                    <Space style="@style/Spacing" />
+
+                    <EditText
+                        android:id="@+id/et_observer"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:hint="John Doe"
+                        android:inputType="text"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/TextParameter.Name"
+                        android:text="Coordinate" />
+
+                    <Space style="@style/Spacing" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <EditText
+                            android:id="@+id/tv_latitude"
+                            style="@style/TextParameter.DataOutput"
+                            android:hint="Latitude" />
+
+                        <Space style="@style/Spacing" />
+
+                        <EditText
+                            android:id="@+id/tv_longitude"
+                            style="@style/TextParameter.DataOutput"
+                            android:hint="Longitude" />
+
+                        <Button
+                            android:id="@+id/btn_generate"
+                            style="@style/ButtonParam"
+                            android:text="Get Coordinate" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/TextParameter.Name"
+                        android:text="Date" />
+
+                    <Space style="@style/Spacing" />
+
+                    <EditText
+                        android:id="@+id/et_date"
+                        style="@style/TextParameter.DataOutput"
+                        android:hint="Set Date "
+                        android:inputType="date" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/TextParameter.Name"
+                        android:text="Time" />
+
+                    <Space style="@style/Spacing" />
+
+                    <EditText
+                        android:id="@+id/et_time"
+                        style="@style/TextParameter.DataOutput"
+                        android:hint="Set Time"
+                        android:inputType="time" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/TextParameter.Name"
+                        android:text="Seeing" />
+
+                    <Space style="@style/Spacing" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RadioGroup
+                            android:id="@+id/rg_seeing"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <RadioButton
+                                android:id="@+id/rb_seeing_exceptional"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:checked="true"
+                                android:text="@string/seeing_excellent" />
+
+                            <RadioButton
+                                android:id="@+id/rb_seeing_good"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/seeing_good" />
+
+                            <RadioButton
+                                android:id="@+id/rb_seeing_ok"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/seeing_ok" />
+
+                            <RadioButton
+                                android:id="@+id/rb_seeing_poor"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/seeing_poor" />
+
+                            <RadioButton
+                                android:id="@+id/rb_seeing_very_poor"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/seeing_very_poor" />
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/TextParameter.Name"
+                        android:text="Instrument" />
+
+                    <Space style="@style/Spacing" />
+
+                    <EditText
+                        android:id="@+id/et_instrument"
+                        style="@style/TextParameter.DataInput"
+                        android:hint="Telescope, Camera, Etc"
+                        android:inputType="text" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/TextParameter.Name"
+                        android:text="Magnification" />
+
+                    <Space style="@style/Spacing" />
+
+                    <EditText
+                        android:id="@+id/et_magnification"
+                        style="@style/TextParameter.DataInput"
+                        android:hint="40x, 60x, etc"
+                        android:inputType="text" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/TextParameter.Name"
+                        android:text="Filter" />
+
+                    <Space style="@style/Spacing" />
+
+                    <EditText
+                        android:id="@+id/et_filter"
+                        style="@style/TextParameter.DataInput"
+                        android:hint="Original, Soft, Warm"
+                        android:inputType="text" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/TextParameter.Name"
+                        android:text="Comment" />
+
+                    <Space style="@style/Spacing" />
+
+                    <EditText
+                        android:id="@+id/et_comment"
+                        style="@style/TextParameter.DataInput"
+                        android:hint="Description of object"
+                        android:inputType="textMultiLine" />
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btn_save_log"
+                    style="@style/ButtonParam"
+                    android:text="Save Log Book " />
+
+            </LinearLayout>
+
+            <TextView
+                style="@style/TextSubTitle.Body"
+                android:text="   Observation Log Book   " />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</ScrollView>
