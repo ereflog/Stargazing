@@ -19,6 +19,30 @@
     <string name="privacy_policy_title">Privacy Policy</string>
 
     <!--Another String Values-->
+    <string name="privacy_police">
+        At Stargazing, one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by Stargazing and how we use it.
+    </string>
+    <string name="log_files">
+        Stargazing follows a standard procedure of using log files. These files log visitors when they use app. The information collected by log files include internet protocol (IP) addresses, browser type, Internet Service Provider (ISP),Current Location (GPS), date and time stamp, referring/exit pages, and possibly the number of clicks. These are not linked to any information that is personally identifiable. The purpose of the information is for analyzing trends, administering the app, tracking users, movement on the app, and gathering demographic information.
+    </string>
+    <string name="advertising">
+        Some of advertisers in our app may use cookies and web beacons. Each of our advertising partners has their own Privacy Policy for their policies on user data. For easier access.
+    </string>
+    <string name="third_party_advertisers">
+        You may consult this list to find the Privacy Policy for each of the advertising partners of Stargazing.
+Third-party ad servers or ad networks uses technologies like cookies, JavaScript, or Beacons that are used in their respective advertisements and links that appear on Stargazing. They automatically receive your IP address when this occurs. These technologies are used to measure the effectiveness of their advertising campaigns and/or to personalize the advertising content that you see on this app or other apps or websites.
+Note that Stargazing has no access to or control over these cookies that are used by third-party advertisers.
+    </string>
+    <string name="children_information">
+        Another part of our priority is adding protection for children while using the internet. We encourage parents and guardians to observe, participate in, and/or monitor and guide their online activity.
+Stargazing does not knowingly collect any Personal Identifiable Information from children under the age of 13. If you think that your child provided this kind of information on our App, we strongly encourage you to contact us immediately and we will do our best efforts to promptly remove such information from our records.
+    </string>
+    <string name="online_only">
+        This Privacy Policy applies only to our online activities and is valid for visitors to our App with regards to the information that they shared and/or collect in Stargazing. This policy is not applicable to any information collected offline or via channels other than this app. Our Privacy Policy was created with the help of the App Privacy Policy Generator from <a href="https://App-Privacy-Policy.com">App-Privacy-Policy.com</a>
+    </string>
+    <string name="consent">
+        By using our app, you hereby consent to our Privacy Policy and agree to its Terms and Conditions.
+    </string>
     <string name="about_text">Stargazing is an app to help make planning your astronomical observations or astrophotography easier.
 there are various calculators for calculating telescope and camera parameters, weather forecasts, an observation log book, and a handy unit converter.
 </string>
@@ -52,7 +76,7 @@ there are various calculators for calculating telescope and camera parameters, w
     <string name="seeing_good">Good</string>
     <string name="seeing_excellent">Exceptional</string>
     <string name="_00_00">00:00</string>
-    <string name="credit_list">Weather forecast by <a href="https://www.windy.com">Windy.com</a> \nApp icon created by <a href="https://www.flaticon.com/free-icons/telescope" title="telescope icons">iconixar</a></string>
+    <string name="credit_list">Weather forecast by <a href="https://www.windy.com">Windy.com</a> \nApp icon created by <a href="https://www.flaticon.com/free-icons/telescope" title="telescope icons">iconixar</a> \n App Privacy Policy Generator from <a href="https://App-Privacy-Policy.com">App-Privacy-Policy.com</a></string>
     <string-array name="ccd_binning">
         <item>1x1</item>
         <item>2x2</item>
