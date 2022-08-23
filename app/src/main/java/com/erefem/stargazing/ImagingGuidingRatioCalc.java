@@ -8,19 +8,22 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import java.math.RoundingMode;
+import java.text.DecimalFormat;
+
 public class ImagingGuidingRatioCalc extends AppCompatActivity {
 
     EditText
-            et_tele_fl, et_tele_ps, et_cam_fl, et_cam_ps;
+            etTeleFocalLength, etTelePixelSize, etGuideFocalLength, etGuidePixelSize;
     TextView
-            tv_resolution_tele, tv_cam_resolution, tvImagingGuidingRatioResult, tvImagingGuidingRatioResult2;
+            tvTeleResolution, tvGuideResolution, tvImagingGuidingRatioResult, tvImagingGuidingRatioResult2;
 
     Spinner
-            barlow_reducer_imaging_dropdown, barlow_reducer_guide_dropdown, binning_imaging_dropdown,
-            binning_guide_dropdown;
+            ddBarlowReducerImaging, ddBarlowReducerGuide, ddBinningImaging,
+            ddBinningGuide;
 
     Button
-            btn_enter;
+            btnCalculateRatio;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,51 +32,52 @@ public class ImagingGuidingRatioCalc extends AppCompatActivity {
         if (getSupportActionBar() != null) {
             getSupportActionBar().setTitle(R.string.imaging_guiding_ratio_calc_title);
         }
-        et_tele_fl = findViewById(R.id.et_tele_fl);
-        et_tele_ps = findViewById(R.id.et_tele_ps);
-        et_cam_fl = findViewById(R.id.et_cam_fl);
-        et_cam_ps = findViewById(R.id.et_cam_ps);
+        etTeleFocalLength   = findViewById(R.id.et_tele_focal_length);
+        etTelePixelSize     = findViewById(R.id.et_tele_pixel_size);
+        etGuideFocalLength  = findViewById(R.id.et_guide_focal_length);
+        etGuidePixelSize    = findViewById(R.id.et_guide_pixel_size);
 
-        tv_resolution_tele = findViewById(R.id.tv_resolution_tele);
-        tv_cam_resolution = findViewById(R.id.tv_cam_resolution);
-        tvImagingGuidingRatioResult = findViewById(R.id.tvImagingGuidingRatioResult);
-        tvImagingGuidingRatioResult2 = findViewById(R.id.tvImagingGuidingRatioResult2);
-        barlow_reducer_imaging_dropdown=findViewById(R.id.dd_barlow_reducer_imaging_dropdown);
-        barlow_reducer_guide_dropdown=findViewById(R.id.dd_barlow_reducer_guide_dropdown);
-        binning_guide_dropdown=findViewById(R.id.binning_guide_dropdown);
-        binning_imaging_dropdown=findViewById(R.id.binning_imaging_dropdown);
+        tvTeleResolution    = findViewById(R.id.tv_resolution_tele);
+        tvGuideResolution   = findViewById(R.id.tv_cam_resolution);
 
-        btn_enter = findViewById(R.id.btn_enter);
+        tvImagingGuidingRatioResult  = findViewById(R.id.tv_imaging_guiding_ratio_result);
 
-        btn_enter.setOnClickListener(view -> {
+        ddBarlowReducerImaging = findViewById(R.id.dd_barlow_reducer_imaging);
+        ddBarlowReducerGuide   = findViewById(R.id.dd_barlow_reducer_guide);
+        ddBinningImaging       = findViewById(R.id.dd_binning_imaging);
+        ddBinningGuide         = findViewById(R.id.dd_binning_guide);
 
-            if (SUtils.isEmpty(et_tele_fl)) {
-                SUtils.setToast(et_tele_fl,"is Empty!!!");
-            } else if (SUtils.isEmpty(et_tele_ps)) {
-                SUtils.setToast(et_tele_ps,"is Empty!!!");
-            } else if (SUtils.isEmpty(et_cam_fl)) {
-                SUtils.setToast(et_cam_fl,"is Empty!!!");
-            } else if (SUtils.isEmpty(et_cam_ps)) {
-                SUtils.setToast(et_cam_ps,"is Empty!!!");
+        btnCalculateRatio = findViewById(R.id.btn_calculate_ratio);
+
+        btnCalculateRatio.setOnClickListener(view -> {
+            DecimalFormat decimal = new DecimalFormat("#.##");
+            decimal.setRoundingMode(RoundingMode.HALF_EVEN);
+            if (SUtils.isEmpty(etTeleFocalLength)) {
+                SUtils.setToast(etTeleFocalLength,"This field cannot be blank!");
+            } if (SUtils.isEmpty(etTelePixelSize)) {
+                SUtils.setToast(etTelePixelSize,"This field cannot be blank!");
+            } if (SUtils.isEmpty(etGuideFocalLength)) {
+                SUtils.setToast(etGuideFocalLength,"This field cannot be blank!");
+            } if (SUtils.isEmpty(etGuidePixelSize)) {
+                SUtils.setToast(etGuidePixelSize,"This field cannot be blank!");
 
             } else {
-                float dd_barlow_reducer_imaging = SUtils.getFloatSpinnerValue(barlow_reducer_imaging_dropdown);
-                float dd_barlow_reducer_guide_dropdown = SUtils.getFloatSpinnerValue(barlow_reducer_guide_dropdown);
-                float binning_guide =SUtils.getBinningSpinnerValue(binning_guide_dropdown);
-                float binning_imaging =SUtils.getBinningSpinnerValue(binning_imaging_dropdown);
-                float Tele_Fl = SUtils.getFloat(et_tele_fl) * dd_barlow_reducer_guide_dropdown;
-                float Tele_Ps = Float.parseFloat(et_tele_ps.getText().toString());
-                float Cam_Fl = SUtils.getFloat(et_cam_fl) * dd_barlow_reducer_imaging;
-                float Cam_Ps = Float.parseFloat(et_cam_ps.getText().toString());
-                float Resolution_Tele =
-                        (float) (Tele_Ps / Tele_Fl * 206.265) * binning_guide;
-                float Resolution_Cam =
-                        (float) (Cam_Ps / Cam_Fl * 206.265) * binning_imaging;
-                float result_value = Resolution_Tele / Resolution_Cam;
-                tv_resolution_tele.setText(String.valueOf(Resolution_Tele));
-                tv_cam_resolution.setText(String.valueOf(Resolution_Cam));
-                tvImagingGuidingRatioResult.setText(String.valueOf(result_value));
-                tvImagingGuidingRatioResult2.setText(String.valueOf(result_value));
+                float teleBarlowReducer    = SUtils.getFloatSpinnerValue(ddBarlowReducerImaging);
+                float guideBarlowReducer   = SUtils.getFloatSpinnerValue(ddBarlowReducerGuide);
+                float binningImaging       = SUtils.getBinningSpinnerValue(ddBinningImaging);
+                float binningGuide         = SUtils.getBinningSpinnerValue(ddBinningGuide);
+                float teleFocalLength      = SUtils.getFloat(etTeleFocalLength) * teleBarlowReducer;
+                float guideFocalLength     = SUtils.getFloat(etGuideFocalLength) * guideBarlowReducer;
+                float telePixelSize        = SUtils.getFloat(etTelePixelSize);
+                float guidePixelSize       = SUtils.getFloat(etGuidePixelSize);
+
+                float ccdTeleResolution   = (float) ((telePixelSize / teleFocalLength) * 206.265) * binningImaging;
+                float ccdGuideResolution  = (float) ((guidePixelSize / guideFocalLength) * 206.265) * binningGuide;
+                float imagingGuidingRatio = ccdGuideResolution / ccdTeleResolution;
+
+                tvTeleResolution.setText(decimal.format(ccdTeleResolution));
+                tvGuideResolution.setText(decimal.format(ccdGuideResolution));
+                tvImagingGuidingRatioResult.setText(decimal.format(imagingGuidingRatio));
             }
         });
     }

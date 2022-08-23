@@ -37,7 +37,7 @@
                     <Space style="@style/Spacing" />
 
                     <EditText
-                        android:id="@+id/et_tele_fl"
+                        android:id="@+id/et_tele_focal_length"
                         style="@style/TextParameter.InputNumber"
                         android:hint="mm" />
 
@@ -60,7 +60,7 @@
                     <Space style="@style/Spacing" />
 
                     <Spinner
-                        android:id="@+id/dd_barlow_reducer_imaging_dropdown"
+                        android:id="@+id/dd_barlow_reducer_imaging"
                         android:layout_width="130dp"
                         android:layout_height="wrap_content"
                         android:background="@android:drawable/btn_dropdown"
@@ -83,7 +83,7 @@
                     <Space style="@style/Spacing" />
 
                     <EditText
-                        android:id="@+id/et_tele_ps"
+                        android:id="@+id/et_tele_pixel_size"
                         style="@style/TextParameter.InputDecimal"
                         android:hint="μm" />
 
@@ -106,7 +106,7 @@
                     <Space style="@style/Spacing" />
 
                     <Spinner
-                        android:id="@+id/binning_imaging_dropdown"
+                        android:id="@+id/dd_binning_imaging"
                         android:layout_width="130dp"
                         android:layout_height="wrap_content"
                         android:background="@android:drawable/btn_dropdown"
@@ -170,7 +170,7 @@
 
                     <EditText
                         style="@style/TextParameter.InputNumber"
-                        android:id="@+id/et_cam_fl"
+                        android:id="@+id/et_guide_focal_length"
                         android:hint="mm" />
 
                     <TextView
@@ -193,7 +193,7 @@
                         style="@style/Spacing"/>
 
                     <Spinner
-                        android:id="@+id/dd_barlow_reducer_guide_dropdown"
+                        android:id="@+id/dd_barlow_reducer_guide"
                         android:layout_width="130dp"
                         android:layout_height="wrap_content"
                         android:background="@android:drawable/btn_dropdown"
@@ -218,7 +218,7 @@
 
                     <EditText
                         style="@style/TextParameter.InputDecimal"
-                        android:id="@+id/et_cam_ps"
+                        android:id="@+id/et_guide_pixel_size"
                         android:hint="μm" />
 
                     <TextView
@@ -241,7 +241,7 @@
                         style="@style/Spacing"/>
 
                     <Spinner
-                        android:id="@+id/binning_guide_dropdown"
+                        android:id="@+id/dd_binning_guide"
                         android:layout_width="130dp"
                         android:layout_height="wrap_content"
                         android:background="@android:drawable/btn_dropdown"
@@ -299,30 +299,32 @@
                         android:id="@+id/tvImagingGuidingRatio"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:text="The ratio is: "
+                        android:text="The ratio is "
                         android:layout_marginTop="10dp"
                         android:textSize="18sp"
                         android:textStyle="bold" />
 
                     <TextView
-                        android:id="@+id/tvImagingGuidingRatioResult"
+                        android:id="@+id/tv_imaging_guiding_ratio"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:hint=" ______ "
+                        android:text=" 1 "
+                        android:textStyle="bold"
                         android:layout_marginTop="10dp"
                         android:textSize="18sp" />
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:textStyle="bold"
-                        android:text=":"
+                        android:text=" :  "
                         android:layout_marginTop="10dp"
                         android:textSize="18sp" />
                     <TextView
-                        android:id="@+id/tvImagingGuidingRatioResult2"
+                        android:id="@+id/tv_imaging_guiding_ratio_result"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:hint=" ______ "
+                        android:hint=" _____ "
+                        android:textStyle="bold"
                         android:layout_marginTop="10dp"
                         android:textSize="18sp" />
 
@@ -330,7 +332,7 @@
 
                 <Button
                     style="@style/ButtonParam"
-                    android:id="@+id/btn_enter"
+                    android:id="@+id/btn_calculate_ratio"
                     android:text="Calculate Ratio" />
 
                 </LinearLayout>
