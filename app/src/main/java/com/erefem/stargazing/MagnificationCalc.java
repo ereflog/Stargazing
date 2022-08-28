@@ -6,17 +6,19 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
+
+import java.math.RoundingMode;
+import java.text.DecimalFormat;
 
 public class MagnificationCalc extends AppCompatActivity {
 
     EditText
-            ettfl,
-            etefl, ettfl2, etta, etmag2;
+            etTelescopeFocalLength1, etEyepieceFocalLength1, etTelescopeFocalLength2,
+            etTelescopeAperture, etMagnification2, etMaxMagnification;
     TextView
-            tvmag, tvefl;
+            etMagnification1, etEyepieceFocalLength2;
     Button
-            btnmag, btneyepiece;
+            btnMagnification, btnEyepiece, btnMaxMagnification;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,46 +28,58 @@ public class MagnificationCalc extends AppCompatActivity {
             getSupportActionBar().setTitle(R.string.magnification_calc_title);
         }
 
-        ettfl = findViewById(R.id.ettfl);
-        etefl = findViewById(R.id.etefl);
-        ettfl2 = findViewById(R.id.ettfl2);
-        etta = findViewById(R.id.etta);
-        etmag2 = findViewById(R.id.etmag2);
+        etTelescopeFocalLength1 = findViewById(R.id.et_telescope_focal_length1);
+        etEyepieceFocalLength1 = findViewById(R.id.et_eyepiece_focal_length1);
+        etMagnification1 = findViewById(R.id.et_magnification1);
 
-        tvmag = findViewById(R.id.tvmag);
-        tvefl = findViewById(R.id.tvefl);
+        etTelescopeFocalLength2 = findViewById(R.id.et_telescope_focal_length2);
+        etMagnification2 = findViewById(R.id.et_magnification2);
+        etEyepieceFocalLength2 = findViewById(R.id.et_eyepiece_focal_length2);
+        etTelescopeAperture = findViewById(R.id.et_telescope_aperture);
 
-        btnmag = findViewById(R.id.btnmag);
-        btneyepiece = findViewById(R.id.btneyepiece);
+        btnMagnification = findViewById(R.id.btn_magnification);
+        btnEyepiece = findViewById(R.id.btn_eyepiece);
+        btnMaxMagnification = findViewById(R.id.btn_max_magnification);
 
+        DecimalFormat decimal = new DecimalFormat("#.##");
+        decimal.setRoundingMode(RoundingMode.HALF_EVEN);
 
-        btnmag.setOnClickListener(view -> {
-            if (SUtils.isEmpty(ettfl)){
-                SUtils.setToast(ettfl,"is Empty!!!");
-            } else if (SUtils.isEmpty(etefl)) {
-                SUtils.setToast(etefl,"is Empty!!!");
+        btnMagnification.setOnClickListener(view -> {
+            if (SUtils.isEmpty(etTelescopeFocalLength1)){
+                SUtils.setToast(etTelescopeFocalLength1,"This field cannot be blank!");
+            } if (SUtils.isEmpty(etEyepieceFocalLength1)) {
+                SUtils.setToast(etEyepieceFocalLength1,"This field cannot be blank!");
             } else {
-                float Telescopefocallength = SUtils.getInteger(ettfl);
-                float Eyepiecefocallength = SUtils.getInteger(etefl);
-                float Magnification = Telescopefocallength / Eyepiecefocallength;
-                tvmag.setText(String.valueOf(Magnification));
+                float telescopeFocalLength = SUtils.getInteger(etTelescopeFocalLength1);
+                float eyepieceFocalLength = SUtils.getInteger(etEyepieceFocalLength1);
+                float magnification = telescopeFocalLength / eyepieceFocalLength;
+                etMagnification1.setText(decimal.format(magnification));
             }
         });
 
-        btneyepiece.setOnClickListener(view -> {
-
-            if (SUtils.isEmpty(ettfl2)) {
-                SUtils.setToast(ettfl2,"is Empty!!!");
-            } else if (SUtils.isEmpty(etta)) {
-                SUtils.setToast(etta,"is Empty!!!");
-            } else if (SUtils.isEmpty(etmag2)) {
-                SUtils.setToast(etmag2,"is Empty!!!");
+        btnEyepiece.setOnClickListener(view -> {
+            if (SUtils.isEmpty(etTelescopeFocalLength2)) {
+                SUtils.setToast(etTelescopeFocalLength2,"This field cannot be blank!");
+            } if (SUtils.isEmpty(etTelescopeAperture)) {
+                SUtils.setToast(etTelescopeAperture,"This field cannot be blank!");
+            } if (SUtils.isEmpty(etMagnification2)) {
+                SUtils.setToast(etMagnification2,"This field cannot be blank!");
             } else {
-                float Telescopefocallength = SUtils.getInteger(ettfl2);
-                float Telescopeaperture = SUtils.getInteger(etta);
-                float Magnification = SUtils.getInteger(etmag2);
-                float Eyepiece = Telescopefocallength / Magnification;
-                tvefl.setText(String.valueOf(Eyepiece));
+                float telescopeFocalLength = SUtils.getInteger(etTelescopeFocalLength2);
+                float magnification = SUtils.getInteger(etMagnification2);
+                float eyepieceFocalLength = telescopeFocalLength / magnification;
+                etEyepieceFocalLength2.setText(decimal.format(eyepieceFocalLength));
+            }
+        });
+
+        btnMaxMagnification.setOnClickListener(view -> {
+            if (SUtils.isEmpty(etMaxMagnification)) {
+                SUtils.setToast(etMaxMagnification, "This field cannot be blank!");
+            } else {
+                float telescopeAperture = SUtils.getInteger(etTelescopeAperture);
+                float maxMagnification = (float) (telescopeAperture * 2.5);
+                if (maxMagnification > 350) { maxMagnification = 350; }
+                etMaxMagnification.setText(decimal.format(maxMagnification));
             }
         });
     }

@@ -13,6 +13,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
+        <!-- MAGNIFICATION VALUE-->
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -34,7 +35,7 @@
                         style="@style/Spacing"/>
 
                     <EditText
-                        android:id="@+id/ettfl"
+                        android:id="@+id/et_telescope_focal_length1"
                         style="@style/TextParameter.InputDecimal"
                         android:hint="mm"
                         />
@@ -58,7 +59,7 @@
                         style="@style/Spacing" />
 
                     <EditText
-                        android:id="@+id/etefl"
+                        android:id="@+id/et_eyepiece_focal_length1"
                         style="@style/TextParameter.InputDecimal"
                         android:hint="mm" />
 
@@ -82,7 +83,7 @@
 
                     <EditText
                         style="@style/TextParameter.Result"
-                        android:id="@+id/tvmag" />
+                        android:id="@+id/et_magnification1" />
 
                     <TextView
                         style="@style/TextParameter.Unit"
@@ -92,7 +93,7 @@
 
                 <Button
                     style="@style/ButtonParam"
-                    android:id="@+id/btnmag"
+                    android:id="@+id/btn_magnification"
                     android:text="Calculate Magnification" />
 
             </LinearLayout>
@@ -102,6 +103,8 @@
                 android:text="   Magnification Value   " />
 
         </RelativeLayout>
+
+        <!-- EYEPIECE FOCAL LENGTH VALUE-->
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -124,30 +127,7 @@
 
                     <EditText
                         style="@style/TextParameter.InputNumber"
-                        android:id="@+id/ettfl2"
-                        android:hint="mm" />
-
-                    <TextView
-                        style="@style/TextParameter.Unit"
-                        android:text="mm" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        style="@style/TextParameter.Name"
-                        android:text="Telescope Aperture" />
-
-                    <Space
-                        style="@style/Spacing" />
-
-                    <EditText
-                        style="@style/TextParameter.InputNumber"
-                        android:id="@+id/etta"
+                        android:id="@+id/et_telescope_focal_length2"
                         android:hint="mm" />
 
                     <TextView
@@ -170,7 +150,7 @@
 
                     <EditText
                         style="@style/TextParameter.InputNumber"
-                        android:id="@+id/etmag2"
+                        android:id="@+id/et_magnification2"
                         android:hint="x" />
 
                     <TextView
@@ -193,7 +173,7 @@
 
                     <EditText
                         style="@style/TextParameter.Result"
-                        android:id="@+id/tvefl" />
+                        android:id="@+id/et_eyepiece_focal_length2" />
 
                     <TextView
                         style="@style/TextParameter.Unit"
@@ -203,7 +183,7 @@
 
                 <Button
                     style="@style/ButtonParam"
-                    android:id="@+id/btneyepiece"
+                    android:id="@+id/btn_eyepiece"
                     android:text="Calculate Eyepiece" />
 
             </LinearLayout>
@@ -211,6 +191,73 @@
             <TextView
                 style="@style/TextSubTitle.Body"
                 android:text="   Eyepiece Focal Length Value   " />
+        </RelativeLayout>
+
+        <!-- MAXIMUM MAGNIFICATION-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp">
+
+            <LinearLayout
+                style="@style/BorderParam">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/TextParameter.Name"
+                        android:text="Telescope Aperture" />
+
+                    <Space
+                        style="@style/Spacing" />
+
+                    <EditText
+                        style="@style/TextParameter.InputNumber"
+                        android:id="@+id/et_telescope_aperture"
+                        android:hint="mm" />
+
+                    <TextView
+                        style="@style/TextParameter.Unit"
+                        android:text="mm" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/TextParameter.Name"
+                        android:text="Max Magnification" />
+
+                    <Space
+                        style="@style/Spacing" />
+
+                    <EditText
+                        style="@style/TextParameter.Result"
+                        android:id="@+id/et_max_magnification" />
+
+                    <TextView
+                        style="@style/TextParameter.Unit"
+                        android:text="x" />
+
+                </LinearLayout>
+
+                <Button
+                    style="@style/ButtonParam"
+                    android:id="@+id/btn_max_magnification"
+                    android:text="Calculate Max Magnification" />
+
+            </LinearLayout>
+
+            <TextView
+                style="@style/TextSubTitle.Body"
+                android:text="   Maximum Magnification   " />
         </RelativeLayout>
     </LinearLayout>
 </ScrollView>
