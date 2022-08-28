@@ -36,7 +36,7 @@
 
                     <EditText
                         style="@style/TextParameter.InputNumber"
-                        android:id="@+id/etefov"
+                        android:id="@+id/et_eyepiece_fov"
                         android:hint="deg" />
 
                     <TextView
@@ -59,7 +59,7 @@
 
                     <EditText
                         style="@style/TextParameter.InputNumber"
-                        android:id="@+id/etefl"
+                        android:id="@+id/et_eyepiece_focal_length1"
                         android:hint="mm" />
 
                     <TextView
@@ -82,7 +82,7 @@
 
                     <EditText
                         style="@style/TextParameter.InputNumber"
-                        android:id="@+id/ettfl"
+                        android:id="@+id/et_telescope_focal_length1"
                         android:hint="mm" />
 
                     <TextView
@@ -105,7 +105,7 @@
 
                     <EditText
                         style="@style/TextParameter.Result"
-                        android:id="@+id/tvafov" />
+                        android:id="@+id/et_actual_fov" />
 
                     <TextView
                         style="@style/TextParameter.Unit"
@@ -115,7 +115,7 @@
 
                 <Button
                     style="@style/ButtonParam"
-                    android:id="@+id/btnfov"
+                    android:id="@+id/btn_true_fov"
                     android:text="Calculate True FOV" />
 
             </LinearLayout>

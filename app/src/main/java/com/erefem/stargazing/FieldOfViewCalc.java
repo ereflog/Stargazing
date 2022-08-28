@@ -8,16 +8,19 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.math.RoundingMode;
+import java.text.DecimalFormat;
+
 public class FieldOfViewCalc extends AppCompatActivity {
 
     EditText
-            etefov,
-            etefl,
-            ettfl;
+            etEyepieceFOV,
+            etEyepieceFocalLength,
+            etTelescopeFocalLength;
     TextView
-            tvafov;
+            etActualFOV;
     Button
-            btnfov;
+            btnTrueFOV;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,28 +29,31 @@ public class FieldOfViewCalc extends AppCompatActivity {
         if (getSupportActionBar() != null) {
             getSupportActionBar().setTitle(R.string.field_of_view_calc_title);
         }
-        etefov = findViewById(R.id.etefov);
-        etefl = findViewById(R.id.etefl);
-        ettfl = findViewById(R.id.ettfl);
+        etEyepieceFOV = findViewById(R.id.et_eyepiece_fov);
+        etEyepieceFocalLength = findViewById(R.id.et_eyepiece_focal_length1);
+        etTelescopeFocalLength = findViewById(R.id.et_telescope_focal_length1);
 
-        tvafov = findViewById(R.id.tvafov);
+        etActualFOV = findViewById(R.id.et_actual_fov);
 
-        btnfov = findViewById(R.id.btnfov);
+        btnTrueFOV = findViewById(R.id.btn_true_fov);
 
-        btnfov.setOnClickListener(view -> {
+        DecimalFormat decimal = new DecimalFormat("#.##");
+        decimal.setRoundingMode(RoundingMode.HALF_EVEN);
 
-            if (etefov.getText().toString().isEmpty()) {
-                Toast.makeText(FieldOfViewCalc.this, "Eyepiece Field of View is Empty!!!", Toast.LENGTH_SHORT).show();
-            } else if (etefl.getText().toString().isEmpty()) {
-                Toast.makeText(FieldOfViewCalc.this, "Eyepiece Focal Length is Empty!!!", Toast.LENGTH_SHORT).show();
-            } else if (ettfl.getText().toString().isEmpty()) {
-                Toast.makeText(FieldOfViewCalc.this, "Telescope Focal Length is Empty!!!", Toast.LENGTH_SHORT).show();
+        btnTrueFOV.setOnClickListener(view -> {
+
+            if (SUtils.isEmpty(etEyepieceFOV)) {
+                SUtils.setToast(etEyepieceFOV,"This field cannot be blank!");
+            } if (SUtils.isEmpty(etEyepieceFocalLength)) {
+                SUtils.setToast(etEyepieceFocalLength,"This field cannot be blank!");
+            } if (SUtils.isEmpty(etTelescopeFocalLength)) {
+                SUtils.setToast(etTelescopeFocalLength, "This field cannot be blank!");
             } else {
-                float Eyepiecefov = Integer.parseInt(etefov.getText().toString());
-                float Eyepiecefocallength = Integer.parseInt(etefl.getText().toString());
-                float Telescopefocallength = Integer.parseInt(ettfl.getText().toString());
-                float Actualvieldofview = Eyepiecefov * Eyepiecefocallength / Telescopefocallength ;
-                tvafov.setText(String.valueOf(Actualvieldofview));
+                float eyepieceFOV = SUtils.getInteger(etEyepieceFOV);
+                float eyepieceFocalLength = SUtils.getInteger(etEyepieceFocalLength);
+                float telescopeFocalLength = SUtils.getInteger(etTelescopeFocalLength);
+                float actualFOV = eyepieceFOV / (eyepieceFocalLength / telescopeFocalLength);
+                etActualFOV.setText(decimal.format(actualFOV));
             }
         });
     }
