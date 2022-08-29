@@ -22,8 +22,7 @@
             android:layout_height="match_parent"
             android:layout_marginBottom="20dp">
 
-            <LinearLayout
-                style="@style/BorderParam">
+            <LinearLayout style="@style/BorderParam">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -34,12 +33,11 @@
                         style="@style/TextParameter.Name"
                         android:text="Telescope Aperture" />
 
-                    <Space
-                        style="@style/Spacing" />
+                    <Space style="@style/Spacing" />
 
                     <EditText
+                        android:id="@+id/et_tele_aperture_dawes"
                         style="@style/TextParameter.InputNumber"
-                        android:id="@+id/et_tele_aper"
                         android:hint="mm" />
 
                     <TextView
@@ -58,12 +56,11 @@
                         style="@style/TextParameter.Name"
                         android:text="Max. Resolution" />
 
-                    <Space
-                        style="@style/Spacing" />
+                    <Space style="@style/Spacing" />
 
                     <EditText
-                        style="@style/TextParameter.Result"
-                        android:id="@+id/tv_max_resolution" />
+                        android:id="@+id/et_max_resolution_dawes"
+                        style="@style/TextParameter.Result" />
 
                     <TextView
                         style="@style/TextParameter.Unit"
@@ -72,8 +69,8 @@
                 </LinearLayout>
 
                 <Button
-                    style="@style/ButtonParam"
                     android:id="@+id/btn_dawes"
+                    style="@style/ButtonParam"
                     android:text="Calculate Dawes's Limit" />
 
             </LinearLayout>
@@ -106,7 +103,7 @@
 
                     <EditText
                         style="@style/TextParameter.InputNumber"
-                        android:id="@+id/et_tele_ray"
+                        android:id="@+id/et_tele_aperture_rayleigh"
                         android:hint="mm" />
 
                     <TextView
@@ -129,7 +126,7 @@
 
                     <EditText
                         style="@style/TextParameter.Result"
-                        android:id="@+id/tv_max_resolution_aper" />
+                        android:id="@+id/et_max_resolution_rayleigh" />
 
                     <TextView
                         style="@style/TextParameter.Unit"
@@ -172,7 +169,7 @@
 
                     <EditText
                         style="@style/TextParameter.InputNumber"
-                        android:id="@+id/et_tele_limit"
+                        android:id="@+id/et_tele_aperture_limiting_mag"
                         android:hint="mm" />
 
                     <TextView
@@ -195,7 +192,7 @@
 
                     <EditText
                         style="@style/TextParameter.Result"
-                        android:id="@+id/tv_max_resolution_limiting" />
+                        android:id="@+id/et_limit_magnitude" />
 
                     <TextView
                         style="@style/TextParameter.Unit"
@@ -205,7 +202,7 @@
 
                 <Button
                     style="@style/ButtonParam"
-                    android:id="@+id/btn_limiting"
+                    android:id="@+id/btn_limiting_mag"
                     android:text="Calculate Limiting Magnitude" />
 
             </LinearLayout>
@@ -238,7 +235,7 @@
 
                     <EditText
                         style="@style/TextParameter.InputNumber"
-                        android:id="@+id/et_larger_light"
+                        android:id="@+id/et_larger_tele_aperture"
                         android:hint="mm"/>
 
                     <TextView
@@ -261,7 +258,7 @@
 
                     <EditText
                         style="@style/TextParameter.InputNumber"
-                        android:id="@+id/et_smaller_light"
+                        android:id="@+id/et_smaller_tele_aperture"
                         android:hint="mm" />
 
                     <TextView
@@ -284,7 +281,7 @@
 
                     <EditText
                         style="@style/TextParameter.Result"
-                        android:id="@+id/tv_max_resolution_light" />
+                        android:id="@+id/et_light_grasp_ratio" />
 
                     <TextView
                         style="@style/TextParameter.Unit"
@@ -294,7 +291,7 @@
 
                 <Button
                     style="@style/ButtonParam"
-                    android:id="@+id/btn_light"
+                    android:id="@+id/btn_light_grasp_ratio"
                     android:text="Calculate Light Grasp Ratio" />
 
             </LinearLayout>

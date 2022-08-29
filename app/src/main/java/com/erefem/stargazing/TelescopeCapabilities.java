@@ -7,14 +7,17 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import java.math.RoundingMode;
+import java.text.DecimalFormat;
+
 public class TelescopeCapabilities extends AppCompatActivity {
 
     EditText
-            et_tele_aper, et_tele_ray,et_tele_limit,et_larger_light,et_smaller_light;
+            etTeleApertureDawes, etTeleApertureRayleigh, etTeleApertureLimitingMag, etLargerTeleAperture, etSmallerTeleAperture;
     TextView
-            tv_max_resolution,tv_max_resolution_aper,tv_max_resolution_limiting,tv_max_resolution_light;
+            etMaxResolutionDawes, etMaxResolutionRayleigh, etLimitMagnitude, etLightGraspRatio;
     Button
-            btn_dawes,btn_rayleigh,btn_limiting,btn_light;
+            btnDawes, btnRayleigh, btnLimitingMag, btnLightGraspRatio;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,72 +27,73 @@ public class TelescopeCapabilities extends AppCompatActivity {
             getSupportActionBar().setTitle(R.string.telescope_capabilities_calc_title);
         }
 
-        et_tele_aper = findViewById(R.id.et_tele_aper);
-        et_tele_ray = findViewById(R.id.et_tele_ray);
-        et_tele_limit = findViewById(R.id.et_tele_limit);
-        et_larger_light = findViewById(R.id.et_larger_light);
-        et_smaller_light = findViewById(R.id.et_smaller_light);
+        //EditText for input field
+        etTeleApertureDawes = findViewById(R.id.et_tele_aperture_dawes);
+        etTeleApertureRayleigh = findViewById(R.id.et_tele_aperture_rayleigh);
+        etTeleApertureLimitingMag = findViewById(R.id.et_tele_aperture_limiting_mag);
+        etLargerTeleAperture = findViewById(R.id.et_larger_tele_aperture);
+        etSmallerTeleAperture = findViewById(R.id.et_smaller_tele_aperture);
 
+        //EditText for result
+        etMaxResolutionDawes = findViewById(R.id.et_max_resolution_dawes);
+        etMaxResolutionRayleigh = findViewById(R.id.et_max_resolution_rayleigh);
+        etLimitMagnitude = findViewById(R.id.et_limit_magnitude);
+        etLightGraspRatio = findViewById(R.id.et_light_grasp_ratio);
 
-        tv_max_resolution = findViewById(R.id.tv_max_resolution);
-        tv_max_resolution_aper = findViewById(R.id.tv_max_resolution_aper);
-        tv_max_resolution_limiting = findViewById(R.id.tv_max_resolution_limiting);
-        tv_max_resolution_light = findViewById(R.id.tv_max_resolution_light);
+        //Buttons
+        btnDawes = findViewById(R.id.btn_dawes);
+        btnRayleigh = findViewById(R.id.btn_rayleigh);
+        btnLimitingMag = findViewById(R.id.btn_limiting_mag);
+        btnLightGraspRatio = findViewById(R.id.btn_light_grasp_ratio);
 
+        //Decimal rounding format
+        DecimalFormat decimal = new DecimalFormat("#.##");
+        decimal.setRoundingMode(RoundingMode.HALF_EVEN);
 
-        btn_dawes = findViewById(R.id.btn_dawes);
-        btn_rayleigh = findViewById(R.id.btn_rayleigh);
-        btn_limiting = findViewById(R.id.btn_limiting);
-        btn_light = findViewById(R.id.btn_light);
-
-        btn_dawes.setOnClickListener(view -> {
-            if (SUtils.isEmpty(et_tele_aper)) {
-                SUtils.setToast(et_tele_aper,"is Empty!!!");
+        btnDawes.setOnClickListener(view -> {
+            if (SUtils.isEmpty(etTeleApertureDawes)) {
+                SUtils.setToast(etTeleApertureDawes,"This field cannot be blank!");
             } else {
-                float tele_aperture = Float.parseFloat(et_tele_aper.getText().toString());
-                float result_aper =
-                        (float) (116 / tele_aperture);
-                tv_max_resolution.setText(String.valueOf(result_aper));
+                float telescopeAperture = SUtils.getFloat(etTeleApertureDawes);
+                float maxResolutionDawes = (float) (116 / telescopeAperture);
+                etMaxResolutionDawes.setText(decimal.format(maxResolutionDawes));
             }
         });
-        btn_rayleigh.setOnClickListener(view -> {
-            if (SUtils.isEmpty(et_tele_ray)) {
-                SUtils.setToast(et_tele_ray,"is Empty!!!");
+
+        btnRayleigh.setOnClickListener(view -> {
+            if (SUtils.isEmpty(etTeleApertureRayleigh)) {
+                SUtils.setToast(etTeleApertureRayleigh,"This field cannot be blank!");
             } else {
-                float tele_ray = Float.parseFloat(et_tele_ray.getText().toString());
-                float result_ray =
-                        (float) (138 / tele_ray);
-                tv_max_resolution_aper.setText(String.valueOf(result_ray));
+                float teleApertureRayleigh = SUtils.getFloat(etTeleApertureRayleigh);
+                float maxResolutionRayleigh = (float) (138 / teleApertureRayleigh);
+                etMaxResolutionRayleigh.setText(decimal.format(maxResolutionRayleigh));
             }
         });
-        btn_limiting.setOnClickListener(view -> {
-            if (SUtils.isEmpty(et_tele_limit)) {
-                SUtils.setToast(et_tele_limit,"is Empty!!!");
+
+        btnLimitingMag.setOnClickListener(view -> {
+            if (SUtils.isEmpty(etTeleApertureLimitingMag)) {
+                SUtils.setToast(etTeleApertureLimitingMag,"This field cannot be blank!");
             } else {
-                float tele_limit = Float.parseFloat(et_tele_limit.getText().toString());
-                float var1 = tele_limit / 10;
-                float var2 =
-                        (float) (5 * (Math.log(var1))/2.302);
-                float result_limit =
-                        (float) 7.7 + var2;
-                tv_max_resolution_limiting.setText(String.valueOf(result_limit));
+                float telescopeAperture = SUtils.getFloat(etTeleApertureLimitingMag);
+                float var1 = telescopeAperture / 10;
+                float var2 = (float) (5 * (Math.log(var1))/2.302);
+                float limitingMagnitude = (float) 7.7 + var2;
+                etLimitMagnitude.setText(decimal.format(limitingMagnitude));
             }
         });
-        btn_light.setOnClickListener(view -> {
-            if (SUtils.isEmpty(et_larger_light)) {
-                SUtils.setToast(et_larger_light,"is Empty!!!");
-            } else if (SUtils.isEmpty(et_smaller_light)) {
-                SUtils.setToast(et_smaller_light,"is Empty!!!");
+
+        btnLightGraspRatio.setOnClickListener(view -> {
+            if (SUtils.isEmpty(etLargerTeleAperture)) {
+                SUtils.setToast(etLargerTeleAperture,"This field cannot be blank!");
+            } if (SUtils.isEmpty(etSmallerTeleAperture)) {
+                SUtils.setToast(etSmallerTeleAperture,"This field cannot be blank!");
             } else {
-                float large_light = Float.parseFloat(et_larger_light.getText().toString());
-                float smaller_light = Float.parseFloat(et_smaller_light.getText().toString());
-
-                float var1 = (float) Math.pow(large_light, 2);
-                float var2 = (float) Math.pow(smaller_light, 2);
-
-                float result_light =
-                        (float) (var1 / var2 );
-                tv_max_resolution_light.setText(String.valueOf(result_light));
+                float largerTeleAperture = SUtils.getFloat(etLargerTeleAperture);
+                float smallerTeleAperture = SUtils.getFloat(etSmallerTeleAperture);
+                float var1 = (float) Math.pow(largerTeleAperture, 2);
+                float var2 = (float) Math.pow(smallerTeleAperture, 2);
+                float lightGraspRatio = (float) (var1 / var2);
+                etLightGraspRatio.setText(decimal.format(lightGraspRatio));
             }
         });
     }
