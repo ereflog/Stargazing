@@ -5,7 +5,8 @@
       <map>
         <entry key="..\:/Applications/Stargazing/app/src/main/res/drawable/ic_baseline_add_24.xml" value="0.18076923076923077" />
         <entry key="..\:/Applications/Stargazing/app/src/main/res/layout/activity_about.xml" value="0.33" />
-        <entry key="..\:/Applications/Stargazing/app/src/main/res/layout/activity_add_obs_log_book.xml" value="0.1675213675213675" />
+        <entry key="..\:/Applications/Stargazing/app/src/main/res/layout/activity_add_obs_log_book.xml" value="0.33" />
+        <entry key="..\:/Applications/Stargazing/app/src/main/res/layout/activity_splash.xml" value="0.4585635359116022" />
         <entry key="..\:/Applications/Stargazing/app/src/main/res/layout/binocular_calc.xml" value="0.33" />
         <entry key="..\:/Applications/Stargazing/app/src/main/res/layout/ccd_calc.xml" value="0.28931623931623934" />
         <entry key="..\:/Applications/Stargazing/app/src/main/res/layout/ccd_filter_size_calc.xml" value="0.30085470085470084" />
@@ -17,7 +18,7 @@
         <entry key="..\:/Applications/Stargazing/app/src/main/res/layout/imaging_guiding_ratio_calc.xml" value="0.30085470085470084" />
         <entry key="..\:/Applications/Stargazing/app/src/main/res/layout/item_log_book.xml" value="0.33" />
         <entry key="..\:/Applications/Stargazing/app/src/main/res/layout/magnification_calc.xml" value="0.30085470085470084" />
-        <entry key="..\:/Applications/Stargazing/app/src/main/res/layout/obs_log_book.xml" value="0.30085470085470084" />
+        <entry key="..\:/Applications/Stargazing/app/src/main/res/layout/obs_log_book.xml" value="0.33" />
         <entry key="..\:/Applications/Stargazing/app/src/main/res/layout/privacy_policy.xml" value="0.30085470085470084" />
         <entry key="..\:/Applications/Stargazing/app/src/main/res/layout/red_light_tool.xml" value="0.30085470085470084" />
         <entry key="..\:/Applications/Stargazing/app/src/main/res/layout/telescope_capabilities.xml" value="0.30085470085470084" />
