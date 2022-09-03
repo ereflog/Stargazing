@@ -16,6 +16,7 @@ import android.os.Bundle;
 import android.os.Looper;
 import android.provider.Settings;
 import android.text.InputType;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
@@ -23,6 +24,8 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.erefem.stargazing.database.AppDatabase;
+import com.erefem.stargazing.database.entitas.Logbook;
 import com.huawei.hms.analytics.HiAnalytics;
 import com.huawei.hms.analytics.HiAnalyticsInstance;
 import com.huawei.hms.location.FusedLocationProviderClient;
@@ -69,8 +72,13 @@ public class AddObsLogBook extends AppCompatActivity {
     private EditText
             et_date;
 
+    private AppDatabase database;
+    private int uid = 0;
+    private boolean isEdit = false;
+
     HiAnalyticsInstance
             instance;
+    private Object Logbook;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -127,6 +135,46 @@ public class AddObsLogBook extends AppCompatActivity {
                 findViewById(R.id.btn_generate);
         btn_save_log=
                 findViewById(R.id.btn_save_log);
+
+        database = AppDatabase.getInstance(getApplicationContext());
+        Intent intent = getIntent();
+        uid = intent.getIntExtra("uid",0);
+        if (uid>0){
+                isEdit = true;
+                Logbook logbook = database.logbookDao().get(uid);
+                et_object_name.setText(logbook.Object);
+                et_observer.setText(logbook.Observer);
+                tv_latitude.setText(logbook.latitude);
+                tv_longitude.setText(logbook.longitude);
+                et_date.setText(logbook.date);
+                et_time.setText(logbook.time);
+                exeptional.setText(logbook.seeing);
+                good.setText(logbook.seeing);
+                ok.setText(logbook.seeing);
+                poor.setText(logbook.seeing);
+                very_poor.setText(logbook.seeing);
+                et_instrument.setText(logbook.instrument);
+                et_magnification.setText(logbook.magnification);
+                et_filter.setText(logbook.filter);
+                et_comment.setText(logbook.comment);
+            }else{
+            isEdit = false;
+        }
+
+
+        btn_save_log.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(isEdit){
+                    database.logbookDao().update(uid,et_object_name.getText().toString(), et_observer.getText().toString(), et_date.getText().toString(), et_time.getText().toString(), et_instrument.getText().toString(),et_filter.getText().toString(),et_magnification.getText().toString(), et_comment.getText().toString());
+                }else{
+                    database.logbookDao().insertAll(et_object_name.getText().toString(), et_observer.getText().toString(), et_date.getText().toString(), et_time.getText().toString(), et_instrument.getText().toString(),et_filter.getText().toString(),et_magnification.getText().toString(), et_comment.getText().toString());
+                }
+
+                finish();
+
+            }
+        });
 
         Calendar
                 calendar=
