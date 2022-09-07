@@ -6,128 +6,173 @@
     android:layout_height="wrap_content"
     android:layout_weight="1"
     android:orientation="vertical"
-    card_view:cardCornerRadius="4dp">
+    card_view:cardCornerRadius="4dp"
+    card_view:cardBackgroundColor="@color/blush" >
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="8dp"
+        android:layout_margin="10dp"
         android:orientation="vertical"
-        style="@style/BorderParam"
-        >
+        style="@style/BorderParam" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Observed Object(s)"
+            android:textSize="12sp"/>
         <TextView
             android:id="@+id/tv_object_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Object Name"
-            />
+            android:hint="Object"
+            android:layout_marginBottom="6dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Observer Name"
+            android:textSize="12sp"/>
         <TextView
             android:id="@+id/tv_observer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Observer Name"
-            android:layout_marginTop="4dp"
+            android:hint="Observer"
+            android:layout_marginBottom="6dp"
             android:ellipsize="end"
             android:maxLines="1"
-            android:textSize="12sp"
+            android:textSize="16sp" />
 
-            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Location Coordinate"
+            android:textSize="12sp"/>
         <TextView
             android:id="@+id/tv_coordinate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Coordinate"
-            android:layout_marginTop="4dp"
+            android:hint="Coordinate"
+            android:layout_marginBottom="6dp"
             android:ellipsize="end"
             android:maxLines="1"
-            android:textSize="12sp"
+            android:textSize="16sp" />
 
-            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Observing Date"
+            android:textSize="12sp"/>
         <TextView
             android:id="@+id/tv_date"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Date"
-            android:layout_marginTop="4dp"
+            android:hint="Date"
+            android:layout_marginBottom="6dp"
             android:ellipsize="end"
             android:maxLines="1"
-            android:textSize="12sp"
+            android:textSize="16sp" />
 
-
-            />
-
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Observing Time"
+            android:textSize="12sp"/>
         <TextView
             android:id="@+id/tv_time"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="time"
-            android:layout_marginTop="4dp"
+            android:hint="Time"
+            android:layout_marginBottom="6dp"
             android:ellipsize="end"
             android:maxLines="1"
-            android:textSize="12sp"
+            android:textSize="16sp" />
 
-            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Seeing"
+            android:textSize="12sp"/>
         <TextView
             android:id="@+id/tv_seeing"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Seeing"
-            android:layout_marginTop="4dp"
+            android:hint="Seeing"
+            android:layout_marginBottom="6dp"
             android:ellipsize="end"
             android:maxLines="1"
-            android:textSize="12sp"
+            android:textSize="16sp" />
 
-            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Instrument and Equipment"
+            android:textSize="12sp"/>
         <TextView
             android:id="@+id/tv_instrument"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Instrument"
-            android:layout_marginTop="4dp"
+            android:hint="Instrument"
+            android:layout_marginBottom="6dp"
             android:ellipsize="end"
             android:maxLines="1"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Optical Magnification"
             android:textSize="12sp"/>
-
-
         <TextView
             android:id="@+id/tv_magnification"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Magnification"
-            android:layout_marginTop="4dp"
+            android:hint="Magnification"
+            android:layout_marginBottom="6dp"
             android:ellipsize="end"
             android:maxLines="1"
-            android:textSize="12sp"
-            />
+            android:textSize="16sp" />
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Filter"
+            android:textSize="12sp"/>
         <TextView
             android:id="@+id/tv_filter"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Filter"
-            android:layout_marginTop="4dp"
+            android:hint="Filter"
+            android:layout_marginBottom="6dp"
             android:ellipsize="end"
             android:maxLines="1"
-            android:textSize="12sp"
-            />
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Comment"
+            android:textSize="12sp"/>
         <TextView
             android:id="@+id/tv_description_object"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Description the object"
-            android:layout_marginTop="4dp"
+            android:hint="Comment"
+            android:layout_marginBottom="6dp"
             android:ellipsize="end"
             android:maxLines="1"
-            android:textSize="12sp"
-            />
+            android:textSize="16sp" />
+
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:layout_gravity="center">
 
-    </LinearLayout>
-
+        </LinearLayout>
 
     </LinearLayout>
 

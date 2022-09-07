@@ -9,17 +9,18 @@ public class Logbook {
     @PrimaryKey
     public int uid;
 
-    @ColumnInfo(name = "Object")
-    public String Object;
-    public String Observer;
-    public String longitude;
+    @ColumnInfo(name = "object")
+    public String object;
+    public String observer;
     public String latitude;
+    public String longitude;
     public String date;
     public String time;
+    public String seeing;
     public String instrument;
     public String magnification;
     public String filter;
     public String comment;
-    public String seeing;
+
 
 }

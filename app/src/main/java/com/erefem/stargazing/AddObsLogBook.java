@@ -21,7 +21,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.erefem.stargazing.database.AppDatabase;
@@ -44,41 +43,44 @@ public class AddObsLogBook extends AppCompatActivity {
             fusedLocationProviderClient;
 
     EditText
-            et_object_name,
-            et_observer,
-            et_time,
-            et_instrument,
-            et_magnification,
-            et_filter,
-            et_comment;
-    TextView
-            tv_latitude,
-            tv_longitude;
+            etObject,
+            etObserver,
+            etLatitude,
+            etLongitude,
+            etTime,
+            etDate,
+            etInstrument,
+            etMagnification,
+            etFilter,
+            etComment;
+
     RadioGroup
-            rg_seeing;
+            rgSeeing;
+
     RadioButton
-            exeptional,
-            good,
-            ok,
-            poor,
-            very_poor;
+            rbSeeing,
+            rbExceptional,
+            rbGood,
+            rbOk,
+            rbPoor,
+            rbVeryPoor;
+
     Button
-            btn_generate,
-            btn_save_log;
+            btnGenerate,
+            btnSaveLog;
 
     DatePickerDialog.OnDateSetListener
             setListener;
-
-    private EditText
-            et_date;
 
     private AppDatabase database;
     private int uid = 0;
     private boolean isEdit = false;
 
-    HiAnalyticsInstance
-            instance;
+    HiAnalyticsInstance instance;
     private Object Logbook;
+
+//    protected Cursor cursor;
+//    DatabaseHelper logbookdb;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -96,45 +98,28 @@ public class AddObsLogBook extends AppCompatActivity {
         mLocationRequest.setInterval(10000);
         mLocationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
 
-        instance=
-                HiAnalytics.getInstance(this);
-        et_object_name=
-                findViewById(R.id.et_object_name);
-        et_observer=
-                findViewById(R.id.et_observer);
-        tv_latitude=
-                findViewById(R.id.tv_latitude);
-        tv_longitude=
-                findViewById(R.id.tv_longitude);
-        et_date=
-                findViewById(R.id.et_date);
-        et_time=
-                findViewById(R.id.et_time);
-        rg_seeing=
-                findViewById(R.id.rg_seeing);
-        exeptional=
-                findViewById(R.id.rb_seeing_exceptional);
-        good=
-                findViewById(R.id.rb_seeing_good);
-        ok=
-                findViewById(R.id.rb_seeing_ok);
-        poor=
-                findViewById(R.id.rb_seeing_poor);
-        very_poor=
-                findViewById(R.id.rb_seeing_very_poor);
-        et_instrument=
-                findViewById(R.id.et_instrument);
-        et_magnification=
-                findViewById(R.id.et_magnification);
-        et_filter=
-                findViewById(R.id.et_filter);
-        et_comment=
-                findViewById(R.id.et_comment);
+        instance        = HiAnalytics.getInstance(this);
+        etObject        = findViewById(R.id.et_object_name);
+        etObserver      = findViewById(R.id.et_observer);
+        etLatitude      = findViewById(R.id.tv_latitude);
+        etLongitude     = findViewById(R.id.tv_longitude);
+        etDate          = findViewById(R.id.et_date);
+        etTime          = findViewById(R.id.et_time);
+        rgSeeing        = findViewById(R.id.rg_seeing);
+        rbExceptional   = findViewById(R.id.rb_seeing_exceptional);
+        rbGood          = findViewById(R.id.rb_seeing_good);
+        rbOk            = findViewById(R.id.rb_seeing_ok);
+        rbPoor          = findViewById(R.id.rb_seeing_poor);
+        rbVeryPoor      = findViewById(R.id.rb_seeing_very_poor);
+        etInstrument    = findViewById(R.id.et_instrument);
+        etMagnification = findViewById(R.id.et_magnification);
+        etFilter        = findViewById(R.id.et_filter);
+        etComment       = findViewById(R.id.et_comment);
+        btnGenerate     = findViewById(R.id.btn_generate);
+        btnSaveLog      = findViewById(R.id.btn_save_log);
 
-        btn_generate=
-                findViewById(R.id.btn_generate);
-        btn_save_log=
-                findViewById(R.id.btn_save_log);
+        int selectedRadioButton = rgSeeing.getCheckedRadioButtonId();
+        rbSeeing = findViewById(selectedRadioButton);
 
         database = AppDatabase.getInstance(getApplicationContext());
         Intent intent = getIntent();
@@ -142,37 +127,56 @@ public class AddObsLogBook extends AppCompatActivity {
         if (uid>0){
                 isEdit = true;
                 Logbook logbook = database.logbookDao().get(uid);
-                et_object_name.setText(logbook.Object);
-                et_observer.setText(logbook.Observer);
-                tv_latitude.setText(logbook.latitude);
-                tv_longitude.setText(logbook.longitude);
-                et_date.setText(logbook.date);
-                et_time.setText(logbook.time);
-                exeptional.setText(logbook.seeing);
-                good.setText(logbook.seeing);
-                ok.setText(logbook.seeing);
-                poor.setText(logbook.seeing);
-                very_poor.setText(logbook.seeing);
-                et_instrument.setText(logbook.instrument);
-                et_magnification.setText(logbook.magnification);
-                et_filter.setText(logbook.filter);
-                et_comment.setText(logbook.comment);
-            }else{
+                etObject.setText(logbook.object);
+                etObserver.setText(logbook.observer);
+                etLatitude.setText(logbook.latitude);
+                etLongitude.setText(logbook.longitude);
+                etDate.setText(logbook.date);
+                etTime.setText(logbook.time);
+//                rbExceptional.setText(logbook.seeing);
+//                rbGood.setText(logbook.seeing);
+//                rbOk.setText(logbook.seeing);
+//                rbPoor.setText(logbook.seeing);
+//                rbVeryPoor.setText(logbook.seeing);
+                rbSeeing.setText(logbook.seeing);
+                etInstrument.setText(logbook.instrument);
+                etMagnification.setText(logbook.magnification);
+                etFilter.setText(logbook.filter);
+                etComment.setText(logbook.comment);
+        } else {
             isEdit = false;
         }
 
-
-        btn_save_log.setOnClickListener(new View.OnClickListener() {
+        btnSaveLog.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if(isEdit){
-                    database.logbookDao().update(uid,et_object_name.getText().toString(), et_observer.getText().toString(), et_date.getText().toString(), et_time.getText().toString(), et_instrument.getText().toString(),et_filter.getText().toString(),et_magnification.getText().toString(), et_comment.getText().toString());
+                    database.logbookDao().update(uid,
+                            etObject.getText().toString(),
+                            etObserver.getText().toString(),
+                            etLatitude.getText().toString(),
+                            etLongitude.getText().toString(),
+                            etDate.getText().toString(),
+                            etTime.getText().toString(),
+                            rbSeeing.getText().toString(),
+                            etInstrument.getText().toString(),
+                            etFilter.getText().toString(),
+                            etMagnification.getText().toString(),
+                            etComment.getText().toString());
                 }else{
-                    database.logbookDao().insertAll(et_object_name.getText().toString(), et_observer.getText().toString(), et_date.getText().toString(), et_time.getText().toString(), et_instrument.getText().toString(),et_filter.getText().toString(),et_magnification.getText().toString(), et_comment.getText().toString());
+                    database.logbookDao().insertAll(etObject.getText().toString(),
+                            etObserver.getText().toString(),
+                            etLatitude.getText().toString(),
+                            etLongitude.getText().toString(),
+                            etDate.getText().toString(),
+                            etTime.getText().toString(),
+                            rbSeeing.getText().toString(),
+                            etInstrument.getText().toString(),
+                            etFilter.getText().toString(),
+                            etMagnification.getText().toString(),
+                            etComment.getText().toString());
                 }
-
                 finish();
-
             }
         });
 
@@ -188,15 +192,18 @@ public class AddObsLogBook extends AppCompatActivity {
         final int
                 day=
                 calendar.get(Calendar.DAY_OF_MONTH);
-        et_time.setClickable(true);
-        et_time.setLongClickable(false);
-        et_time.setInputType(InputType.TYPE_NULL);
 
-        et_date.setClickable(true);
-        et_date.setLongClickable(false);
-        et_date.setInputType(InputType.TYPE_NULL);
+        //logbookdb = new DatabaseHelper(this);
 
-        et_date.setOnClickListener(v -> {
+        etTime.setClickable(true);
+        etTime.setLongClickable(false);
+        etTime.setInputType(InputType.TYPE_NULL);
+
+        etDate.setClickable(true);
+        etDate.setLongClickable(false);
+        etDate.setInputType(InputType.TYPE_NULL);
+
+        etDate.setOnClickListener(v -> {
 
             DatePickerDialog
                     dialog=
@@ -207,14 +214,14 @@ public class AddObsLogBook extends AppCompatActivity {
                         String
                                 date=
                                 dayOfMonth + "/" + month1 + "/" + year1;
-                        et_date.setText(date);
+                        etDate.setText(date);
 
                     }, year, month, day);
             dialog.show();
 
         });
 
-        et_time.setOnClickListener(v -> {
+        etTime.setOnClickListener(v -> {
             // TODO Auto-generated method stub
             Calendar
                     mcurrentTime=
@@ -229,7 +236,7 @@ public class AddObsLogBook extends AppCompatActivity {
             TimePickerDialog
                     mTimePicker;
             mTimePicker=
-                    new TimePickerDialog(AddObsLogBook.this, (timePicker, selectedHour, selectedMinute) -> et_time.setText(selectedHour + ":" + selectedMinute), hour, minute, true);
+                    new TimePickerDialog(AddObsLogBook.this, (timePicker, selectedHour, selectedMinute) -> etTime.setText(selectedHour + ":" + selectedMinute), hour, minute, true);
             mTimePicker.setTitle("Select Time");
             mTimePicker.show();
 
@@ -238,28 +245,47 @@ public class AddObsLogBook extends AppCompatActivity {
         fusedLocationProviderClient=
                 LocationServices.getFusedLocationProviderClient(AddObsLogBook.this);
 
-        obslogBookPageEvt(SUtils.getString(et_object_name),
-                SUtils.getString(et_observer),
-                SUtils.getString(tv_latitude) + "," + SUtils.getString(tv_longitude));
+        obslogBookPageEvt(SUtils.getString(etObject),
+                SUtils.getString(etObserver),
+                SUtils.getString(etLatitude) + "," + SUtils.getString(etLongitude));
 
-        btn_generate.setOnClickListener(view -> {
+        btnGenerate.setOnClickListener(view -> {
 
             if (ActivityCompat.checkSelfPermission(AddObsLogBook.this,
-                    android.Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED
+                    Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED
                     && ActivityCompat.checkSelfPermission(AddObsLogBook.this,
-                    android.Manifest.permission.ACCESS_COARSE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
+                    Manifest.permission.ACCESS_COARSE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
 
                 getLocation();
 
             } else {
                 ActivityCompat.requestPermissions(AddObsLogBook.this
-                        , new String[]{android.Manifest.permission.ACCESS_FINE_LOCATION
+                        , new String[]{Manifest.permission.ACCESS_FINE_LOCATION
                                 , Manifest.permission.ACCESS_COARSE_LOCATION}
                         , 100);
             }
             Toast.makeText(getApplicationContext(), "Please Wait", Toast.LENGTH_SHORT).show();
 
         });
+        
+//        btn_save_log.setOnClickListener(view -> {
+//            SQLiteDatabase db = logbookdb.getWritableDatabase();
+//            db.execSQL("insert into logbook (object, observer, latitude, longitude, date, time, seeing, instrument, magnification, filter, comment) values ('" +
+//                    et_object_name.getText().toString() + "','" +
+//                    et_observer.getText().toString() + "','" +
+//                    tv_latitude.getText().toString() + "','" +
+//                    tv_longitude.getText().toString() + "','" +
+//                    et_date.getText().toString() + "','" +
+//                    et_time.getText().toString() + "','" +
+//                    rg_seeing.getContext().toString() + "','" +
+//                    et_instrument.getText().toString() + "','" +
+//                    et_magnification.getText().toString() + "','" +
+//                    et_filter.getText().toString() + "','" +
+//                    et_comment.getText().toString() + "')");
+//            Toast.makeText(AddObsLogBook.this, "Data Saved", Toast.LENGTH_SHORT).show();
+//            ObsLogBook.olb.refreshDisplayLogbook();
+//            finish();
+//        });
     }
 
     @Override
@@ -287,8 +313,8 @@ public class AddObsLogBook extends AppCompatActivity {
                         location=
                         task.getResult();
                 if (location != null) {
-                    tv_latitude.setText(String.valueOf(location.getLatitude()));
-                    tv_longitude.setText(String.valueOf(location.getLongitude()));
+                    etLatitude.setText(String.valueOf(location.getLatitude()));
+                    etLongitude.setText(String.valueOf(location.getLongitude()));
                 } else {
                     LocationRequest
                             locationRequest=
@@ -305,8 +331,8 @@ public class AddObsLogBook extends AppCompatActivity {
                                     Location
                                             location1=
                                             locationResult.getLastLocation();
-                                    tv_latitude.setText(String.valueOf(location1.getLatitude()));
-                                    tv_longitude.setText(String.valueOf(location1.getLongitude()));
+                                    etLatitude.setText(String.valueOf(location1.getLatitude()));
+                                    etLongitude.setText(String.valueOf(location1.getLongitude()));
                                 }
                             };
                     fusedLocationProviderClient.requestLocationUpdates(locationRequest,

@@ -14,11 +14,12 @@ import com.erefem.stargazing.database.dao.LogbookDao;
 import com.erefem.stargazing.database.entitas.Logbook;
 import com.huawei.hms.ads.App;
 
-@Database(entities = {Logbook.class},version = 1)
+@Database(entities = {Logbook.class},version = 2)
 public abstract class AppDatabase extends RoomDatabase {
 
     private static AppDatabase sInstance;
     private final MutableLiveData<Boolean> mIsDatabaseCreated = new MutableLiveData<>();
+
     @VisibleForTesting
     public static final String DATABASE_NAME = "logbook_database";
     public abstract LogbookDao logbookDao();
@@ -55,5 +56,4 @@ public abstract class AppDatabase extends RoomDatabase {
         }
         return sInstance;
     }
-
 }

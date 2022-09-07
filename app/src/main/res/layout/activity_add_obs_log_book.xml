@@ -177,7 +177,6 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:checked="true"
                                 android:text="@string/seeing_excellent" />
 
                             <RadioButton
@@ -229,7 +228,7 @@
                         android:id="@+id/et_instrument"
                         style="@style/TextParameter.DataInput"
                         android:hint="Telescope, Camera, Etc"
-                        android:inputType="text" />
+                        android:inputType="textMultiLine" />
 
                 </LinearLayout>
 
@@ -248,7 +247,7 @@
                         android:id="@+id/et_magnification"
                         style="@style/TextParameter.DataInput"
                         android:hint="40x, 60x, etc"
-                        android:inputType="text" />
+                        android:inputType="textMultiLine" />
 
                 </LinearLayout>
 
@@ -267,7 +266,7 @@
                         android:id="@+id/et_filter"
                         style="@style/TextParameter.DataInput"
                         android:hint="Original, Soft, Warm"
-                        android:inputType="text" />
+                        android:inputType="textMultiLine" />
 
                 </LinearLayout>
 
