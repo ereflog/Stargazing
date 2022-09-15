@@ -24,25 +24,20 @@ import java.util.List;
 public class ObsLogBook extends AppCompatActivity {
 
     RecyclerView recyclerView;
-    //List<MyModel> myModelList;
-    //CustomAdapter customAdapter;
-    private Button fabAddLogbook;
     private AppDatabase database;
     private LogbookAdapter logbookAdapter;
-    private List<Logbook> list = new ArrayList<>();
+    private final List<Logbook> list = new ArrayList<>();
     private AlertDialog.Builder dialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.obs_log_book);
         if (getSupportActionBar() != null) {
             getSupportActionBar().setTitle(R.string.obs_log_book_title);
         }
 
-        setContentView(R.layout.obs_log_book);
         recyclerView = findViewById(R.id.rvLogBook);
-        //Toast.makeText(getApplicationContext(), "Please Wait", Toast.LENGTH_SHORT).show();
-        FloatingActionButton fabAddLogbook = findViewById(R.id.fab_add_logbook);
         database = AppDatabase.getInstance(getApplicationContext());
         list.clear();
         list.addAll(database.logbookDao().getAll());
@@ -65,7 +60,7 @@ public class ObsLogBook extends AppCompatActivity {
                                 Logbook logbook = list.get(position);
                                 database.logbookDao().delete(logbook);
                                 onStart();
-                                //Toast.makeText(getApplicationContext(), "Data has been delete (Please Refresh)", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(getApplicationContext(), "Log Deleted", Toast.LENGTH_SHORT).show();
                                 break;
                         }
                     }
@@ -78,6 +73,7 @@ public class ObsLogBook extends AppCompatActivity {
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setAdapter(logbookAdapter);
 
+        FloatingActionButton fabAddLogbook = findViewById(R.id.fab_add_logbook);
         fabAddLogbook.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

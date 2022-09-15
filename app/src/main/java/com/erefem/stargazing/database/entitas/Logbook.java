@@ -12,8 +12,8 @@ public class Logbook {
     @ColumnInfo(name = "object")
     public String object;
     public String observer;
-    public String latitude;
     public String longitude;
+    public String latitude;
     public String date;
     public String time;
     public String seeing;

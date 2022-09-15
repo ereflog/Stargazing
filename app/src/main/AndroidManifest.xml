@@ -26,9 +26,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Stargazing">
         <activity
-            android:name=".EditObsLogBook"
-            android:exported="false" />
-        <activity
             android:name=".AddObsLogBook"
             android:parentActivityName=".ObsLogBook">
             <meta-data

@@ -92,14 +92,14 @@
                         android:orientation="vertical">
 
                         <EditText
-                            android:id="@+id/tv_latitude"
+                            android:id="@+id/et_latitude"
                             style="@style/TextParameter.DataOutput"
                             android:hint="Latitude" />
 
                         <Space style="@style/Spacing" />
 
                         <EditText
-                            android:id="@+id/tv_longitude"
+                            android:id="@+id/et_longitude"
                             style="@style/TextParameter.DataOutput"
                             android:hint="Longitude" />
 

@@ -86,23 +86,20 @@ public class AddObsLogBook extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_obs_log_book);
-
         if (getSupportActionBar() != null) {
             getSupportActionBar().setTitle(R.string.obs_log_book_title);
         }
 
-        LocationRequest
-                mLocationRequest;
-        mLocationRequest=
-                new LocationRequest();
+        LocationRequest mLocationRequest;
+        mLocationRequest = new LocationRequest();
         mLocationRequest.setInterval(10000);
         mLocationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
 
         instance        = HiAnalytics.getInstance(this);
         etObject        = findViewById(R.id.et_object_name);
         etObserver      = findViewById(R.id.et_observer);
-        etLatitude      = findViewById(R.id.tv_latitude);
-        etLongitude     = findViewById(R.id.tv_longitude);
+        etLatitude      = findViewById(R.id.et_latitude);
+        etLongitude     = findViewById(R.id.et_longitude);
         etDate          = findViewById(R.id.et_date);
         etTime          = findViewById(R.id.et_time);
         rgSeeing        = findViewById(R.id.rg_seeing);
@@ -124,6 +121,7 @@ public class AddObsLogBook extends AppCompatActivity {
         database = AppDatabase.getInstance(getApplicationContext());
         Intent intent = getIntent();
         uid = intent.getIntExtra("uid",0);
+
         if (uid>0){
                 isEdit = true;
                 Logbook logbook = database.logbookDao().get(uid);
@@ -133,12 +131,7 @@ public class AddObsLogBook extends AppCompatActivity {
                 etLongitude.setText(logbook.longitude);
                 etDate.setText(logbook.date);
                 etTime.setText(logbook.time);
-//                rbExceptional.setText(logbook.seeing);
-//                rbGood.setText(logbook.seeing);
-//                rbOk.setText(logbook.seeing);
-//                rbPoor.setText(logbook.seeing);
-//                rbVeryPoor.setText(logbook.seeing);
-                rbSeeing.setText(logbook.seeing);
+                //rbSeeing.setText(logbook.seeing);
                 etInstrument.setText(logbook.instrument);
                 etMagnification.setText(logbook.magnification);
                 etFilter.setText(logbook.filter);
@@ -160,11 +153,12 @@ public class AddObsLogBook extends AppCompatActivity {
                             etTime.getText().toString(),
                             rbSeeing.getText().toString(),
                             etInstrument.getText().toString(),
-                            etFilter.getText().toString(),
                             etMagnification.getText().toString(),
+                            etFilter.getText().toString(),
                             etComment.getText().toString());
                 }else{
-                    database.logbookDao().insertAll(etObject.getText().toString(),
+                    database.logbookDao().insertAll(
+                            etObject.getText().toString(),
                             etObserver.getText().toString(),
                             etLatitude.getText().toString(),
                             etLongitude.getText().toString(),
@@ -172,8 +166,8 @@ public class AddObsLogBook extends AppCompatActivity {
                             etTime.getText().toString(),
                             rbSeeing.getText().toString(),
                             etInstrument.getText().toString(),
-                            etFilter.getText().toString(),
                             etMagnification.getText().toString(),
+                            etFilter.getText().toString(),
                             etComment.getText().toString());
                 }
                 finish();

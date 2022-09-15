@@ -43,10 +43,8 @@ public class LogbookAdapter extends RecyclerView.Adapter<LogbookAdapter.ViewAdap
     public void onBindViewHolder(@NonNull ViewAdapter holder, int position) {
         holder.object.setText(list.get(position).object);
         holder.observer.setText(list.get(position).observer);
-        //holder.latitude.setText(String.valueOf(position));
-        //holder.longitude.setText(String.valueOf(position));
-        holder.longitude.setText(list.get(position).longitude);
         holder.latitude.setText((list.get(position).latitude));
+        holder.longitude.setText(list.get(position).longitude);
         holder.date.setText(list.get(position).date);
         holder.time.setText(list.get(position).time);
         holder.seeing.setText(list.get(position).seeing);
@@ -62,14 +60,14 @@ public class LogbookAdapter extends RecyclerView.Adapter<LogbookAdapter.ViewAdap
     }
 
     class ViewAdapter extends RecyclerView.ViewHolder{
-        TextView object, observer, longitude, latitude, date, time, seeing, instrument, magnification, filter, comment;
+        TextView object, observer, latitude, longitude, date, time, seeing, instrument, magnification, filter, comment;
 
         public ViewAdapter(@NonNull View itemView) {
             super(itemView);
             object = itemView.findViewById(R.id.tv_object_name);
             observer = itemView.findViewById(R.id.tv_observer);
-            longitude = itemView.findViewById(R.id.tv_longitude);
             latitude = itemView.findViewById(R.id.tv_latitude);
+            longitude = itemView.findViewById(R.id.tv_longitude);
             date = itemView.findViewById(R.id.tv_date);
             time = itemView.findViewById(R.id.tv_time);
             seeing = itemView.findViewById(R.id.tv_seeing);

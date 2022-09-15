@@ -20,11 +20,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Observed Object(s)"
-            android:textSize="12sp"/>
+            android:textColor="@color/black"
+            android:textSize="12sp" />
         <TextView
             android:id="@+id/tv_object_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textColorHint="@color/taupe"
             android:hint="Object"
             android:layout_marginBottom="6dp"
             android:ellipsize="end"
@@ -35,11 +38,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Observer Name"
+            android:textColor="@color/black"
             android:textSize="12sp"/>
         <TextView
             android:id="@+id/tv_observer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textColorHint="@color/taupe"
             android:hint="Observer"
             android:layout_marginBottom="6dp"
             android:ellipsize="end"
@@ -50,29 +56,55 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Location Coordinate"
+            android:textColor="@color/black"
             android:textSize="12sp"/>
-        <TextView
-            android:id="@+id/tv_coordinate"
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Coordinate"
-            android:layout_marginBottom="6dp"
-            android:ellipsize="end"
-            android:maxLines="1"
-            android:textSize="16sp" />
+            android:layout_height="match_parent"
+            android:orientation="horizontal" >
+            <TextView
+                android:id="@+id/tv_latitude"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textColor="@color/black"
+                android:textColorHint="@color/taupe"
+                android:hint="Latitude"
+                android:layout_marginBottom="6dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textSize="16sp" />
+            <TextView
+                android:id="@+id/tv_longitude"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/black"
+                android:textColorHint="@color/taupe"
+                android:hint="Longitude"
+                android:layout_marginBottom="6dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textSize="16sp" />
+        </LinearLayout>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Observing Date"
-            android:textSize="12sp"/>
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+
         <TextView
             android:id="@+id/tv_date"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Date"
             android:layout_marginBottom="6dp"
             android:ellipsize="end"
+            android:textColor="@color/black"
+            android:textColorHint="@color/taupe"
+            android:hint="Date"
             android:maxLines="1"
             android:textSize="16sp" />
 
@@ -80,11 +112,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Observing Time"
+            android:textColor="@color/black"
             android:textSize="12sp"/>
         <TextView
             android:id="@+id/tv_time"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textColorHint="@color/taupe"
             android:hint="Time"
             android:layout_marginBottom="6dp"
             android:ellipsize="end"
@@ -95,11 +130,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Seeing"
-            android:textSize="12sp"/>
+            android:textColor="@color/black"
+            android:textSize="12sp" />
         <TextView
             android:id="@+id/tv_seeing"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textColorHint="@color/taupe"
             android:hint="Seeing"
             android:layout_marginBottom="6dp"
             android:ellipsize="end"
@@ -110,29 +148,35 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Instrument and Equipment"
+            android:textColor="@color/black"
             android:textSize="12sp"/>
         <TextView
             android:id="@+id/tv_instrument"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Instrument"
             android:layout_marginBottom="6dp"
             android:ellipsize="end"
+            android:textColor="@color/black"
+            android:textColorHint="@color/taupe"
+            android:hint="Instrument"
             android:maxLines="1"
-            android:textSize="16sp"/>
+            android:textSize="16sp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Optical Magnification"
-            android:textSize="12sp"/>
+            android:textColor="@color/black"
+            android:textSize="12sp" />
         <TextView
             android:id="@+id/tv_magnification"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Magnification"
             android:layout_marginBottom="6dp"
             android:ellipsize="end"
+            android:textColor="@color/black"
+            android:textColorHint="@color/taupe"
+            android:hint="Magnification"
             android:maxLines="1"
             android:textSize="16sp" />
 
@@ -140,11 +184,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Filter"
-            android:textSize="12sp"/>
+            android:textColor="@color/black"
+            android:textSize="12sp" />
         <TextView
             android:id="@+id/tv_filter"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textColorHint="@color/taupe"
             android:hint="Filter"
             android:layout_marginBottom="6dp"
             android:ellipsize="end"
@@ -155,24 +202,19 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Comment"
+            android:textColor="@color/black"
             android:textSize="12sp"/>
         <TextView
             android:id="@+id/tv_description_object"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textColorHint="@color/taupe"
             android:hint="Comment"
             android:layout_marginBottom="6dp"
             android:ellipsize="end"
             android:maxLines="1"
             android:textSize="16sp" />
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_gravity="center">
-
-        </LinearLayout>
 
     </LinearLayout>
 
