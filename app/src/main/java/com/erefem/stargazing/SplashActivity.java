@@ -93,7 +93,7 @@ public class SplashActivity extends Activity {
     private void loadAd() {
         Log.i(TAG, "Start to load ad");
         // Lock the screen orientation on the device. Your app will automatically adapt to the screen orientation.
-        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED);
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_SENSOR);
         int orientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT;
         AdParam adParam = new AdParam.Builder().build();
         splashView = findViewById(R.id.splash_ad_view);
