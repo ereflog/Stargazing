@@ -18,8 +18,10 @@ import java.util.Objects;
 
 public class RedLightTool extends AppCompatActivity {
 
-    SeekBar seekBar;
-    boolean success = true;
+    private SeekBar seekBar;
+    private int brightness;
+    private ContentResolver contentResolver;
+    private Window window;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,17 +33,37 @@ public class RedLightTool extends AppCompatActivity {
         setContentView(R.layout.red_light_tool);
 
         seekBar = (SeekBar) findViewById(R.id.seekBar);
-        seekBar.setMax(255);
-        seekBar.setProgress(getBrightness());
+        contentResolver = getContentResolver();
+        window = getWindow();
 
-        getPermission();
+        seekBar.setMax(255);
+        seekBar.setKeyProgressIncrement(1);
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M){
+            if (Settings.System.canWrite(this)){
+                Toast.makeText(this, "You can change the brightness", Toast.LENGTH_SHORT).show();
+            }else{
+                Intent intent = new Intent(Settings.ACTION_MANAGE_WRITE_SETTINGS);
+                intent.setData(Uri.parse("package" + getApplication().getPackageName()));
+                startActivity(intent);
+            }
+        }
+
+        try {
+            brightness = Settings.System.getInt(contentResolver, Settings.System.SCREEN_BRIGHTNESS);
+            seekBar.setProgress(brightness);
+        } catch (Settings.SettingNotFoundException e) {
+            e.printStackTrace();
+        }
 
         seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                if(fromUser && success){
-                    setBrightness(progress);
-                }
+                brightness = progress;
+                Settings.System.putInt(contentResolver, Settings.System.SCREEN_BRIGHTNESS,brightness);
+                WindowManager.LayoutParams layoutParams = window.getAttributes();
+                layoutParams.screenBrightness = brightness / (float) 300;
+                window.setAttributes(layoutParams);
             }
 
             @Override
@@ -51,60 +73,8 @@ public class RedLightTool extends AppCompatActivity {
 
             @Override
             public void onStopTrackingTouch(SeekBar seekBar) {
-                if(!success){
-                    Toast.makeText(RedLightTool.this, "Permission not granted!", Toast.LENGTH_SHORT).show();
-                }
+
             }
         });
-    }
-
-    private void setBrightness(int brightness){
-        if (brightness < 0){
-            brightness = 0;
-        } else if (brightness > 255){
-            brightness = 255;
-        }
-
-        ContentResolver contentResolver = getApplicationContext().getContentResolver();
-        Settings.System.putInt(contentResolver, Settings.System.SCREEN_BRIGHTNESS, brightness);
-
-    }
-
-    private int getBrightness(){
-        int brightness = 255;
-        try{
-            ContentResolver contentResolver = getApplicationContext().getContentResolver();
-            brightness = Settings.System.getInt(contentResolver, Settings.System.SCREEN_BRIGHTNESS);
-        } catch (Settings.SettingNotFoundException e){
-            e.printStackTrace();
-        }
-        return brightness;
-    }
-
-    private void getPermission(){
-        boolean value;
-        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.M){
-            value = Settings.System.canWrite(getApplicationContext());
-            if (value){
-                success = true;
-            } else {
-                Intent intent = new Intent(Settings.ACTION_MANAGE_WRITE_SETTINGS);
-                intent.setData(Uri.parse("package:" + getApplicationContext().getPackageName()));
-                startActivityForResult(intent, 1000);
-            }
-        }
-    }
-
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            boolean value = Settings.System.canWrite(getApplicationContext());
-            if (value) {
-                success = true;
-            } else {
-                Toast.makeText(this, "Permission not granted!", Toast.LENGTH_SHORT).show();
-            }
-        }
     }
 }
