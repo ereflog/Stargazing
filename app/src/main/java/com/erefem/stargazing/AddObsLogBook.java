@@ -79,9 +79,6 @@ public class AddObsLogBook extends AppCompatActivity {
     HiAnalyticsInstance instance;
     private Object Logbook;
 
-//    protected Cursor cursor;
-//    DatabaseHelper logbookdb;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -103,11 +100,11 @@ public class AddObsLogBook extends AppCompatActivity {
         etDate          = findViewById(R.id.et_date);
         etTime          = findViewById(R.id.et_time);
         rgSeeing        = findViewById(R.id.rg_seeing);
-        rbExceptional   = findViewById(R.id.rb_seeing_exceptional);
-        rbGood          = findViewById(R.id.rb_seeing_good);
-        rbOk            = findViewById(R.id.rb_seeing_ok);
-        rbPoor          = findViewById(R.id.rb_seeing_poor);
-        rbVeryPoor      = findViewById(R.id.rb_seeing_very_poor);
+//        rbExceptional   = findViewById(R.id.rb_seeing_exceptional);
+//        rbGood          = findViewById(R.id.rb_seeing_good);
+//        rbOk            = findViewById(R.id.rb_seeing_ok);
+//        rbPoor          = findViewById(R.id.rb_seeing_poor);
+//        rbVeryPoor      = findViewById(R.id.rb_seeing_very_poor);
         etInstrument    = findViewById(R.id.et_instrument);
         etMagnification = findViewById(R.id.et_magnification);
         etFilter        = findViewById(R.id.et_filter);
@@ -115,27 +112,24 @@ public class AddObsLogBook extends AppCompatActivity {
         btnGenerate     = findViewById(R.id.btn_generate);
         btnSaveLog      = findViewById(R.id.btn_save_log);
 
-        int selectedRadioButton = rgSeeing.getCheckedRadioButtonId();
-        rbSeeing = findViewById(selectedRadioButton);
-
         database = AppDatabase.getInstance(getApplicationContext());
         Intent intent = getIntent();
         uid = intent.getIntExtra("uid",0);
 
         if (uid>0){
-                isEdit = true;
-                Logbook logbook = database.logbookDao().get(uid);
-                etObject.setText(logbook.object);
-                etObserver.setText(logbook.observer);
-                etLatitude.setText(logbook.latitude);
-                etLongitude.setText(logbook.longitude);
-                etDate.setText(logbook.date);
-                etTime.setText(logbook.time);
-                //rbSeeing.setText(logbook.seeing);
-                etInstrument.setText(logbook.instrument);
-                etMagnification.setText(logbook.magnification);
-                etFilter.setText(logbook.filter);
-                etComment.setText(logbook.comment);
+            isEdit = true;
+            Logbook logbook = database.logbookDao().get(uid);
+            etObject.setText(logbook.object);
+            etObserver.setText(logbook.observer);
+            etLatitude.setText(logbook.latitude);
+            etLongitude.setText(logbook.longitude);
+            etDate.setText(logbook.date);
+            etTime.setText(logbook.time);
+            //rbSeeing.setText(logbook.seeing);
+            etInstrument.setText(logbook.instrument);
+            etMagnification.setText(logbook.magnification);
+            etFilter.setText(logbook.filter);
+            etComment.setText(logbook.comment);
         } else {
             isEdit = false;
         }
@@ -143,6 +137,10 @@ public class AddObsLogBook extends AppCompatActivity {
         btnSaveLog.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                int selectedRadioButton = rgSeeing.getCheckedRadioButtonId();
+                rbSeeing = (RadioButton) findViewById(selectedRadioButton);
+
                 if(isEdit){
                     database.logbookDao().update(uid,
                             etObject.getText().toString(),
@@ -186,8 +184,6 @@ public class AddObsLogBook extends AppCompatActivity {
         final int
                 day=
                 calendar.get(Calendar.DAY_OF_MONTH);
-
-        //logbookdb = new DatabaseHelper(this);
 
         etTime.setClickable(true);
         etTime.setLongClickable(false);
