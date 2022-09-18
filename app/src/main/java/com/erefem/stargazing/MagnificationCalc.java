@@ -66,8 +66,6 @@ public class MagnificationCalc extends AppCompatActivity {
         btnEyepiece.setOnClickListener(view -> {
             if (SUtils.isEmpty(etTelescopeFocalLength2)) {
                 SUtils.setToast(etTelescopeFocalLength2,"This field cannot be blank!");
-            } if (SUtils.isEmpty(etTelescopeAperture)) {
-                SUtils.setToast(etTelescopeAperture,"This field cannot be blank!");
             } if (SUtils.isEmpty(etMagnification2)) {
                 SUtils.setToast(etMagnification2,"This field cannot be blank!");
             } else {
