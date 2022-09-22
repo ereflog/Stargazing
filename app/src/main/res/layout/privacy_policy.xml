@@ -5,6 +5,7 @@
     android:layout_height="wrap_content"
     android:padding="16dp"
     tools:context=".PrivacyPolicy">
+
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
@@ -23,36 +24,43 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textSize="16sp"
             android:text="@string/privacy_police" />
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textSize="16sp"
             android:paddingTop="7dp"
             android:text="@string/log_files"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textSize="16sp"
             android:paddingTop="7dp"
             android:text="@string/advertising"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textSize="16sp"
             android:paddingTop="7dp"
             android:text="@string/third_party_advertisers"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textSize="16sp"
             android:paddingTop="7dp"
             android:text="@string/children_information"/>
         <TextView
             android:id="@+id/tv_privacy_police"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textSize="16sp"
             android:paddingTop="5dp"
             android:text="@string/online_only"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textSize="16sp"
             android:paddingTop="7dp"
             android:text="@string/consent"/>
 
