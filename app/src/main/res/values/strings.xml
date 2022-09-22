@@ -20,7 +20,7 @@
 
     <!--Another String Values-->
     <string name="privacy_police">
-        At Stargazing, one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by Stargazing and how we use it.
+        One of our main priorities is the privacy of our Stargazing app users. This Privacy Policy document contains types of information that is collected and recorded by Stargazing and how we use it.
     </string>
     <string name="log_files">
         Stargazing follows a standard procedure of using log files. These files log visitors when they use app. The information collected by log files include internet protocol (IP) addresses, browser type, Internet Service Provider (ISP),Current Location (GPS), date and time stamp, referring/exit pages, and possibly the number of clicks. These are not linked to any information that is personally identifiable. The purpose of the information is for analyzing trends, administering the app, tracking users, movement on the app, and gathering demographic information.
@@ -44,7 +44,7 @@ Stargazing does not knowingly collect any Personal Identifiable Information from
         By using our app, you hereby consent to our Privacy Policy and agree to its Terms and Conditions.
     </string>
     <string name="about_text">Stargazing is an app to help make planning your astronomical observations or astrophotography easier.
-there are various calculators for calculating telescope and camera parameters, weather forecasts, an observation log book, and a handy unit converter.
+There are various calculators for calculating telescope and camera parameters, weather forecasts, an observation log book, and a handy unit converter.
 </string>
     <string name="tv_magnification_value">Magnification Value</string>
     <string name="eyepiece_fl_value">Eyepiece F Length Value</string>
@@ -76,7 +76,7 @@ there are various calculators for calculating telescope and camera parameters, w
     <string name="seeing_good">Good</string>
     <string name="seeing_excellent">Exceptional</string>
     <string name="_00_00">00:00</string>
-    <string name="credit_list">Weather forecast by <a href="https://www.windy.com">Windy.com</a> \nApp icon created by <a href="https://www.flaticon.com/free-icons/telescope" title="telescope icons">iconixar</a> \n App Privacy Policy Generator from <a href="https://App-Privacy-Policy.com">App-Privacy-Policy.com</a></string>
+    <string name="credit_list">Weather forecast by <a href="https://www.windy.com">Windy.com</a> \nApp icon created by <a href="https://www.flaticon.com/free-icons/telescope" title="telescope icons">iconixar</a> \nPrivacy Policy generated from <a href="https://App-Privacy-Policy.com">App-Privacy-Policy.com</a></string>
     <string-array name="ccd_binning">
         <item>1x1</item>
         <item>2x2</item>
