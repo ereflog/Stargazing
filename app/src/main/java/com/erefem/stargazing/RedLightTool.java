@@ -1,5 +1,7 @@
 package com.erefem.stargazing;
 
+import static android.content.ContentValues.TAG;
+
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -9,6 +11,7 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.provider.Settings;
+import android.util.Log;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.SeekBar;
@@ -35,17 +38,23 @@ public class RedLightTool extends AppCompatActivity {
         seekBar = (SeekBar) findViewById(R.id.seekBar);
         contentResolver = getContentResolver();
         window = getWindow();
+        boolean success = true;
 
         seekBar.setMax(255);
         seekBar.setKeyProgressIncrement(1);
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M){
-            if (Settings.System.canWrite(this)){
+            if (Settings.System.canWrite(getApplicationContext())){
                 Toast.makeText(this, "You can change the brightness", Toast.LENGTH_SHORT).show();
             }else{
-                Intent intent = new Intent(Settings.ACTION_MANAGE_WRITE_SETTINGS);
-                intent.setData(Uri.parse("package" + getApplication().getPackageName()));
+//                Intent intent = new Intent(Settings.ACTION_MANAGE_WRITE_SETTINGS);
+//                intent.setData(Uri.parse("package" + getApplication().getPackageName()));
+//                startActivity(intent);
+                Intent intent = new Intent(android.provider.Settings.ACTION_MANAGE_WRITE_SETTINGS)
+                        .setData(Uri.parse("package:" + getApplication().getPackageName()))
+                        .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(intent);
+                //Log.d(TAG, "Open activity new task");
             }
         }
 
