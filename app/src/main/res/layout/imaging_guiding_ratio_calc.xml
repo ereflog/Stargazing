@@ -12,10 +12,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <TextView
-            style="@style/TextTitle.Name"
-            android:text="Imaging-Guiding Ratio" />
-
         <!--IMAGING CAMERA-->
         <RelativeLayout
             android:layout_width="match_parent"
@@ -26,9 +22,7 @@
 
                 <!--Focal Length-->
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    style="@style/horizontalLinearLayoutParam" >
 
                     <TextView
                         style="@style/TextParameter.Name"
@@ -49,9 +43,7 @@
 
                 <!--Barlow/Reducer-->
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    style="@style/horizontalLinearLayoutParam" >
 
                     <TextView
                         style="@style/TextParameter.Name"
@@ -61,7 +53,7 @@
 
                     <Spinner
                         android:id="@+id/dd_barlow_reducer_imaging"
-                        android:layout_width="130dp"
+                        android:layout_width="140dp"
                         android:layout_height="wrap_content"
                         android:background="@android:drawable/btn_dropdown"
                         android:entries="@array/barlow_reducer"
@@ -95,9 +87,7 @@
 
                 <!--CCD Binning-->
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    style="@style/horizontalLinearLayoutParam" >
 
                     <TextView
                         style="@style/TextParameter.Name"
@@ -107,7 +97,7 @@
 
                     <Spinner
                         android:id="@+id/dd_binning_imaging"
-                        android:layout_width="130dp"
+                        android:layout_width="140dp"
                         android:layout_height="wrap_content"
                         android:background="@android:drawable/btn_dropdown"
                         android:entries="@array/ccd_binning"
@@ -118,9 +108,7 @@
 
                 <!--Result (Resolution)-->
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    style="@style/horizontalLinearLayoutParam" >
 
                     <TextView
                         style="@style/TextParameter.Name"
@@ -157,9 +145,7 @@
 
                 <!--Focal Length-->
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    style="@style/horizontalLinearLayoutParam" >
 
                     <TextView
                         style="@style/TextParameter.Name"
@@ -181,9 +167,7 @@
 
                 <!--Barlow/Reducer-->
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    style="@style/horizontalLinearLayoutParam" >
 
                     <TextView
                         style="@style/TextParameter.Name"
@@ -194,7 +178,7 @@
 
                     <Spinner
                         android:id="@+id/dd_barlow_reducer_guide"
-                        android:layout_width="130dp"
+                        android:layout_width="140dp"
                         android:layout_height="wrap_content"
                         android:background="@android:drawable/btn_dropdown"
                         android:entries="@array/barlow_reducer"
@@ -205,9 +189,7 @@
 
                 <!--CCD Pixel Size-->
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    style="@style/horizontalLinearLayoutParam" >
 
                     <TextView
                         style="@style/TextParameter.Name"
@@ -229,9 +211,7 @@
 
                 <!--CCD Binning-->
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    style="@style/horizontalLinearLayoutParam" >
 
                     <TextView
                         style="@style/TextParameter.Name"
@@ -242,7 +222,7 @@
 
                     <Spinner
                         android:id="@+id/dd_binning_guide"
-                        android:layout_width="130dp"
+                        android:layout_width="140dp"
                         android:layout_height="wrap_content"
                         android:background="@android:drawable/btn_dropdown"
                         android:entries="@array/ccd_binning"
@@ -253,9 +233,7 @@
 
                 <!--Result (Resolution)-->
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    style="@style/horizontalLinearLayoutParam" >
 
                     <TextView
                         style="@style/TextParameter.Name"
@@ -291,9 +269,7 @@
                 style="@style/BorderParam" >
 
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    style="@style/horizontalLinearLayoutParam">
 
                     <TextView
                         android:id="@+id/tvImagingGuidingRatio"

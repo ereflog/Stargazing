@@ -23,9 +23,7 @@
                 style="@style/BorderParam">
 
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    style="@style/horizontalLinearLayoutParam">
 
                     <TextView
                         style="@style/TextParameter.Name"
@@ -36,7 +34,7 @@
 
                     <Spinner
                         android:id="@+id/seeing_spinner"
-                        android:layout_width="230dp"
+                        android:layout_width="250dp"
                         android:layout_height="wrap_content"
                         android:background="@android:drawable/btn_dropdown"
                         android:entries="@array/Seeing"
@@ -45,9 +43,7 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    style="@style/horizontalLinearLayoutParam">
 
                     <TextView
                         style="@style/TextParameter.Name"
@@ -58,7 +54,7 @@
 
                     <Spinner
                         android:id="@+id/dd_barlow_reducer_ccd_imaging_dropdown"
-                        android:layout_width="120dp"
+                        android:layout_width="140dp"
                         android:layout_height="wrap_content"
                         android:background="@android:drawable/btn_dropdown"
                         android:entries="@array/barlow_reducer"
@@ -68,9 +64,7 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    style="@style/horizontalLinearLayoutParam">
 
                     <TextView
                         style="@style/TextParameter.Name"
@@ -90,9 +84,7 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    style="@style/horizontalLinearLayoutParam">
 
                     <TextView
                         style="@style/TextParameter.Name"
@@ -112,9 +104,7 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    style="@style/horizontalLinearLayoutParam">
 
                     <TextView
                         style="@style/TextParameter.Name"
@@ -125,7 +115,7 @@
 
                     <Spinner
                         android:id="@+id/binning_spinner"
-                        android:layout_width="120dp"
+                        android:layout_width="140dp"
                         android:layout_height="wrap_content"
                         android:background="@android:drawable/btn_dropdown"
                         android:entries="@array/ccd_binning"
@@ -135,9 +125,7 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    style="@style/horizontalLinearLayoutParam">
 
                     <TextView
                         style="@style/TextParameter.Name"
@@ -152,7 +140,7 @@
 
                     <TextView
                         style="@style/TextParameter.Unit"
-                        android:text="' / pixel" />
+                        android:text="''/pixel" />
                 </LinearLayout>
 
                 <Button

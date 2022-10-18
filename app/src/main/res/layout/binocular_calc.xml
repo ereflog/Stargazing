@@ -21,9 +21,7 @@
                 style="@style/BorderParam">
 
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    style="@style/horizontalLinearLayoutParam">
 
                     <TextView
                         style="@style/TextParameter.Name"
@@ -44,9 +42,7 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    style="@style/horizontalLinearLayoutParam">
 
                     <TextView
                         style="@style/TextParameter.Name"
@@ -61,7 +57,8 @@
 
                     <TextView
                         style="@style/TextParameter.Unit"
-                        android:text="\u00b0" />
+                        android:text="\u00b0"
+                        android:textSize="28sp"/>
 
                 </LinearLayout>
 
@@ -87,9 +84,7 @@
                 style="@style/BorderParam">
 
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    style="@style/horizontalLinearLayoutParam">
 
                     <TextView
                         style="@style/TextParameter.Name"
@@ -105,14 +100,13 @@
 
                     <TextView
                         style="@style/TextParameter.Unit"
-                        android:text="\u00b0" />
+                        android:text="\u00b0"
+                        android:textSize="28sp"/>
 
                 </LinearLayout>
 
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    style="@style/horizontalLinearLayoutParam">
 
                     <TextView
                         style="@style/TextParameter.Name"
@@ -153,9 +147,7 @@
                 style="@style/BorderParam">
 
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    style="@style/horizontalLinearLayoutParam">
 
                     <TextView
                         style="@style/TextParameter.Name"
@@ -171,14 +163,13 @@
 
                     <TextView
                         style="@style/TextParameter.Unit"
-                        android:text="\u00b0" />
+                        android:text="\u00b0"
+                        android:textSize="28sp"/>
 
                 </LinearLayout>
 
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    style="@style/horizontalLinearLayoutParam">
 
                     <TextView
                         style="@style/TextParameter.Name"
@@ -199,9 +190,7 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    style="@style/horizontalLinearLayoutParam">
 
                     <TextView
                         style="@style/TextParameter.Name"
@@ -216,7 +205,8 @@
 
                     <TextView
                         style="@style/TextParameter.Unit"
-                        android:text="\u00b0" />
+                        android:text="\u00b0"
+                        android:textSize="28sp"/>
 
                 </LinearLayout>
 
@@ -242,9 +232,7 @@
                 style="@style/BorderParam">
 
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    style="@style/horizontalLinearLayoutParam">
 
                     <TextView
                         style="@style/TextParameter.Name"
@@ -260,14 +248,13 @@
 
                     <TextView
                         style="@style/TextParameter.Unit"
-                        android:text="\u00b0" />
+                        android:text="\u00b0"
+                        android:textSize="28sp"/>
 
                 </LinearLayout>
 
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    style="@style/horizontalLinearLayoutParam">
 
                     <TextView
                         style="@style/TextParameter.Name"
@@ -288,9 +275,7 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    style="@style/horizontalLinearLayoutParam">
 
                     <TextView
                         style="@style/TextParameter.Name"
@@ -306,7 +291,8 @@
 
                     <TextView
                         style="@style/TextParameter.Unit"
-                        android:text="\u00b0" />
+                        android:text="\u00b0"
+                        android:textSize="28sp"/>
 
                 </LinearLayout>
 

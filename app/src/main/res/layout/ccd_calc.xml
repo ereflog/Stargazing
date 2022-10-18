@@ -24,9 +24,7 @@
                 android:layout_height="wrap_content">
 
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    style="@style/horizontalLinearLayoutParam">
 
                     <TextView
                         style="@style/TextParameter.Name"
@@ -46,9 +44,7 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    style="@style/horizontalLinearLayoutParam">
 
                     <TextView
                         style="@style/TextParameter.Name"
@@ -68,9 +64,7 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    style="@style/horizontalLinearLayoutParam">
 
                     <TextView
                         style="@style/TextParameter.Name"
@@ -110,32 +104,33 @@
                 style="@style/BorderParam">
 
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    style="@style/horizontalLinearLayoutParam">
 
                     <TextView
                         style="@style/TextParameter.Name"
-                        android:text="Dimensions" />
+                        android:layout_width="wrap_content"
+                        android:text="Dimension" />
 
                     <Space
-                        style="@style/Spacing" />
+                        style="@style/Spacing"/>
 
                     <EditText
-                        style="@style/TextParameter.InputNumber"
                         android:id="@+id/et_dim_hor"
-                        android:hint="hor" />
+                        style="@style/TextParameter.InputNumber"
+                        android:hint="width" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="X"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginEnd="4dp"/>
 
                     <EditText
                         style="@style/TextParameter.InputNumber"
                         android:id="@+id/et_dim_ver"
-                        android:hint="ver" />
+                        android:hint="height" />
 
                     <TextView
                         style="@style/TextParameter.Unit"
@@ -144,9 +139,7 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    style="@style/horizontalLinearLayoutParam">
 
                     <TextView
                         style="@style/TextParameter.Name"
@@ -158,18 +151,20 @@
                     <EditText
                         style="@style/TextParameter.InputNumber"
                         android:id="@+id/et_res_hor"
-                        android:hint="hor" />
+                        android:hint="width" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="X"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginEnd="4dp" />
 
                     <EditText
                         style="@style/TextParameter.InputNumber"
                         android:id="@+id/et_res_ver"
-                        android:hint="ver" />
+                        android:hint="height" />
 
                     <TextView
                         style="@style/TextParameter.Unit"
@@ -178,9 +173,7 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    style="@style/horizontalLinearLayoutParam">
 
                     <TextView
                         style="@style/TextParameter.Name"
@@ -199,7 +192,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="X"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginEnd="4dp" />
 
                     <EditText
                         style="@style/TextParameter.Result"
@@ -234,9 +229,7 @@
                 style="@style/BorderParam">
 
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    style="@style/horizontalLinearLayoutParam">
 
                     <TextView
                         style="@style/TextParameter.Name"
@@ -258,9 +251,7 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    style="@style/horizontalLinearLayoutParam">
 
                     <TextView
                         style="@style/TextParameter.Name"
@@ -272,20 +263,20 @@
                     <EditText
                         style="@style/TextParameter.InputNumber"
                         android:id="@+id/et_res_hor2"
-                        android:hint="hor"
-                        android:textAlignment="center" />
+                        android:hint="width" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="X"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginEnd="4dp" />
 
                     <EditText
                         style="@style/TextParameter.InputNumber"
                         android:id="@+id/et_res_ver2"
-                        android:hint="ver"
-                        android:textAlignment="center" />
+                        android:hint="height" />
 
                     <TextView
                         style="@style/TextParameter.Unit"
@@ -294,9 +285,7 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    style="@style/horizontalLinearLayoutParam">
 
                     <TextView
                         style="@style/TextParameter.Name"
@@ -315,7 +304,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="X"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginEnd="4dp" />
 
                     <EditText
                         style="@style/TextParameter.Result"
@@ -330,9 +321,7 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    style="@style/horizontalLinearLayoutParam">
 
                     <TextView
                         style="@style/TextParameter.Name"

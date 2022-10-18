@@ -23,9 +23,7 @@
             <LinearLayout style="@style/BorderParam">
 
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    style="@style/horizontalLinearLayoutParam" >
 
                     <TextView
                         style="@style/TextParameter.Name"
@@ -45,9 +43,7 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    style="@style/horizontalLinearLayoutParam" >
 
                     <TextView
                         style="@style/TextParameter.Name"
@@ -67,9 +63,7 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    style="@style/horizontalLinearLayoutParam" >
 
                     <TextView
                         style="@style/TextParameter.Name"
@@ -109,9 +103,7 @@
         <LinearLayout style="@style/BorderParam">
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                style="@style/horizontalLinearLayoutParam" >
 
                 <TextView
                     style="@style/TextParameter.Name"
@@ -131,9 +123,7 @@
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                style="@style/horizontalLinearLayoutParam" >
 
                 <TextView
                     style="@style/TextParameter.Name"
@@ -153,9 +143,7 @@
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                style="@style/horizontalLinearLayoutParam" >
 
                 <TextView
                     style="@style/TextParameter.Name"
