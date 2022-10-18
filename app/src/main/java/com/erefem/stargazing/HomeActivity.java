@@ -1,9 +1,13 @@
 package com.erefem.stargazing;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -64,10 +68,10 @@ public class HomeActivity extends AppCompatActivity {
                 getString(R.string.unit_converter_title),
                 getString(R.string.obs_log_book_title),
                 getString(R.string.weather_forecast_title),
-                getString(R.string.red_light_tool_title),
-                getString(R.string.about_title),
+                getString(R.string.red_light_tool_title)
+/*                getString(R.string.about_title),
                 getString(R.string.credit_and_data_source_title),
-                getString(R.string.privacy_policy_title)
+                getString(R.string.privacy_policy_title)*/
         };
 
         ArrayAdapter<String> adapter = new ArrayAdapter<>(  this,
@@ -145,7 +149,7 @@ public class HomeActivity extends AppCompatActivity {
                     reportPageEvt(RedLightTool.class.getSimpleName());
                     startActivity(intent);
                 }
-                if (i == 13){
+                /*if (i == 13){
                     Intent intent = new Intent(view.getContext(),About.class);
                     reportPageEvt(About.class.getSimpleName());
                     startActivity(intent);
@@ -159,10 +163,36 @@ public class HomeActivity extends AppCompatActivity {
                     Intent intent = new Intent(view.getContext(),PrivacyPolicy.class);
                     reportPageEvt(PrivacyPolicy.class.getSimpleName());
                     startActivity(intent);
-                }
+                }*/
             }
         });
 
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater menuInflater = getMenuInflater();
+        menuInflater.inflate(R.menu.menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.item1:
+                Intent intent1 = new Intent(HomeActivity.this, About.class);
+                startActivity(intent1);
+                return true;
+            case R.id.item2:
+                Intent intent2 = new Intent(HomeActivity.this, CreditAndDataSource.class);
+                startActivity(intent2);
+                return true;
+            case R.id.item3:
+                Intent intent3 = new Intent(HomeActivity.this, PrivacyPolicy.class);
+                startActivity(intent3);
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     private void reportPageEvt(String page) {
