@@ -44,9 +44,9 @@ public class FieldOfViewCalc extends AppCompatActivity {
 
             if (SUtils.isEmpty(etEyepieceFOV)) {
                 SUtils.setToast(etEyepieceFOV,"This field cannot be blank!");
-            } if (SUtils.isEmpty(etEyepieceFocalLength)) {
+            } else if (SUtils.isEmpty(etEyepieceFocalLength)) {
                 SUtils.setToast(etEyepieceFocalLength,"This field cannot be blank!");
-            } if (SUtils.isEmpty(etTelescopeFocalLength)) {
+            } else if (SUtils.isEmpty(etTelescopeFocalLength)) {
                 SUtils.setToast(etTelescopeFocalLength, "This field cannot be blank!");
             } else {
                 float eyepieceFOV = SUtils.getInteger(etEyepieceFOV);

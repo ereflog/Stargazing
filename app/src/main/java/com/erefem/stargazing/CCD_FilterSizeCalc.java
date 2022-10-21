@@ -46,11 +46,11 @@ public class CCD_FilterSizeCalc extends AppCompatActivity {
 
             if (SUtils.isEmpty(et_fs_aperture)) {
                 SUtils.setToast(et_fs_aperture,"This field cannot be blank!");
-            } if (SUtils.isEmpty(et_fs_fl)) {
+            } else if (SUtils.isEmpty(et_fs_fl)) {
                 SUtils.setToast(et_fs_fl,"This field cannot be blank!");
-            } if (SUtils.isEmpty(et_fs_diagonal)) {
+            } else if (SUtils.isEmpty(et_fs_diagonal)) {
                 SUtils.setToast(et_fs_diagonal,"This field cannot be blank!");
-            } if (SUtils.isEmpty(et_fs_distance)) {
+            } else if (SUtils.isEmpty(et_fs_distance)) {
                 SUtils.setToast(et_fs_distance,"This field cannot be blank!");
 
             } else {

@@ -54,7 +54,7 @@ public class CCD_Calc extends AppCompatActivity {
 
             if (SUtils.isEmpty(et_pixsize)) {
                 SUtils.setToast(et_pixsize,"This field cannot be blank!");
-            } if (SUtils.isEmpty(et_tfl)) {
+            } else if (SUtils.isEmpty(et_tfl)) {
                 SUtils.setToast(et_tfl,"This field cannot be blank!");
             } else {
                 float CCDpixel      = SUtils.getFloat(et_pixsize);
@@ -71,11 +71,11 @@ public class CCD_Calc extends AppCompatActivity {
 
             if (SUtils.isEmpty(et_dim_hor)) {
                 SUtils.setToast(et_dim_hor,"This field cannot be blank!");
-            } if (SUtils.isEmpty(et_dim_ver)) {
+            } else if (SUtils.isEmpty(et_dim_ver)) {
                 SUtils.setToast(et_dim_ver,"This field cannot be blank!");
-            } if (SUtils.isEmpty(et_res_hor)) {
+            } else if (SUtils.isEmpty(et_res_hor)) {
                 SUtils.setToast(et_res_hor,"This field cannot be blank!");
-            } if (SUtils.isEmpty(et_res_ver)) {
+            } else if (SUtils.isEmpty(et_res_ver)) {
                 SUtils.setToast(et_res_ver,"This field cannot be blank!");
             } else {
                 float Dimension_Hor     = SUtils.getFloat(et_dim_hor);
@@ -96,9 +96,9 @@ public class CCD_Calc extends AppCompatActivity {
 
             if (SUtils.isEmpty(et_ccd_pix)) {
                 SUtils.setToast(et_ccd_pix,"This field cannot be blank!");
-            } if (SUtils.isEmpty(et_res_hor2)) {
+            } else if (SUtils.isEmpty(et_res_hor2)) {
                 SUtils.setToast(et_res_hor2,"This field cannot be blank!");
-            } if (SUtils.isEmpty(et_res_ver2)) {
+            } else if (SUtils.isEmpty(et_res_ver2)) {
                 SUtils.setToast(et_res_ver2,"This field cannot be blank!");
             } else {
                 float CCD_pixel         = SUtils.getFloat(et_ccd_pix);

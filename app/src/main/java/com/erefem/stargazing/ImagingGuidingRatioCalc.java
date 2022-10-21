@@ -54,11 +54,11 @@ public class ImagingGuidingRatioCalc extends AppCompatActivity {
             decimal.setRoundingMode(RoundingMode.HALF_EVEN);
             if (SUtils.isEmpty(etTeleFocalLength)) {
                 SUtils.setToast(etTeleFocalLength,"This field cannot be blank!");
-            } if (SUtils.isEmpty(etTelePixelSize)) {
+            } else if (SUtils.isEmpty(etTelePixelSize)) {
                 SUtils.setToast(etTelePixelSize,"This field cannot be blank!");
-            } if (SUtils.isEmpty(etGuideFocalLength)) {
+            } else if (SUtils.isEmpty(etGuideFocalLength)) {
                 SUtils.setToast(etGuideFocalLength,"This field cannot be blank!");
-            } if (SUtils.isEmpty(etGuidePixelSize)) {
+            } else if (SUtils.isEmpty(etGuidePixelSize)) {
                 SUtils.setToast(etGuidePixelSize,"This field cannot be blank!");
 
             } else {

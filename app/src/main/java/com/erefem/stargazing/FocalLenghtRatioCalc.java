@@ -50,7 +50,7 @@ public class FocalLenghtRatioCalc extends AppCompatActivity {
         btnFocalLength.setOnClickListener(view -> {
             if (SUtils.isEmpty(etAperture1)) {
                 SUtils.setToast(etAperture1, "This field cannot be blank!");
-            } if (SUtils.isEmpty(etFocalRatio)) {
+            } else if (SUtils.isEmpty(etFocalRatio)) {
                 SUtils.setToast(etFocalRatio, "This field cannot be blank!");
             } else {
                 float aperture = SUtils.getInteger(etAperture1);

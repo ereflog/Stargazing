@@ -77,7 +77,7 @@ public class BinocularCalc extends AppCompatActivity {
 
             if (SUtils.isEmpty(et_ang_fov)) {
                 SUtils.setToast(et_ang_fov,"This field cannot be blank!");
-            } if (SUtils.isEmpty(et_mag)) {
+            } else if (SUtils.isEmpty(et_mag)) {
                 SUtils.setToast(et_mag,"This field cannot be blank!");
             } else {
                 float Anggularfov     = SUtils.getFloat(et_ang_fov);
@@ -94,7 +94,7 @@ public class BinocularCalc extends AppCompatActivity {
 
             if (SUtils.isEmpty(et_ang_fov2)) {
                 SUtils.setToast(et_ang_fov2,"This field cannot be blank!");
-            } if (SUtils.isEmpty(et_mag2)) {
+            } else if (SUtils.isEmpty(et_mag2)) {
                 SUtils.setToast(et_mag2,"This field cannot be blank!");
             } else {
                 float Anggularfov2      = SUtils.getFloat(et_ang_fov2);

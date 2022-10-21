@@ -46,7 +46,7 @@ public class CCDTelescopeCombinationCalc extends AppCompatActivity {
 
             if (SUtils.isEmpty(et_pixel_size)) {
                 SUtils.setToast(et_pixel_size,"This field cannot be blank!");
-            } if (SUtils.isEmpty(et_focal_lenght)) {
+            } else if (SUtils.isEmpty(et_focal_lenght)) {
                 SUtils.setToast(et_focal_lenght,"This field cannot be blank!");
             } else {
                 float dd_barlow_reducer = SUtils.getFloatSpinnerValue(dd_barlow_reducer_ccd_imaging);

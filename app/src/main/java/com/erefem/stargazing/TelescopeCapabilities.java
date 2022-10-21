@@ -85,7 +85,7 @@ public class TelescopeCapabilities extends AppCompatActivity {
         btnLightGraspRatio.setOnClickListener(view -> {
             if (SUtils.isEmpty(etLargerTeleAperture)) {
                 SUtils.setToast(etLargerTeleAperture,"This field cannot be blank!");
-            } if (SUtils.isEmpty(etSmallerTeleAperture)) {
+            } else if (SUtils.isEmpty(etSmallerTeleAperture)) {
                 SUtils.setToast(etSmallerTeleAperture,"This field cannot be blank!");
             } else {
                 float largerTeleAperture = SUtils.getFloat(etLargerTeleAperture);
