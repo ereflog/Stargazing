@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.Stargazing" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+    <style name="Theme.Stargazing" parent="Theme.AppCompat.DayNight.DarkActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/taupe</item>
         <item name="colorPrimaryVariant">@color/deep_purple</item>
@@ -101,12 +101,13 @@
     </style>
 
     <style name="ButtonParam">
-        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_width">180dp</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginTop">12dp</item>
         <item name="android:layout_marginBottom">12dp</item>
         <item name="android:layout_gravity">center</item>
-        <item name="android:backgroundTint">@color/indigo</item>
+        <item name="android:background">@drawable/cylindrical_button</item>
+        <item name="android:textColor">@color/grey</item>
     </style>
 
     <style name="BorderParam">

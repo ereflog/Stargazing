@@ -13,29 +13,25 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <RelativeLayout
+<!--        INCH TO MILLIMETERS-->
+<!--        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginBottom="20dp">
 
-            <LinearLayout
-                style="@style/BorderParam">
+            <LinearLayout style="@style/BorderParam">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                <LinearLayout style="@style/horizontalLinearLayoutParam">
 
                     <TextView
                         style="@style/TextParameter.Name"
                         android:text="Inches" />
 
-                    <Space
-                        style="@style/Spacing" />
+                    <Space style="@style/Spacing" />
 
                     <EditText
-                        style="@style/TextParameter.InputDecimal"
                         android:id="@+id/et_inches"
+                        style="@style/TextParameter.InputDecimal"
                         android:hint="inch" />
 
                     <TextView
@@ -44,21 +40,17 @@
 
                 </LinearLayout>
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                <LinearLayout style="@style/horizontalLinearLayoutParam">
 
                     <TextView
                         style="@style/TextParameter.Name"
                         android:text="Millimetres" />
 
-                    <Space
-                        style="@style/Spacing"/>
+                    <Space style="@style/Spacing" />
 
                     <EditText
-                        style="@style/TextParameter.Result"
                         android:id="@+id/tv_millimetres"
+                        style="@style/TextParameter.Result"
                         android:hint="mm" />
 
                     <TextView
@@ -68,8 +60,8 @@
                 </LinearLayout>
 
                 <Button
-                    style="@style/ButtonParam"
                     android:id="@+id/btn_calculate_inctomm"
+                    style="@style/ButtonParam"
                     android:text="Calculate" />
 
             </LinearLayout>
@@ -78,31 +70,27 @@
                 style="@style/TextSubTitle.Body"
                 android:text="   Inches to Millimetres   " />
 
-        </RelativeLayout>
+        </RelativeLayout>-->
 
-        <RelativeLayout
+<!--        MILLIMETERS TO INCH-->
+<!--        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginBottom="20dp">
 
-            <LinearLayout
-                style="@style/BorderParam">
+            <LinearLayout style="@style/BorderParam">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                <LinearLayout style="@style/horizontalLinearLayoutParam">
 
                     <TextView
                         style="@style/TextParameter.Name"
                         android:text="Millimetres" />
 
-                    <Space
-                        style="@style/Spacing" />
+                    <Space style="@style/Spacing" />
 
                     <EditText
-                        style="@style/TextParameter.InputNumber"
                         android:id="@+id/et_millimeter"
+                        style="@style/TextParameter.InputNumber"
                         android:hint="mm" />
 
                     <TextView
@@ -112,21 +100,17 @@
                 </LinearLayout>
 
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                <LinearLayout style="@style/horizontalLinearLayoutParam">
 
                     <TextView
                         style="@style/TextParameter.Name"
                         android:text="Inches" />
 
-                    <Space
-                        style="@style/Spacing" />
+                    <Space style="@style/Spacing" />
 
                     <EditText
-                        style="@style/TextParameter.Result"
                         android:id="@+id/tv_inches"
+                        style="@style/TextParameter.Result"
                         android:hint="inch" />
 
                     <TextView
@@ -136,8 +120,8 @@
                 </LinearLayout>
 
                 <Button
-                    style="@style/ButtonParam"
                     android:id="@+id/btn_calculate_mmtoinc"
+                    style="@style/ButtonParam"
                     android:text="Calculate" />
 
             </LinearLayout>
@@ -145,6 +129,96 @@
             <TextView
                 style="@style/TextSubTitle.Body"
                 android:text="   Millimetres to Inches   " />
+        </RelativeLayout>-->
+
+<!--        UNIT CONVERTERS-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="20dp">
+
+            <LinearLayout style="@style/BorderParam">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="4dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/TextParameter.Name"
+                        android:text="Convert From" />
+
+                    <Space style="@style/Spacing" />
+
+                    <Spinner
+                        android:id="@+id/dd_length_unit_input"
+                        android:layout_width="210dp"
+                        android:layout_height="wrap_content"
+                        android:background="@android:drawable/btn_dropdown"
+                        android:spinnerMode="dropdown"
+                        android:textAlignment="textStart" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="8dp"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/et_conversion_input"
+                        style="@style/TextParameter.InputDecimal"
+                        android:layout_width="match_parent"
+                        android:hint="Enter numbers" />
+
+                </LinearLayout>
+
+                <LinearLayout style="@style/horizontalLinearLayoutParam">
+
+                    <TextView
+                        style="@style/TextParameter.Name"
+                        android:text="Convert To" />
+
+                    <Space style="@style/Spacing" />
+
+                    <Spinner
+                        android:id="@+id/dd_length_unit_output"
+                        android:layout_width="210dp"
+                        android:layout_height="wrap_content"
+                        android:background="@android:drawable/btn_dropdown"
+                        android:spinnerMode="dropdown"
+                        android:textAlignment="textStart" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="8dp"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/et_conversion_result"
+                        style="@style/TextParameter.Result"
+                        android:layout_width="match_parent"
+                        android:hint="Result" />
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btn_calculate_conversion"
+                    style="@style/ButtonParam"
+                    android:onClick="btnCalculateConversion"
+                    android:text="Convert" />
+
+            </LinearLayout>
+
+            <TextView
+                style="@style/TextSubTitle.Body"
+                android:text="   Unit Conversion   " />
+
         </RelativeLayout>
     </LinearLayout>
 </ScrollView>
